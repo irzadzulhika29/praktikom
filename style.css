@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.text-plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  /* Orange */
+  --orange: #ff6823;
+
+  /* Blue */
+  --blue: #213448;
+
+  /* Gradient Blue */
+  --gradient-blue: linear-gradient(to right, #547792, #213448);
+
+  /* Grey Background */
+  --grey-bg: #f3f7f6;
+
+  /* Orange Pastel */
+  --orange-pastel: #ffac37;
+
+  /* Blue Pastel */
+  --blue-pastel: #627d99;
+
+  /* Sky */
+  --sky: #e3e5e5;
+}
+
+/* Kelas untuk warna teks */
+.text-orange {
+  color: var(--orange);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.text-blue-pastel {
+  color: var(--blue-pastel);
+}
+
+.text-grey {
+  color: var(--grey-bg);
+}
+
+.text-gradient-blue {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Kelas untuk background */
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-grey {
+  background-color: var(--grey-bg);
+}
+
+.bg-gradient-blue {
+  background: var(--gradient-blue);
+}
+
+.bg-orange-pastel {
+  background-color: var(--orange-pastel);
+}
+
+.bg-blue-pastel {
+  background-color: var(--blue-pastel);
+}
+
+/* Kelas untuk border */
+.border-sky {
+  border: 1px solid var(--sky);
+}
+
+.border-blue {
+  border: 1px solid var(--blue);
+}
+
+.border-orange {
+  border: 1px solid var(--orange);
+}
+
+.regular-heading-bold {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.semibold-heading {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.bold-heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.medium-heading {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.subheading {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.regular-text {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.subtext {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.small-text {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.footer-text {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.semibold-text {
+  font-weight: 600;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
