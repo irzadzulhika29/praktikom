@@ -23,6 +23,8 @@
   /* Grey Background */
   --grey-bg: #f3f7f6;
 
+  --dark-grey: #D9D9D9;
+
   /* Orange Pastel */
   --orange-pastel: #ffac37;
 
@@ -67,6 +69,10 @@
 
 .bg-grey {
   background-color: var(--grey-bg);
+}
+
+.bg-dark-grey {
+  background-color: var(--dark-grey);
 }
 
 .bg-gradient-blue {
@@ -129,8 +135,14 @@
   font-weight: normal;
 }
 
+.xsmall-text {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+
 .small-text {
-  font-size: 12px;
+  font-size: 8px;
   font-weight: normal;
 }
 

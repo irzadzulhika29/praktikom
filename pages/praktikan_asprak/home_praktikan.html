@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikom</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../style.css">
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="px-6 py-4 w-screen relative">
 <!-- Tombol untuk membuka popup -->
 <button id="openPopupButton" class="regular-text bg-gradient-blue rounded-full w-full text-white py-3">
     Click
@@ -7,8 +22,16 @@
 <div id="popup"
     class="h-64 gap-4 fixed flex flex-col items-center justify-center bottom-0 right-0 left-0 hidden w-full border-2 Z-100 border-grey rounded-t-3xl p-6">
     <h1 class="medium-heading text-center text-blue">Status Laporan Berhasil Diperbarui</h1>
-    <img class="w-16 h-16" src="../assets/svg/checklist-icon.svg" alt="">
+    <img class="w-16 h-16" src="../../assets/svg/checklist-icon.svg" alt="">
     <button id="closePopupButton" class="regular-text bg-gradient-blue rounded-full w-full text-white py-3">
         Tutup
     </button>
 </div>
+
+  <script src="../../script.js"></script>
+
+
+
+</body>
+
+</html>

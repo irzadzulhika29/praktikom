@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="px-6 py-4 w-screen relative">
+    <header class="flex justify-between mb-5 items-center w-full">
+        <div class="flex items-center ">
+            <img class="w-10 h-10" src="../../assets/svg/praktikom2-icon.svg" alt="">
+            <h1 class="text-blue semibold-heading">PRAKTIKOM</h1>
+        </div>
+        <button>
+            <img class="w-6 h-6" src="../../assets/svg/notification2-icon.svg" alt="">
+        </button>
+    </header>
+
+    <div class="w-full h-42">
+        <img class="rounded-xl w-full h-full object-cover" src="../../assets/img/carousel3-img.png" alt="">
+    </div>
+
+    <h1 class="relative my-3">Halo, <span class="text-blue">Aryo Pinandito! </span></h1>
+
+    <div class="flex justify-between gap-2 mb-5">
+        <div class="flex-1 flex justify-between bg-grey rounded-xl p-3">
+            <div class="flex flex-col justify-center items-center">
+                <h1 class="medium-heading text-blue">Sen <span class="text-orange">Mei</span></h1>
+                <h1 class="regular-heading text-6xl font-bold text-plus-jakarta-sans text-gradient-blue">19</h1>
+            </div>
+            <div class="flex flex-col gap-3 items-center justify-center">
+                <p>18</p>
+                <p class="h-8 w-8 flex items-center justify-center bg-blue text-white rounded-full">19</p>
+                <div class="flex flex-col items-center">
+                    <p>20</p>
+                    <div class="h-1 w-1 rounded-full bg-blue "></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="flex-1 border-2 border-grey rounded-xl p-3">
+            <div class="flex justify-between items-center">
+                <p>Jadwal Lab</p>
+                <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+            </div>
+
+            <div class="gap-2 flex flex-col">
+                <div class="small-text px-2 py-1 rounded-full flex  bg-grey justify-between items-center">
+                    <p>Lab G1.2</p>
+                    <p class="text-right">Senin <br>07.00-08.40</p>
+                </div>
+                <div class="small-text px-2 py-1 rounded-full  bg-grey flex justify-between items-center">
+                    <p>Lab G1.2</p>
+                    <p class="text-right">Senin <br>07.00-08.40</p>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <div class="rounded-xl border-2 relative  border-grey p-3">
+        <!-- popup -->
+        <div id="popup"
+            class="absolute hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b  w-full py-2">
+                <p id="closePopupButton">Semua</p>
+            </div>
+            <div class="border-b  w-full py-2">
+                <p>Berlangsung</p>
+            </div>
+            <div class="border-b  w-full py-2">
+                <p>Terlewat</p>
+            </div>
+        </div>
+
+        <!-- Judul Linimasa -->
+        <div class="flex justify-between items-center mb-3">
+            <h1 class="regular-heading font-bold">Linimasa</h1>
+            <img id="openPopupButton" src="../../assets/svg/filter-icon.svg" alt="">
+        </div>
+
+        <!-- Bagian yang bisa di-scroll -->
+        <div class="flex flex-col max-h-56 overflow-y-auto gap-2">
+            <div class="border items-center  bg-grey flex gap-2 ">
+                <div class="bg-dark-grey w-10 subtext p-2 text-center">
+                    <h1 class="font-bold">19</h1>
+                    <p>Mei</p>
+                </div>
+                <div>
+                    <h1 class="subtext font-bold">Perbaikan Router G1.3</h1>
+                    <p class="subtext">Tenggat pengerjaan hari ini</p>
+                </div>
+            </div>
+            <div class="border items-center  bg-grey flex gap-2 ">
+                <div class="bg-dark-grey w-10 subtext p-2 text-center">
+                    <h1 class="font-bold">20</h1>
+                    <p>Mei</p>
+                </div>
+                <div>
+                    <h1 class="subtext font-bold">Update Stok Kursi Lab</h1>
+                    <p class="subtext">Tenggat pengerjaan besok</p>
+                </div>
+            </div>
+            <div class="border items-center  bg-orange-pastel flex gap-2 ">
+                <div class="bg-orange w-10 subtext p-2 text-center">
+                    <h1 class="font-bold">17</h1>
+                    <p>Mei</p>
+                </div>
+                <div>
+                    <h1 class="subtext font-bold">Perbaikan Router G1.3</h1>
+                    <p class="subtext">Tenggat pengerjaan hari ini</p>
+                </div>
+            </div>
+            <div class="border items-center  bg-orange-pastel flex gap-2 ">
+                <div class="bg-orange w-10 subtext p-2 text-center">
+                    <h1 class="font-bold">18</h1>
+                    <p>Mei</p>
+                </div>
+                <div>
+                    <h1 class="subtext font-bold">Perbaikan Router G1.3</h1>
+                    <p class="subtext">Tenggat pengerjaan hari ini</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0  bg-blue py-2">
+        <div class="flex flex-col justify-center items-center text-white">
+            <img class="w-6 h-6" src="../../assets//svg/home-icon.svg" alt="">
+            <p>Beranda</p>
+        </div>
+        <div class="flex flex-col justify-center items-center text-white">
+            <img class="w-5 h-5" src="../../assets/svg/lab-icon.svg" alt="">
+            <p>Laboratorium</p>
+        </div>
+        <div class="flex flex-col justify-center items-center text-white">
+            <img class="w-6 h-6" src="../../assets/svg/profile-icon.svg" alt="">
+            <p>Profil</p>
+        </div>
+    </nav>
+
+
+
+
+    <script src="../../scripts/script.js">
+
+    </script>
+
+
+
+
+</body>
+
+</html>
