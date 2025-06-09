@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="px-6 py-4 w-screen relative">
+    <header class="flex justify-between items-center w-full mb-5 relative ">
+        <button> <img class="w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        <p class="subheading">Jadwal Laboratorium</p>
+        <button id="openPopupButton">
+            <img class="w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b  w-full py-2">
+                <p id="closePopupButton">Pusat Bantuan</p>
+            </div>
+            <div class=" w-full py-2">
+                <p>Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="flex flex-col gap-2 px-5">
+        <h1 class="font-bold">Jenis Jadwal</h1>
+
+        <!-- dropdown -->
+        <div class='flex flex-col relative border border-grey rounded-lg p-3'>
+            <div id="dropdownButton" class='flex justify-between items-center w-full'>
+                <p class='regular-text text-blue'>Praktikom</p>
+                <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+                    class='w-6 h-6 transition-transform duration-300 transform'>
+            </div>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownMenu"
+                class="absolute left-0 top-full w-full mt-2 bg-white border rounded-lg shadow-md hidden">
+                <ul class="space-y-2 p-3">
+                    <li class="cursor-pointer border-b hover:bg-gray-100 p-2 rounded">Reguler</li>
+                    <li class="cursor-pointer hover:bg-gray-100 p-2 rounded">Peminjaman</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border  border-blue my-5">
+
+    <div class="flex flex-col gap-3">
+
+        <div class="flex gap-3 border-2 border-sky rounded-lg p-3">
+            <div class="w-24 space-y-2 xsmall-text">
+                <div class="bg-gradient-blue rounded-xl flex p-2 justify-center items-center text-white">
+                    <p class="t">Senin</p>
+                </div>
+                <div class="flex justify-center rounded-xl overflow-hidden">
+                    <div class="flex-1 text-center p-2 bg-orange rounded-l-xl">
+                        <p>2 <br>SKS</p>
+                    </div>
+                    <div class="flex-1 text-center p-2 bg-orange-pastel rounded-r-xl">
+                        <p>07.00 <br>08.40</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between ">
+                <h1>Muhammad Irza Dzulhika</h1>
+                <h1>Gedung G FILKOM G1.2</h1>
+            </div>
+        </div>
+        <div class="flex gap-3 border-2 border-sky rounded-lg p-3">
+            <div class="w-24 space-y-2 xsmall-text">
+                <div class="bg-gradient-blue rounded-xl flex p-2 justify-center items-center text-white">
+                    <p class="t">Senin</p>
+                </div>
+                <div class="flex justify-center rounded-xl overflow-hidden">
+                    <div class="flex-1 text-center p-2 bg-orange rounded-l-xl">
+                        <p>2 <br>SKS</p>
+                    </div>
+                    <div class="flex-1 text-center p-2 bg-orange-pastel rounded-r-xl">
+                        <p>07.00 <br>08.40</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between ">
+                <h1>Muhammad Irza Dzulhika</h1>
+                <h1>Gedung G FILKOM G1.2</h1>
+            </div>
+        </div>
+        <div class="flex gap-3 border-2 border-sky rounded-lg p-3">
+            <div class="w-24 space-y-2 xsmall-text">
+                <div class="bg-gradient-blue rounded-xl flex p-2 justify-center items-center text-white">
+                    <p class="t">Senin</p>
+                </div>
+                <div class="flex justify-center rounded-xl overflow-hidden">
+                    <div class="flex-1 text-center p-2 bg-orange rounded-l-xl">
+                        <p>2 <br>SKS</p>
+                    </div>
+                    <div class="flex-1 text-center p-2 bg-orange-pastel rounded-r-xl">
+                        <p>07.00 <br>08.40</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between ">
+                <h1>Muhammad Irza Dzulhika</h1>
+                <h1>Gedung G FILKOM G1.2</h1>
+            </div>
+        </div>
+        <div class="flex gap-3 border-2 border-sky rounded-lg p-3">
+            <div class="w-24 space-y-2 xsmall-text">
+                <div class="bg-gradient-blue rounded-xl flex p-2 justify-center items-center text-white">
+                    <p class="t">Senin</p>
+                </div>
+                <div class="flex justify-center rounded-xl overflow-hidden">
+                    <div class="flex-1 text-center p-2 bg-orange rounded-l-xl">
+                        <p>2 <br>SKS</p>
+                    </div>
+                    <div class="flex-1 text-center p-2 bg-orange-pastel rounded-r-xl">
+                        <p>07.00 <br>08.40</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between ">
+                <h1>Muhammad Irza Dzulhika</h1>
+                <h1>Gedung G FILKOM G1.2</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="../../scripts/script.js"></script>
+</body>
+
+</html>
