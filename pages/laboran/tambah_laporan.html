@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class=" w-screen relative max-h-screen ">
+    <div class="bg-gradient-blue h-36 w-full absolute top-0 left-0 z-[-1]"></div>
+
+    </div>
+    <header class="p-6 text-white flex justify-between items-center w-full mb-5 relative">
+        <!-- Background div -->
+
+        <button> <img class="w-8 h-8" src="../../assets/svg/chevron-left-white-icon.svg" alt=""></button>
+        <p class="subheading">Tambah Laporan</p>
+        <button id="openPopupButton">
+            <img class="w-8 h-8" src="../../assets/svg/dots-white-icon.svg" alt="">
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="cursor-pointer absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b  w-full py-2">
+                <p id="closePopupButton">Pusat Bantuan</p>
+            </div>
+            <div class=" w-full py-2">
+                <p>Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-white rounded-t-3xl w-full h-full p-6  ">
+        <div class="space-y-3 mt-5">
+            <div class="space-y-2">
+                <h1>Nama Alat</h1>
+                <input
+                    class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900"
+                    placeholder="Contoh: Router Nirkabel">
+                </input>
+
+            </div>
+        </div>
+        <div class="space-y-2 mt-5">
+            <h1>Deskripsi Kerusakan</h1>
+            <input
+                class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900"
+                placeholder="Contoh: Router tidak ada koneksi internet, lampu indikator WAN mati.">
+            </input>
+
+
+        </div>
+        <div class="space-y-2 mt-5">
+            <h1>Bukti Dukung</h1>
+            <div
+                class="regular-text border-2 border-sky rounded-lg w-full py-1 px-2 focus:outline-none focus:border-blue-900">
+
+                <!-- Label for the file input -->
+                <label for="file-input"
+                    class="rounded flex bg-gradient-blue w-1/2  p-3 justify-center items-center gap-2 cursor-pointer">
+                    <!-- Icon and Text -->
+                    <img src="../../assets/svg/gallery-white-icon.svg" alt="">
+                    <span class="text-center text-white xsmall-text">Tambah Foto</span>
+                </label>
+                <!-- Hidden file input -->
+                <input id="file-input" type="file"
+                    class="bg-blue-900 w-36 h-8 p-3 text-white opacity-0 absolute cursor-pointer">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="p-6 fixed bottom-0 left-0 right-0">
+        <div class="flex items-center gap-3">
+            <!-- Checkbox -->
+            <input type="checkbox" id="data-checked" class="form-checkbox text-blue-900">
+            <!-- Text -->
+            <p class="regular-text" for="data-checked">
+                Data yang saya isikan adalah data sebenar-benarnya
+            </p>
+        </div>
+
+        <button id="open-popup-confirmation"
+            class="regular-text bg-gradient-blue rounded-full w-full text-white py-3 mt-3">
+            Kirim
+        </button>
+        <!-- popup confirmation -->
+        <div id="popup-confirmation"
+            class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
+            <div class="flex flex-col justify-center items-center gap-5">
+                <h1 class="text-center font-bold subheading">Laporan berhasil <br>ditambahkan</h1>
+                <img src="../../assets/svg/checklist-icon.svg" alt="">
+                <button id="close-popup-confirmation"
+                    class="regular-text bg-gradient-blue rounded-full w-full text-white py-3">
+                    Kirim
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../scripts/tambah_laporan.js">
+
+    </script>
+
+
+
+</body>
+
+</html>

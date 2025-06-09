@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
   // Tab Switching
   const leftTab = document.getElementById("left-tab");
   const rightTab = document.getElementById("right-tab");
@@ -98,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Tab Pengajuan dan Riwayat
 document.addEventListener("DOMContentLoaded", function () {
   const pengajuanTab = document.getElementById("pengajuan-tab");
   const riwayatTab = document.getElementById("riwayat-tab");
@@ -110,20 +113,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add event listeners to tabs
   pengajuanTab.addEventListener("click", () => {
-      // Reset all tabs and content
-      pengajuanTab.classList.add("border-b-2", "border-black", "text-black");
-      riwayatTab.classList.remove("border-b-2", "border-black", "text-black");
+    // Reset all tabs and content
+    pengajuanTab.classList.add("border-b-2", "border-black", "text-black");
+    riwayatTab.classList.remove("border-b-2", "border-black", "text-black");
 
-      pengajuanContent.classList.remove("hidden");
-      riwayatContent.classList.add("hidden");
+    pengajuanContent.classList.remove("hidden");
+    riwayatContent.classList.add("hidden");
   });
 
   riwayatTab.addEventListener("click", () => {
-      // Reset all tabs and content
-      riwayatTab.classList.add("border-b-2", "border-black", "text-black");
-      pengajuanTab.classList.remove("border-b-2", "border-black", "text-black");
+    // Reset all tabs and content
+    riwayatTab.classList.add("border-b-2", "border-black", "text-black");
+    pengajuanTab.classList.remove("border-b-2", "border-black", "text-black");
 
-      riwayatContent.classList.remove("hidden");
-      pengajuanContent.classList.add("hidden");
+    riwayatContent.classList.remove("hidden");
+    pengajuanContent.classList.add("hidden");
   });
 });

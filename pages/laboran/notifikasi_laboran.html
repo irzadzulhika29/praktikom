@@ -8,7 +8,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="px-6 py-4 w-screen relative">
@@ -32,16 +32,16 @@
     </header>
 
     <div class="flex gap-3 mb-5">
-        <div class="bg-blue px-3 py-1 rounded-full ">
+        <div class="bg-blue px-3 py-1 rounded-full item-category active" id="semua">
             <p class="subtext text-white">Semua</p>
         </div>
-        <div class="bg-grey px-3 py-1 rounded-full ">
-            <p class="subtext text-dark-grey">Peminjamann</p>
+        <div class="bg-grey px-3 py-1 rounded-full item-category" id="peminjaman">
+            <p class="subtext text-dark-grey">Peminjaman</p>
         </div>
-        <div class="bg-grey px-3 py-1 rounded-full ">
+        <div class="bg-grey px-3 py-1 rounded-full item-category" id="laporan">
             <p class="subtext text-dark-grey">Laporan</p>
         </div>
-        <div class="bg-grey px-3 py-1 rounded-full ">
+        <div class="bg-grey px-3 py-1 rounded-full item-category" id="stok">
             <p class="subtext text-dark-grey">Stok</p>
         </div>
     </div>
@@ -54,10 +54,11 @@
                 <p class="xsmall-text">10 menit yang lalu</p>
             </div>
             <div>
-                <p class="subtext">Muhammad Irza Dzulhika mengajukan peminjaman ruangan laboratorium G1.3 pada 25/05/2025 pukul
+                <p class="subtext">Muhammad Irza Dzulhika mengajukan peminjaman ruangan laboratorium G1.3 pada
+                    25/05/2025 pukul
                     09.30-12.10 WIB</p>
             </div>
-        
+
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
         <div class="relative p-3 bg-blue-pastel h-28  ">
@@ -67,9 +68,10 @@
                 <p class="xsmall-text">15 menit yang lalu</p>
             </div>
             <div>
-                <p class="subtext">Ahmad Akmal Syafi’i mengajukan peminjaman ruangan laboratorium G1.4 pada 25/05/2025 pukul 09.30-12.10 WIB</p>
+                <p class="subtext">Ahmad Akmal Syafi’i mengajukan peminjaman ruangan laboratorium G1.4 pada 25/05/2025
+                    pukul 09.30-12.10 WIB</p>
             </div>
-        
+
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
         <div class="relative p-3 bg-grey h-28  ">
@@ -79,9 +81,10 @@
                 <p class="xsmall-text">15 menit yang lalu</p>
             </div>
             <div>
-                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan untuk menjaga ketersediaan stok barang</p>
+                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan
+                    untuk menjaga ketersediaan stok barang</p>
             </div>
-        
+
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
         <div class="relative p-3 bg-grey h-28  ">
@@ -91,9 +94,10 @@
                 <p class="xsmall-text">15 menit yang lalu</p>
             </div>
             <div>
-                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan untuk menjaga ketersediaan stok barang</p>
+                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan
+                    untuk menjaga ketersediaan stok barang</p>
             </div>
-        
+
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
         <div class="relative p-3 bg-grey h-28  ">
@@ -103,9 +107,10 @@
                 <p class="xsmall-text">15 menit yang lalu</p>
             </div>
             <div>
-                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan untuk menjaga ketersediaan stok barang</p>
+                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan
+                    untuk menjaga ketersediaan stok barang</p>
             </div>
-        
+
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
         <div class="relative p-3 bg-grey h-28  ">
@@ -115,12 +120,13 @@
                 <p class="xsmall-text">15 menit yang lalu</p>
             </div>
             <div>
-                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan untuk menjaga ketersediaan stok barang</p>
+                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan
+                    untuk menjaga ketersediaan stok barang</p>
             </div>
-        
+
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
- 
+
         <div class="relative p-3 bg-grey h-28  ">
             <div class="flex gap-3 items-center">
                 <h1 class="regular-text  font-bold">Stok bahan hampir habis!</h1>
@@ -128,12 +134,13 @@
                 <p class="xsmall-text">15 menit yang lalu</p>
             </div>
             <div>
-                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan untuk menjaga ketersediaan stok barang</p>
+                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan
+                    untuk menjaga ketersediaan stok barang</p>
             </div>
-        
+
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
- 
+
         <div class="relative p-3 bg-grey h-28  ">
             <div class="flex gap-3 items-center">
                 <h1 class="regular-text  font-bold">Stok bahan hampir habis!</h1>
@@ -141,19 +148,21 @@
                 <p class="xsmall-text">15 menit yang lalu</p>
             </div>
             <div>
-                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan untuk menjaga ketersediaan stok barang</p>
+                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan
+                    untuk menjaga ketersediaan stok barang</p>
             </div>
-        
+
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
- 
-        
+
+
     </div>
 
 
+    <script src="../../scripts/notifikasi.js">
 
 
-    <script src="../../scripts/script.js"></script>
+    </script>
 </body>
 
 </html>

@@ -129,6 +129,10 @@
   border: 1px solid var(--orange) !important;
 }
 
+.border-grey {
+  border: 2px solid var(--grey-bg) !important;
+}
+
 .regular-heading-bold {
   font-size: 32px;
   font-weight: bold;
@@ -146,37 +150,30 @@
 
 .medium-heading {
   font-size: 20px;
-  font-weight: normal;
 }
 
 .subheading {
   font-size: 18px;
-  font-weight: normal;
 }
 
 .regular-text {
   font-size: 16px;
-  font-weight: normal;
 }
 
 .subtext {
   font-size: 14px;
-  font-weight: normal;
 }
 
 .xsmall-text {
   font-size: 10px;
-  font-weight: normal;
 }
 
 .small-text {
   font-size: 8px;
-  font-weight: normal;
 }
 
 .footer-text {
   font-size: 10px;
-  font-weight: normal;
 }
 
 .bold-text {
@@ -192,4 +189,13 @@
 }
 .tab-content.active {
   display: block;
+}
+
+.item-category {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.item-category.active {
+  background-color: #2563eb;
+  color: white;
 }
