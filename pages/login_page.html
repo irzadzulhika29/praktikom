@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - PRAKTIKOM</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="bg-white min-h-screen flex flex-col px-6 pt-6">
+    <!-- Logo Praktikom  -->
+    <div class="w-full flex justify-center mt-6">
+      <img
+        src="../assets/svg/logo-praktikom.svg"
+        alt="Logo PRAKTIKOM"
+        class="w-24 h-24 mb-4"
+      />
+    </div>
+    <!-- Header -->
+    <div class="flex flex-col mb-6">
+      <h1 class="mb-2 text-center text-3xl font-bold text-blue">Masuk</h1>
+      <p class="text-sm text-black">
+        Selamat datang. Silakan masuk menggunakan akun UB Anda untuk mengakses
+        ekosistem praktikum terintegrasi FILKOM.
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form id="loginForm" class="flex flex-col space-y-4">
+      <input
+        type="email"
+        placeholder="Email"
+        class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#627D99]"
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#627D99]"
+      />
+
+      <div class="text-right">
+        <a href="lupa_kata_sandi.html" class="text-sm text-[#627D99] underline"
+          >Lupa Kata Sandi?</a
+        >
+      </div>
+    </form>
+    <!-- Log In Button -->
+    <button
+      id="actionButton"
+      type="submit"
+      class="bg-gradient-blue text-white rounded-full font-medium py-3 mt-5"
+    >
+      Log In
+    </button>
+
+    <script src="../scrpts/login_page.js"></script>
+  </body>
+</html>

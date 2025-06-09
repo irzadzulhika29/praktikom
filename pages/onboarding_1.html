@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="bg-white flex flex-col h-screen">
+    <!-- Gambar -->
+    <div class="flex justify-center py-44">
+      <img src="../assets/img/onboarding-1.png" alt="Ilustrasi praktikum" />
+    </div>
+
+    <!-- Konten teks -->
+    <div
+      class="bg-gradient-blue px-6 py-8 shadow-md fixed bottom-0 left-0 right-0"
+    >
+      <h1 class="text-2xl font-bold text-white mb-2">
+        Semua Praktikum di Satu Tempat
+      </h1>
+      <p class="text-white text-sm mb-6">
+        Lupakan jadwal yang simpang siur. Semua informasi praktikum, mulai dari
+        jadwal, modul, hingga pengumuman penting, kini terpusat dalam satu
+        aplikasi.
+      </p>
+
+      <!-- Indicator + Button -->
+      <div class="flex items-center justify-between">
+        <div class="flex space-x-2">
+          <div class="w-2 h-2 rounded-full bg-blue-pastel"></div>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+          <div class="w-2 h-2 rounded-full bg-white"></div>
+        </div>
+        <button
+          id="nextBtn1"
+          class="bg-blue-pastel text-white text-sm px-5 py-2 rounded-full transition"
+        >
+          Lanjut
+        </button>
+      </div>
+    </div>
+    <script src="../scripts/onboarding.js"></script>
+  </body>
+</html>
