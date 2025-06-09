@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 * {
   font-family: "Inter", sans-serif;
@@ -24,7 +22,7 @@
   /* Grey Background */
   --grey-bg: #f3f7f6;
 
-  --dark-grey: #D9D9D9;
+  --dark-grey: #979c9e;
 
   /* Orange Pastel */
   --orange-pastel: #ffac37;
@@ -34,71 +32,101 @@
 
   /* Sky */
   --sky: #e3e5e5;
+
+  /* Blue Pastel */
+  --blue-pastel: #c4dffa;
+
+  /* Success */
+  --success: #5dbc76;
 }
 
 /* Kelas untuk warna teks */
 .text-orange {
-  color: var(--orange);
+  color: var(--orange) !important;
 }
 
 .text-blue {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 
 .text-blue-pastel {
-  color: var(--blue-pastel);
+  color: var(--blue-pastel) !important;
 }
 
 .text-grey {
-  color: var(--grey-bg);
+  color: var(--grey-bg) !important;
+}
+
+.text-sky {
+  color: var(--sky) !important;
+}
+
+.text-dark-grey {
+  color: var(--dark-grey) !important;
+}
+
+.text-orange-pastel {
+  color: var(--orange-pastel) !important;
+}
+
+.text-success {
+  color: var(--success) !important;
 }
 
 .text-gradient-blue {
-  background: var(--gradient-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: var(--gradient-blue) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 /* Kelas untuk background */
 .bg-orange {
-  background-color: var(--orange);
+  background-color: var(--orange) !important;
 }
 
 .bg-blue {
-  background-color: var(--blue);
+  background-color: var(--blue) !important;
 }
 
 .bg-grey {
-  background-color: var(--grey-bg);
+  background-color: var(--grey-bg) !important;
 }
 
 .bg-dark-grey {
-  background-color: var(--dark-grey);
+  background-color: var(--dark-grey) !important;
+}
+
+.bg-sky {
+  background-color: var(--sky) !important;
 }
 
 .bg-gradient-blue {
-  background: var(--gradient-blue);
+  background: var(--gradient-blue) !important;
 }
 
 .bg-orange-pastel {
-  background-color: var(--orange-pastel);
+  background-color: var(--orange-pastel) !important;
+}
+
+.bg-success {
+  background-color: var(--success) !important;
 }
 
 .bg-blue-pastel {
-  background-color: var(--blue-pastel);
+  background-color: var(--blue-pastel) !important;
 }
 
 /* Kelas untuk border */
 .border-sky {
-  border: 1px solid var(--sky);
+  border: 1px solid var(--sky) !important;
 }
 
 .border-blue {
-  border: 1px solid var(--blue);
+  border: 1px solid var(--blue) !important;
 }
 
 .border-orange {
-  border: 1px solid var(--orange);
+  border: 1px solid var(--orange) !important;
 }
 
 .regular-heading-bold {
@@ -141,7 +169,6 @@
   font-weight: normal;
 }
 
-
 .small-text {
   font-size: 8px;
   font-weight: normal;
@@ -166,4 +193,3 @@
 .tab-content.active {
   display: block;
 }
-
