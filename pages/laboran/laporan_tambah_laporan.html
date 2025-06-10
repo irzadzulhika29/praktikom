@@ -23,17 +23,17 @@
                 alt=""></button>
         <p class="subheading">Tambah Laporan</p>
         <button id="openPopupButton">
-            <img class="w-8 h-8" src="../../assets/svg/dots-white-icon.svg" alt="">
+            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-white-icon.svg" alt="">
         </button>
 
         <!-- popup -->
         <div id="popup"
-            class="cursor-pointer absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
-            <div class="border-b  w-full py-2">
-                <p id="closePopupButton">Pusat Bantuan</p>
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
             </div>
-            <div class=" w-full py-2">
-                <p>Laporkan Masalah</p>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
             </div>
         </div>
     </header>
@@ -90,7 +90,7 @@
         </div>
 
         <button id="open-popup-confirmation"
-            class="regular-text bg-gradient-blue rounded-full w-full text-white py-3 mt-3">
+            class="cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3 mt-3">
             Kirim
         </button>
         <!-- popup confirmation -->
@@ -99,10 +99,10 @@
             <div class="flex flex-col justify-center items-center gap-5">
                 <h1 class="text-center font-bold subheading">Laporan berhasil <br>ditambahkan</h1>
                 <img src="../../assets/svg/checklist-icon.svg" alt="">
-                <button id="close-popup-confirmation"
-                    class="regular-text bg-gradient-blue rounded-full w-full text-white py-3">
-                    Kirim
-                </button>
+                <a class="w-full" href="laporan.html"> <button id="close-popup-confirmation"
+                        class="cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3">
+                        Kirim
+                    </button></a>
             </div>
         </div>
     </div>

@@ -10,8 +10,8 @@ if (openPopupButton && popup) {
   });
 
   // Menambahkan event listener untuk setiap item dalam popup
-  popupItems.forEach(function(item) {
-    item.addEventListener("click", function() {
+  popupItems.forEach(function (item) {
+    item.addEventListener("click", function () {
       popup.classList.add("hidden"); // Menyembunyikan popup setelah item diklik
     });
   });

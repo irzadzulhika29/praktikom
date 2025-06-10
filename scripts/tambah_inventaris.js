@@ -1,43 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Popup
-  const openPopupButton = document.getElementById("openPopupButton");
-  const popup = document.getElementById("popup");
-  const closePopupButton = document.getElementById("closePopupButton");
+ // Popup
+const openPopupButton = document.getElementById("openPopupButton");
+const popup = document.getElementById("popup");
+const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 
-  if (openPopupButton && popup && closePopupButton) {
-    // Menambahkan event listener untuk tombol klik membuka popup
-    openPopupButton.addEventListener("click", function () {
-      popup.classList.remove("hidden"); // Menampilkan popup
+if (openPopupButton && popup) {
+  // Menambahkan event listener untuk tombol klik membuka popup
+  openPopupButton.addEventListener("click", function () {
+    popup.classList.remove("hidden"); // Menampilkan popup
+  });
+
+  // Menambahkan event listener untuk setiap item dalam popup
+  popupItems.forEach(function(item) {
+    item.addEventListener("click", function() {
+      popup.classList.add("hidden"); // Menyembunyikan popup setelah item diklik
     });
+  });
+}
 
-    // Menambahkan event listener untuk tombol klik menutup popup
-    closePopupButton.addEventListener("click", function () {
-      popup.classList.add("hidden"); // Menyembunyikan popup
-    });
-  }
+// Back Button
+const backButton = document.getElementById("backButton");
+backButton.addEventListener("click", function () {
+  window.history.back(); // Membawa pengguna ke halaman sebelumnya
+});
 
-  // Dropdown
-  const dropdownButton = document.getElementById("dropdownButton");
-  const dropdownMenu = document.getElementById("dropdownMenu");
-  const dropdownIcon = document.getElementById("dropdownIcon");
 
-  if (dropdownButton && dropdownMenu && dropdownIcon) {
-    dropdownButton.addEventListener("click", () => {
-      // Toggle visibility of the dropdown menu
-      dropdownMenu.classList.toggle("hidden");
+// Mendapatkan elemen-elemen
+const dropdownButton = document.getElementById("dropdownButton");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const dropdownText = document.getElementById("dropdownText");
+const dropdownIcon = document.getElementById("dropdownIcon");
+const dropdownItems = document.querySelectorAll(".dropdown-item");
 
-      // Toggle rotation of the dropdown icon
-      dropdownIcon.classList.toggle("rotate-180");
-    });
+// Menampilkan atau menyembunyikan menu dropdown saat tombol diklik
+dropdownButton.addEventListener("click", function () {
+  dropdownMenu.classList.toggle("hidden"); // Menampilkan atau menyembunyikan menu dropdown
+  dropdownIcon.classList.toggle("transform"); // Memberikan efek rotasi pada ikon
+  dropdownIcon.classList.toggle("rotate-180"); // Rotasi 180 derajat pada ikon
+});
 
-    // Close dropdown if clicked outside
-    window.addEventListener("click", (event) => {
-      if (!event.target.closest(".flex-col")) {
-        dropdownMenu.classList.add("hidden");
-        dropdownIcon.classList.remove("rotate-180");
-      }
-    });
-  }
+// Menangani pemilihan item dropdown
+dropdownItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    // Mengubah teks yang ditampilkan di dropdownButton
+    dropdownText.textContent = item.textContent;
+
+    // Menyembunyikan dropdown setelah item dipilih
+    dropdownMenu.classList.add("hidden");
+
+    // Mengubah ikon kembali ke posisi semula (tidak terbalik)
+    dropdownIcon.classList.remove("rotate-180");
+  });
+});
 });
 
 // Pop up 1 Confirmation
