@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - PRAKTIKOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="../../scripts/profile.js"></script>
+    <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body class="bg-gradient-blue min-h-screen font-sans relative">
+    <!-- Header -->
+    <div class="flex items-center justify-between px-4 pt-6 text-white">
+        <div class="w-5 h-5"></div>
+        <h1 class="text-lg font-semibold">Profile</h1>
+        <button id="menu-button">
+            <img src="../../assets/svg/dots-white-icon.svg" alt="" />
+        </button>
+    </div>
+
+    <!-- Modal Menu -->
+    <div id="menu-modal"
+        class="hidden absolute top-16 right-4 bg-white rounded-lg shadow-md py-2 px-4 text-sm text-gray-800 z-50">
+        <button class="block w-full text-left py-1">Pusat bantuan</button>
+        <hr class="my-1" />
+        <a href="../../pages/login_page.html"><button
+                class="block w-full text-left py-1 text-red-500">Logout</button></a>
+    </div>
+
+    <!-- Profile Info -->
+    <div class="text-white flex flex-col items-center mt-4 mb-6">
+        <img src="../../assets/img/foto-profile.png" alt="Profile"
+            class="w-20 h-20 rounded-full border-4 border-white" />
+        <h2 class="mt-2 font-semibold text-lg">Muhammad Irza Dzulhika</h2>
+        <p class="text-sm text-gray-300">irzadzulhika@student.ub.ac.id</p>
+    </div>
+
+    <!-- Info Card -->
+    <div class="bg-white rounded-2xl pt-6 px-4 min-h-screen">
+
+
+        <div class="bg-[#F3F7F6] p-4 rounded-2xl space-y-2">
+            <h3 class="font-bold text-xl text-blue">GENERAL</h3>
+            <div>
+                <p class="text-xs text-black">Nama</p>
+                <p class="font-bold">Muhammad Irza Dzulhika</p>
+                <hr class="border-t-1 border-black mb-4" />
+            </div>
+            <div>
+                <p class="text-xs text-black">NIP</p>
+                <p class="font-bold">23515040111111</p>
+                <hr class="border-t-1 border-black mb-4" />
+            </div>
+            <div>
+                <p class="text-xs text-black">Departemen Program Studi</p>
+                <p class="font-bold">Sistem Informasi</p>
+                <hr class="border-t-1 border-black mb-4" />
+            </div>
+            <div>
+                <p class="text-xs text-black">Jenis Kelamin</p>
+                <p class="font-bold">Laki-laki</p>
+                <hr class="border-t-1 border-black mb-4" />
+            </div>
+            <div>
+                <p class="text-xs text-black">Jabatan</p>
+                <p class="font-bold">Kepala Laboratorium MGM</p>
+                <hr class="border-t-1 border-black mb-4" />
+            </div>
+        </div>
+
+
+        <!-- Navbar -->
+        <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0  bg-blue py-2">
+            <a href="home_laboran.html">
+                <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                    <img class="w-6 h-6" src="../../assets//svg/home-icon.svg" alt="">
+                    <p>Beranda</p>
+                </button>
+            </a>
+            <a href="laboratorium.html">
+                <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                    <img class="mb-1 w-5 h-5" src="../../assets/svg/lab-icon.svg" alt="">
+                    <p>Laboratorium</p>
+                </button>
+            </a>
+            <a href="profile_laboran.html">
+                <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                    <img class="w-6 h-6" src="../../assets/svg/profile-active-icon.svg" alt="">
+                    <p class="text-orange-pastel">Profil</p>
+                </button>
+            </a>
+        </nav>
+</body>
+
+</html>
