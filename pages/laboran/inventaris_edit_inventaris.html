@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class=" w-screen relative max-h-screen ">
+    <div class="bg-gradient-blue h-36 w-full absolute top-0 left-0 z-[-1]"></div>
+
+    </div>
+    <header class="p-6 text-white flex justify-between items-center w-full mb-5 relative">
+        <!-- Background div -->
+
+        <button id="backButton"> <img class="w-8 h-8 cursor-pointer" src="../../assets/svg/chevron-left-white-icon.svg"
+                alt=""></button>
+        <p class="subheading">Edit Inventaris</p>
+        <button id="openPopupButton">
+            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-white-icon.svg" alt="">
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-white rounded-t-3xl w-full h-full p-6  ">
+        <div class="space-y-3 mt-5">
+            <div class="space-y-2">
+                <h1>Nama Barang</h1>
+                <div
+                    class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900">
+                    <p>Router Nirkabel</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="space-y-2 mt-5">
+            <h1>Kondisi Barang</h1>
+           <!-- dropdown -->
+<div class='cursor-pointer flex flex-col relative border border-grey rounded-lg p-3'>
+    <div id="dropdownButton" class='flex justify-between items-center w-full'>
+        <p id="dropdownText" class='regular-text text-blue'>Baik</p>
+        <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+            class='w-6 h-6 transition-transform duration-300 transform'>
+    </div>
+    <!-- Dropdown menu -->
+    <div id="dropdownMenu"
+        class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
+        <ul class="space-y-2 p-3">
+            <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Baik</li>
+            <hr>
+            <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Buruk</li>
+            <hr>
+        </ul>
+    </div>
+</div>
+
+
+
+        </div>
+        <div class="space-y-3 mt-5">
+            <div class="space-y-2">
+                <h1>Jumlah Barang</h1>
+                <div
+                    class="regular-text text-dark-grey border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900">
+                    <p>10</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="space-y-2 mt-5">
+            <h1>Gambar Barang</h1>
+            <div class="w-full h-40">
+                <img class="w-full h-full object-cover rounded-2xl" src="../../assets/img/bukti-dukung.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="p-6 fixed bottom-0 left-0 right-0">
+        <div class="flex items-center gap-3">
+            <!-- Checkbox -->
+            <input type="checkbox" class="form-checkbox text-blue-900">
+            <!-- Text -->
+            <p class="regular-text" for="data-checked">
+                Data yang saya isikan adalah data sebenar-benarnya
+            </p>
+        </div>
+
+        <button id="open-popup-confirmation"
+            class="cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3 mt-3">
+            Edit Inventaris
+        </button>
+    </div>
+    <!-- popup diterima -->
+    <div id="popup-confirmation"
+        class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
+        <div class="flex flex-col justify-center items-center gap-5">
+            <h1 class="text-center font-bold subheading">Inventaris berhasil<br> diedit!</h1>
+            <img src="../../assets/svg/checklist-icon.svg" alt="">
+            <button id="close-popup-confirmation"
+                class="cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3">
+                Tutup
+            </button>
+        </div>
+    </div>
+
+
+    <script src="../../scripts/edit_inventaris.js">
+
+    </script>
+
+
+</body>
+
+</html>

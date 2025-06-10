@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="p-6 w-screen relative h-screen ">
+    <header class="flex justify-between items-center w-full mb-5 relative ">
+        <button id="backButton"> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg"
+                alt=""></button>
+        <p class="subheading">Inventaris</p>
+        <button id="openPopupButton">
+            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex items-center gap-2 bg-grey rounded-lg p-2 mb-4">
+        <!-- Search Icon -->
+        <img src="../../assets/svg/search-icon.svg" alt="Search Icon" class="w-5 h-5">
+        <!-- Input field -->
+        <input placeholder="Cari inventaris" type="text" class="bg-transparent border-none outline-none p-1 text-black">
+    </div>
+    <div class="flex gap-3 mb-5">
+        <div class="bg-blue px-3 py-1 rounded-full item-category active" id="semua">
+            <p class="subtext text-white">Semua</p>
+        </div>
+        <div class="bg-grey px-3 py-1 rounded-full item-category" id="peminjaman">
+            <p class="subtext text-dark-grey">Peminjaman</p>
+        </div>
+        <div class="bg-grey px-3 py-1 rounded-full item-category" id="laporan">
+            <p class="subtext text-dark-grey">Laporan</p>
+        </div>
+        <div class="bg-grey px-3 py-1 rounded-full item-category" id="stok">
+            <p class="subtext text-dark-grey">Stok</p>
+        </div>
+    </div>
+
+    <a href="inventaris_tambah_inventaris.html">
+        <button
+            class="cursor-pointer fixed bottom-10 right-6 z-10 w-12 h-12 rounded-full bg-gradient-blue text-white flex justify-center items-center">
+            <h1 class="medium-heading">+</h1>
+        </button>
+    </a>
+
+
+    <div class="mt-10 flex flex-col gap-3">
+        <a href="inventaris_edit_inventaris.html">
+            <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
+                <img class="w-22 h-full object-cover" src="../../assets/img/kertas-img.jpg" alt="">
+                <div class="border-t border-b border-r p-5 w-full h-full border-grey">
+                    <h1 class="mb-2">Kertas HVS</h1>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Kondisi</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>Baik</p>
+                    </div>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Jumlah stok</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>1000</p>
+                    </div>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Pemeriksaan terakhir</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>25/05/2025 23.59 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="inventaris_edit_inventaris.html">
+            <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
+                <img class="w-28 h-full object-cover" src="../../assets/img/kabelrj45-img.png" alt="">
+                <div class="border-t border-b border-r p-5 w-full h-full border-grey">
+                    <h1 class="mb-2">Kabel RJ-45</h1>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Kondisi</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>Baik</p>
+                    </div>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Jumlah stok</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>25</p>
+                    </div>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Pemeriksaan terakhir</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>25/05/2025 23.59 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="inventaris_edit_inventaris.html">
+            <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
+                <img class="w-28 h-full object-cover" src="../../assets/img/router-img.png" alt="">
+                <div class="border-t border-b border-r p-5 w-full h-full border-grey">
+                    <h1 class="mb-2">Router</h1>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Kondisi</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>Buruk</p>
+                    </div>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Jumlah stok</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>25</p>
+                    </div>
+                    <div class="flex items-center gap-2 xsmall-text">
+                        <p>Pemeriksaan terakhir</p>
+                        <div class="bg-blue rounded-full  w-1 h-1"></div>
+                        <p>25/05/2025 23.59 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        </a>
+
+
+
+        <script src="../../scripts/inventaris.js">
+
+        </script>
+
+
+
+</body>
+
+</html>

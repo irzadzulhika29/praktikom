@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-6 w-screen relative h-screen ">
+    <header class="flex justify-between items-center w-full mb-5 relative ">
+        <button id="backButton"> <img class="w-8 h-8 cursor-pointer" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        <p class="subheading">Detail Peminjaman</p>
+        <button id="openPopupButton">
+            <img class="w-8 h-8 cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
+
+       <!-- popup -->
+       <div id="popup"
+       class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+       <div class="border-b w-full py-2">
+           <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+       </div>
+       <div class="w-full py-2">
+           <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+       </div>
+   </div>
+    </header>
+
+    <div class="mb-5 ">
+        <h1 class="mb-5 subheading bold-text">Data peminjam</h1>
+        <div class="space-y-4">
+            <div class="border-b-2 pb-2">
+                <p class="xsmall-text ">Nama</p>
+                <h1 class="regular-text">Muhammad Irza Dzulhika</h1>
+            </div>
+            <div class="border-b-2 pb-2">
+                <p class="xsmall-text">NIM</p>
+                <h1 class="regular-text">23550401111007</h1>
+            </div>
+            <div class="border-b-2 pb-2">
+                <p class="xsmall-text">Program Studi</p>
+                <h1 class="regular-text">Sistem Informasi</h1>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <h1 class="mb-5  subheading bold-text">Data barang</h1>
+        <div class="space-y-4">
+            <div class="border-b-2 pb-2">
+                <p class="xsmall-text">Nama barang</p>
+                <h1 class="regular-text">Muhammad Irza Dzulhika</h1>
+            </div>
+            <div class="border-b-2 pb-2">
+                <p class="xsmall-text">Keperluan</p>
+                <h1 class="regular-text">Praktikum Jaringan Komputasi Awan</h1>
+            </div>
+            <div class="border-b-2 pb-2">
+                <p class="xsmall-text">Tanggal peminjaman</p>
+                <h1 class="regular-text">05/05/2025</h1>
+            </div>
+
+            <div class="flex gap-5">
+                <div class="flex-1 border-b-2 pb-2">
+                    <p class="xsmall-text">Tanggal peminjaman</p>
+                    <h1 class="regular-text">05/05/2025</h1>
+                </div>
+
+                <div class="flex-1 border-b-2 pb-2">
+                    <p class="xsmall-text">Tanggal peminjaman</p>
+                    <h1 class="regular-text">05/05/2025</h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- tombol terima dan tolak -->
+    <div class="flex justify-center gap-5 right-0 left-0 absolute bottom-10">
+        <button id="tolak-confirmation" class="cursor-pointer bg-orange text-white rounded-full w-32 px-4 py-2">Tolak</button>
+        <button id="terima-confirmation" class="cursor-pointer bg-gradient-blue text-white rounded-full w-32 px-4 py-2">Terima</button>
+    </div>
+
+    <div>
+        <!-- Popup Diterima -->
+        <div id="popup-diterima"
+            class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
+            <div class="flex flex-col justify-center items-center gap-5">
+                <h1 class="text-center font-bold subheading">Permohonan Peminjaman <br> Diterima</h1>
+                <img src="../../assets/svg/checklist-icon.svg" alt="">
+                <button
+                    class="close-button cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3">Kirim</button>
+            </div>
+        </div>
+
+        <!-- Popup Ditolak -->
+        <div id="popup-ditolak"
+            class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
+            <div class="flex flex-col justify-center items-center gap-5">
+                <h1 class="text-center font-bold subheading">Permohonan Peminjaman <br> Ditolak</h1>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Masukkan alasan ditolak"
+                    class="h-24 w-full border-2 border-grey rounded-lg p-2"></textarea>
+                <button
+                    class="close-button cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/detail_peminjaman.js"></script>
+
+
+</body>
+
+</html>

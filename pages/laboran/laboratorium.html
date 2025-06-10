@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-6  w-screen relative">
+
+    <header class="flex justify-between items-center w-full mb-5">
+        <div></div>
+        <p class="subheading">Laboratorium</p>
+        <button id="openPopupButton">
+            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <a href="peminjaman.html">
+            <div class="rounded-xl overflow-hidden w-full h-56">
+                <img class="w-full h-28 object-cover -mt-10" src="../../assets/img/fitur1-lab.png" alt="">
+                <div class="border-r-2 border-b-2 border-l-2 border-sky rounded-b-xl">
+                    <div class="p-3">
+                        <div class="flex gap-2 items-center justify-between mb-3">
+                            <div class="flex gap-2 items-center">
+                                <img class="w-8 h-8" src="../../assets/svg/tools-icon.svg" alt="">
+                                <h1 class="medium-heading text-blue">Peminjaman</h1>
+                            </div>
+                            <button>
+                                <img class="w-8 h-8" src="../../assets/svg/chevron-right-icon.svg" alt="">
+                            </button>
+                        </div>
+                        <p class="subtext">Setujui pengajuan peminjaman alat dari mahasiswa dan dosen. Pantau status
+                            peminjaman secara real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="laporan.html">
+            <div class="rounded-xl overflow-hidden w-full h-56">
+                <img class="w-full h-28 object-cover -mt-10" src="../../assets/img/fitur2-lab.png" alt="">
+                <div class="border-r-2 border-b-2 border-l-2 border-sky rounded-b-xl">
+                    <div class="p-3">
+                        <div class="flex gap-2 items-center justify-between mb-3">
+                            <div class="flex gap-2 items-center">
+                                <img class="w-8 h-8" src="../../assets/svg/report-icon.svg" alt="">
+                                <h1 class="medium-heading text-blue">Laporan Kerusakan</h1>
+                            </div>
+                            <button>
+                                <img class="w-8 h-8" src="../../assets/svg/chevron-right-icon.svg" alt="">
+                            </button>
+                        </div>
+                        <p class="subtext">Terima dan kelola laporan kerusakan alat secara digital. Lacak status
+                            perbaikan hingga selesai dan catat riwayatnya untuk evaluasi.</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="inventaris.html">
+            <div class="rounded-xl overflow-hidden w-full h-56">
+                <img class="w-full h-28 object-cover -mt-10" src="../../assets/img/fitur3-lab.png" alt="">
+                <div class="border-r-2 border-b-2 border-l-2 border-sky rounded-b-xl">
+                    <div class="p-3">
+                        <div class="flex gap-2 items-center justify-between mb-3">
+                            <div class="flex gap-2 items-center">
+                                <img class="w-8 h-8" src="../../assets/svg/box-icon.svg" alt="">
+                                <h1 class="medium-heading text-blue">Inventaris</h1>
+                            </div>
+                            <button>
+                                <img class="w-8 h-8" src="../../assets/svg/chevron-right-icon.svg" alt="">
+                            </button>
+                        </div>
+                        <p class="subtext">Setujui pengajuan peminjaman alat dari mahasiswa dan dosen. Pantau status
+                            peminjaman secara real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0  bg-blue py-2">
+        <a href="home_laboran.html">
+            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                <img class="w-6 h-6" src="../../assets//svg/home-icon.svg" alt="">
+                <p>Beranda</p>
+            </button>
+        </a>
+        <a href="laboratorium.html">
+            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                <img class="mb-1 w-5 h-5" src="../../assets/svg/lab-active-icon.svg" alt="">
+                <p class="text-orange-pastel">Laboratorium</p>
+            </button>
+        </a>
+        <a href="profil_laboratorium">
+            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                <img class="w-6 h-6" src="../../assets/svg/profile-icon.svg" alt="">
+                <p>Profil</p>
+            </button>
+        </a>
+    </nav>
+    <script src="../../scripts/laboratorium.js"></script>
+
+</body>
+
+</html>

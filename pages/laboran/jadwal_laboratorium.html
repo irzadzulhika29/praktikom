@@ -8,25 +8,25 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="px-6 py-4 w-screen relative">
+<body class="p-6 w-screen relative">
     <header class="flex justify-between items-center w-full mb-5 relative ">
-        <button> <img class="w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        <button id="backButton"> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
         <p class="subheading">Jadwal Laboratorium</p>
         <button id="openPopupButton">
-            <img class="w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
 
         <!-- popup -->
         <div id="popup"
             class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
-            <div class="border-b  w-full py-2">
-                <p id="closePopupButton">Pusat Bantuan</p>
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
             </div>
-            <div class=" w-full py-2">
-                <p>Laporkan Masalah</p>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
             </div>
         </div>
     </header>
@@ -38,17 +38,17 @@
         <!-- dropdown -->
         <div class='flex flex-col relative border border-grey rounded-lg p-3'>
             <div id="dropdownButton" class='flex justify-between items-center w-full'>
-                <p class='regular-text text-blue'>Praktikom</p>
+                <p id="dropdownText" class='regular-text text-blue'>Reguler</p>
                 <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
                     class='w-6 h-6 transition-transform duration-300 transform'>
             </div>
-
             <!-- Dropdown menu -->
             <div id="dropdownMenu"
-                class="absolute left-0 top-full w-full mt-2 bg-white border rounded-lg shadow-md hidden">
+                class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
                 <ul class="space-y-2 p-3">
-                    <li class="cursor-pointer border-b hover:bg-gray-100 p-2 rounded">Reguler</li>
-                    <li class="cursor-pointer hover:bg-gray-100 p-2 rounded">Peminjaman</li>
+                    <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Reguler</li>
+                    <hr>
+                    <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Peminjaman</li>
                 </ul>
             </div>
         </div>
@@ -142,7 +142,7 @@
     </div>
 
 
-    <script src="../../scripts/script.js"></script>
+    <script src="../../scripts/jadwal_laboratorium.js"></script>
 </body>
 
 </html>

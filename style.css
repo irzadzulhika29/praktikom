@@ -33,11 +33,17 @@
 
   /* Sky */
   --sky: #e3e5e5;
+
+  /* Blue Pastel */
+  --blue-pastel: #c4dffa;
+
+  /* Success */
+  --success: #5dbc76;
 }
 
 /* Kelas untuk warna teks */
 .text-orange {
-  color: var(--orange);
+  color: var(--orange) !important;
 }
 
 .text-orange-pastel {
@@ -45,63 +51,91 @@
 }
 
 .text-blue {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 
 .text-blue-pastel {
-  color: var(--blue-pastel);
+  color: var(--blue-pastel) !important;
 }
 
 .text-grey {
-  color: var(--grey-bg);
+  color: var(--grey-bg) !important;
+}
+
+.text-sky {
+  color: var(--sky) !important;
+}
+
+.text-dark-grey {
+  color: var(--dark-grey) !important;
+}
+
+.text-orange-pastel {
+  color: var(--orange-pastel) !important;
+}
+
+.text-success {
+  color: var(--success) !important;
 }
 
 .text-gradient-blue {
-  background: var(--gradient-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: var(--gradient-blue) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 /* Kelas untuk background */
 .bg-orange {
-  background-color: var(--orange);
+  background-color: var(--orange) !important;
 }
 
 .bg-blue {
-  background-color: var(--blue);
+  background-color: var(--blue) !important;
 }
 
 .bg-grey {
-  background-color: var(--grey-bg);
+  background-color: var(--grey-bg) !important;
 }
 
 .bg-dark-grey {
-  background-color: var(--dark-grey);
+  background-color: var(--dark-grey) !important;
+}
+
+.bg-sky {
+  background-color: var(--sky) !important;
 }
 
 .bg-gradient-blue {
-  background: var(--gradient-blue);
+  background: var(--gradient-blue) !important;
 }
 
 .bg-orange-pastel {
-  background-color: var(--orange-pastel);
+  background-color: var(--orange-pastel) !important;
+}
+
+.bg-success {
+  background-color: var(--success) !important;
 }
 
 .bg-blue-pastel {
-  background-color: var(--blue-pastel);
+  background-color: var(--blue-pastel) !important;
 }
 
 /* Kelas untuk border */
 .border-sky {
-  border: 1px solid var(--sky);
+  border: 1px solid var(--sky) !important;
 }
 
 .border-blue {
-  border: 1px solid var(--blue);
+  border: 1px solid var(--blue) !important;
 }
 
 .border-orange {
-  border: 1px solid var(--orange);
+  border: 1px solid var(--orange) !important;
+}
+
+.border-grey {
+  border: 2px solid var(--grey-bg) !important;
 }
 
 .regular-heading-bold {
@@ -121,37 +155,30 @@
 
 .medium-heading {
   font-size: 20px;
-  font-weight: normal;
 }
 
 .subheading {
   font-size: 18px;
-  font-weight: normal;
 }
 
 .regular-text {
   font-size: 16px;
-  font-weight: normal;
 }
 
 .subtext {
   font-size: 14px;
-  font-weight: normal;
 }
 
 .xsmall-text {
   font-size: 10px;
-  font-weight: normal;
 }
 
 .small-text {
   font-size: 8px;
-  font-weight: normal;
 }
 
 .footer-text {
   font-size: 10px;
-  font-weight: normal;
 }
 
 .bold-text {

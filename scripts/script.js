@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
   // Tab Switching
   const leftTab = document.getElementById("left-tab");
   const rightTab = document.getElementById("right-tab");
@@ -96,4 +98,35 @@ document.addEventListener("DOMContentLoaded", () => {
       popup.classList.add("hidden"); // Menyembunyikan popup
     });
   }
+});
+
+// Tab Pengajuan dan Riwayat
+document.addEventListener("DOMContentLoaded", function () {
+  const pengajuanTab = document.getElementById("pengajuan-tab");
+  const riwayatTab = document.getElementById("riwayat-tab");
+  const pengajuanContent = document.getElementById("pengajuan");
+  const riwayatContent = document.getElementById("riwayat");
+
+  // Activate Pengajuan tab by default
+  pengajuanTab.classList.add("border-b-2", "border-black", "text-black");
+  pengajuanContent.classList.remove("hidden");
+
+  // Add event listeners to tabs
+  pengajuanTab.addEventListener("click", () => {
+    // Reset all tabs and content
+    pengajuanTab.classList.add("border-b-2", "border-black", "text-black");
+    riwayatTab.classList.remove("border-b-2", "border-black", "text-black");
+
+    pengajuanContent.classList.remove("hidden");
+    riwayatContent.classList.add("hidden");
+  });
+
+  riwayatTab.addEventListener("click", () => {
+    // Reset all tabs and content
+    riwayatTab.classList.add("border-b-2", "border-black", "text-black");
+    pengajuanTab.classList.remove("border-b-2", "border-black", "text-black");
+
+    riwayatContent.classList.remove("hidden");
+    pengajuanContent.classList.add("hidden");
+  });
 });
