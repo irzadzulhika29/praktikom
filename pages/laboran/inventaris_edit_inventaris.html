@@ -19,8 +19,9 @@
     <header class="p-6 text-white flex justify-between items-center w-full mb-5 relative">
         <!-- Background div -->
 
-        <button id="backButton"> <img class="w-8 h-8 cursor-pointer" src="../../assets/svg/chevron-left-white-icon.svg"
-                alt=""></button>
+      <a href="inventaris.html">
+        <button> <img class="w-8 h-8 cursor-pointer" src="../../assets/svg/chevron-left-white-icon.svg" alt=""></button>
+      </a>
         <p class="subheading">Edit Inventaris</p>
         <button id="openPopupButton">
             <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-white-icon.svg" alt="">
@@ -51,35 +52,31 @@
         </div>
         <div class="space-y-2 mt-5">
             <h1>Kondisi Barang</h1>
-           <!-- dropdown -->
-<div class='cursor-pointer flex flex-col relative border border-grey rounded-lg p-3'>
-    <div id="dropdownButton" class='flex justify-between items-center w-full'>
-        <p id="dropdownText" class='regular-text text-blue'>Baik</p>
-        <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
-            class='w-6 h-6 transition-transform duration-300 transform'>
-    </div>
-    <!-- Dropdown menu -->
-    <div id="dropdownMenu"
-        class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
-        <ul class="space-y-2 p-3">
-            <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Baik</li>
-            <hr>
-            <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Buruk</li>
-            <hr>
-        </ul>
-    </div>
-</div>
-
-
-
+            <!-- dropdown -->
+            <div class='cursor-pointer flex flex-col relative border border-grey rounded-lg p-3'>
+                <div id="dropdownButton" class='flex justify-between items-center w-full'>
+                    <p id="dropdownText" class='regular-text text-blue'>Baik</p>
+                    <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+                        class='w-6 h-6 transition-transform duration-300 transform'>
+                </div>
+                <!-- Dropdown menu -->
+                <div id="dropdownMenu"
+                    class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
+                    <ul class="space-y-2 p-3">
+                        <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Baik</li>
+                        <hr>
+                        <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Buruk</li>
+                     
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="space-y-3 mt-5">
             <div class="space-y-2">
                 <h1>Jumlah Barang</h1>
-                <div
-                    class="regular-text text-dark-grey border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900">
-                    <p>10</p>
-                </div>
+
+                <input placeholder="10" type="text" class="regular-text text-dark-grey border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900">
+               
 
             </div>
         </div>
