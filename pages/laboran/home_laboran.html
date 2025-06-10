@@ -18,9 +18,11 @@
             <img class="w-10 h-10" src="../../assets/svg/praktikom2-icon.svg" alt="">
             <h1 class="text-blue semibold-heading">PRAKTIKOM</h1>
         </div>
-        <button>
-            <img class="w-6 h-6" src="../../assets/svg/notification2-icon.svg" alt="">
-        </button>
+        <a href="notifikasi_laboran.html">
+            <button>
+                <img class="w-6 h-6" src="../../assets/svg/notification-icon.svg" alt="">
+            </button>
+        </a>
     </header>
 
     <div class="w-full h-42">
@@ -30,10 +32,10 @@
     <h1 class=" relative my-3">Halo, <span class="text-blue">Aryo Pinandito! </span></h1>
 
     <div class="flex justify-between gap-2 mb-5 ">
-        <div class="flex-1 flex justify-between bg-grey rounded-xl p-3">
+        <div class="w-[52%] flex justify-center items-center  gap-5 bg-grey rounded-xl px-3 py-3">
             <div class="flex flex-col justify-center items-center">
                 <h1 class="medium-heading text-blue">Sen <span class="text-orange">Mei</span></h1>
-                <h1 class="regular-heading text-6xl font-bold text-plus-jakarta-sans text-gradient-blue">19</h1>
+                <h1 class="regular-heading text-8xl font-bold text-plus-jakarta-sans text-gradient-blue">19</h1>
             </div>
             <div class="flex flex-col gap-3 items-center justify-center">
                 <p>18</p>
@@ -45,10 +47,12 @@
 
             </div>
         </div>
-        <div class="flex-1 border-2 border-grey rounded-xl p-3">
+        <div class="w-[47%] border-2 border-grey rounded-xl px-3 py-3">
             <div class="flex justify-between items-center">
                 <p>Jadwal Lab</p>
-                <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                <a href="jadwal_laboratorium.html"><button class="cursor-pointer">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button></a>
             </div>
 
             <div class="gap-2 flex flex-col">
@@ -57,8 +61,8 @@
                     <p class="text-right">Senin <br>07.00-08.40</p>
                 </div>
                 <div class="small-text px-2 py-1 rounded-full  bg-grey flex justify-between items-center">
-                    <p>Lab G1.2</p>
-                    <p class="text-right">Senin <br>07.00-08.40</p>
+                    <p>Lab G1.3</p>
+                    <p class="text-right">Senin <br>09.30-12.10</p>
                 </div>
             </div>
             <div></div>
@@ -70,14 +74,14 @@
         <!-- popup -->
         <div id="popup"
             class="absolute hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
-            <div class="border-b  w-full py-2">
-                <p id="closePopupButton">Semua</p>
+            <div class="border-b w-full py-2">
+                <p class="cursor-pointer item-popup">Semua</p>
             </div>
             <div class="border-b  w-full py-2">
-                <p>Berlangsung</p>
+                <p class="item-popup">Berlangsung</p>
             </div>
-            <div class="border-b  w-full py-2">
-                <p>Terlewat</p>
+            <div class=" w-full py-2">
+                <p class="item-popup">Terlewat</p>
             </div>
         </div>
 
@@ -116,7 +120,7 @@
                 </div>
                 <div>
                     <h1 class="subtext font-bold">Perbaikan Router G1.3</h1>
-                    <p class="subtext">Tenggat pengerjaan hari ini</p>
+                    <p class="subtext">Pengerjaan terlambat</p>
                 </div>
             </div>
             <div class="border border-grey rounded-lg items-center  bg-orange-pastel flex gap-2 ">
@@ -126,7 +130,7 @@
                 </div>
                 <div>
                     <h1 class="subtext font-bold">Perbaikan Router G1.3</h1>
-                    <p class="subtext">Tenggat pengerjaan hari ini</p>
+                    <p class="subtext">Pengerjaan terlambat</p>
                 </div>
             </div>
 
@@ -136,24 +140,30 @@
 
 
     <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0  bg-blue py-2">
-        <div class="flex flex-col justify-center items-center text-white">
-            <img class="w-6 h-6" src="../../assets//svg/home-icon.svg" alt="">
-            <p>Beranda</p>
-        </div>
-        <div class="flex flex-col justify-center items-center text-white">
-            <img class="w-5 h-5" src="../../assets/svg/lab-icon.svg" alt="">
-            <p>Laboratorium</p>
-        </div>
-        <div class="flex flex-col justify-center items-center text-white">
-            <img class="w-6 h-6" src="../../assets/svg/profile-icon.svg" alt="">
-            <p>Profil</p>
-        </div>
+        <a href="home_laboran.html">
+            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                <img class="w-6 h-6" src="../../assets//svg/home-active-icon.svg" alt="">
+                <p class="text-orange-pastel">Beranda</p>
+            </button>
+        </a>
+        <a href="laboratorium.html">
+            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                <img class="mb-1 w-5 h-5" src="../../assets/svg/lab-icon.svg" alt="">
+                <p>Laboratorium</p>
+            </button>
+        </a>
+        <a href="profil_laboratorium">
+            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+                <img class="w-6 h-6" src="../../assets/svg/profile-icon.svg" alt="">
+                <p>Profil</p>
+            </button>
+        </a>
     </nav>
 
 
 
 
-    <script src="../../scripts/script.js">
+    <script src="../../scripts/home_laboran.js">
 
     </script>
 

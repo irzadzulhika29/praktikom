@@ -35,3 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
     closePopupConfirmationButton.addEventListener("click", function () {
       popupConfirmation.classList.add("hidden"); // Menyembunyikan popup
     });
+
+    // Back Button
+const backButton = document.getElementById("backButton");
+backButton.addEventListener("click", function () {
+  window.history.back(); // Membawa pengguna ke halaman sebelumnya
+});
