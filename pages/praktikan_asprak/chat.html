@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-6 w-screen relative">
+    <header class="flex justify-between items-center w-full mb-5 relative ">
+        <div class="w-5 h-5"></div>
+        <p class="subheading">Pesan</p>
+        <button id="openPopupButton">
+            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
+
+        <!-- Popup -->
+        <div id="popup"
+            class="cursor-pointer absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b  w-full py-2 popup-item">
+                <p>Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2 popup-item">
+                <p>Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex items-center gap-2 bg-grey rounded-lg p-2 mb-4">
+        <!-- Search Icon -->
+        <img src="../../assets/svg/search-icon.svg" alt="Search Icon" class="w-5 h-5">
+        <!-- Input field -->
+        <input placeholder="Cari pesan" type="text" class="bg-transparent border-none outline-none p-1 text-black">
+    </div>
+
+    <div class="flex gap-3 mb-10">
+        <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active" id="semua">
+            <p class="subtext text-white">All</p>
+        </div>
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="peminjaman">
+            <p class="subtext text-dark-grey">Unread 10</p>
+        </div>
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="laporan">
+            <p class="subtext text-dark-grey">Favourites</p>
+        </div>
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="stok">
+            <p class="subtext text-dark-grey">Groups</p>
+        </div>
+    </div>
+
+    <div class="chat-conteiner flex flex-col gap-5">
+        <a href="chat_detail_chat.html">
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-3 items-center">
+                    <h1 class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center">P
+                    </h1>
+                    <div class="flex flex-col ">
+                        <div class="flex gap-2 items-center justify-between">
+                            <h1 class="text-blue medium-heading font-bold">Pemrograman Lanjut</h1>
+                            <div class="flex gap-2 items-center">
+                                <p class="xsmall-text">10.00</p>
+                                <div class="w-1 h-1 bg-blue  rounded-full"></div>
+                            </div>
+                        </div>
+                        <p class="subtext">Nanang Yudi Setiawan: Selamat siang...</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="chat_detail_chat.html">
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-3 items-center">
+                    <h1 class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center">D
+                    </h1>
+                    <div class="flex flex-col ">
+                        <div class="flex gap-2 items-center justify-between">
+                            <h1 class="text-blue medium-heading font-bold">Dr. Himawat Aryadita...</h1>
+                            <div class="flex gap-2 items-center">
+                                <p class="xsmall-text">10.00</p>
+                                <div class="w-1 h-1 bg-blue  rounded-full"></div>
+                            </div>
+                        </div>
+                        <p class="subtext">Tidak ada kompensasi untuk keterlambat..</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="chat_detail_chat.html">
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-3 items-center">
+                    <h1 class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center">M
+                    </h1>
+                    <div class="flex flex-col ">
+                        <div class="flex gap-2 items-center justify-between">
+                            <h1 class="text-blue medium-heading font-bold">Muhammad Irza Dzulh...</h1>
+                            <div class="flex gap-2 items-center">
+                                <p class="xsmall-text">10.00</p>
+                                <div class="w-1 h-1 bg-blue  rounded-full"></div>
+                            </div>
+                        </div>
+                        <p class="subtext">Tidak ada kompensasi untuk keterlambat..</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0 bg-blue py-2">
+        <a href="#">
+            <button class="cursor-pointer flex flex-col items-center text-white">
+                <img src="../../assets/svg/home-icon.svg" alt="" />
+                <p>Beranda</p>
+            </button>
+        </a>
+        <a href="#">
+            <button class="cursor-pointer flex flex-col items-center text-white">
+                <img src="../../assets/svg/classes-icon.svg" alt="" />
+                <p>Kelas</p>
+            </button>
+        </a>
+        <a href="chat.html">
+            <button class="cursor-pointer flex flex-col items-center text-orange-pastel">
+                <img src="../../assets/svg/chat-active-icon.svg" alt="" />
+                <p>Pesan</p>
+            </button>
+        </a>
+        <a href="profile.html">
+            <button class="cursor-pointer flex flex-col items-center text-white">
+                <img src="../../assets/svg/profile-icon.svg" alt="" />
+                <p>Profil</p>
+            </button>
+        </a>
+    </nav>
+
+
+    <script src="../../scripts/pesan.js"></script>
+</body>
+
+</html>
