@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menubutton");
-  const menuModal = document.getElementById("menumodal");
-  const daftarButton = document.getElementById("daftarasprakbutton");
+  const menuBtn = document.getElementById("menuButton");
+  const menuModal = document.getElementById("menuModal");
+  const daftarButton = document.getElementById("daftarAsprakButton");
 
   menuBtn.addEventListener("click", () => {
     menuModal.classList.toggle("hidden");

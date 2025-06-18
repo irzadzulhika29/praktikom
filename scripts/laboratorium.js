@@ -1,5 +1,5 @@
 // Popup
-const openPopupButton = document.getElementById("openPopupButton");
+const openPopupButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 

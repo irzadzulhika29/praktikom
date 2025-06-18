@@ -1,5 +1,5 @@
 // Popup
-const openPopupButton = document.getElementById("filterbutton");
+const openPopupButton = document.getElementById("filterButton");
 const popup = document.getElementById("popup");
 const itemPopups = document.querySelectorAll(".item-popup");
 
@@ -16,5 +16,4 @@ if (openPopupButton && popup) {
     });
   });
 }
-
 

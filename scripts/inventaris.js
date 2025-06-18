@@ -21,7 +21,7 @@ categories.forEach(function (category) {
 });
 
 // Popup
-const openPopupButton = document.getElementById("morebutton");
+const openPopupButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 
@@ -40,10 +40,10 @@ if (openPopupButton && popup) {
 }
 
 // Dropdown
-const dropdownButton = document.getElementById("dropdownbutton");
-const dropdownMenu = document.getElementById("dropdownmenu");
-const dropdownIcon = document.getElementById("dropdownicon");
-const dropdownText = document.getElementById("dropdowntext");
+const dropdownButton = document.getElementById("dropdownButton");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const dropdownIcon = document.getElementById("dropdownIcon");
+const dropdownText = document.getElementById("dropdownText");
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 
 // Menambahkan event listener untuk tombol klik membuka atau menutup dropdown
@@ -70,11 +70,11 @@ dropdownItems.forEach((item) => {
 
 // Pop up 1 Confirmation
 const openPopupConfirmationButton = document.getElementById(
-  "confirmationbutton"
+  "confirmationButton"
 );
-const popupConfirmation = document.getElementById("confirmationpopup");
+const popupConfirmation = document.getElementById("confirmationPopup");
 const closePopupConfirmationButton = document.getElementById(
-  "closepopup"
+  "closePopup"
 );
 // Menambahkan event listener untuk membuka popup
 openPopupConfirmationButton.addEventListener("click", function () {

@@ -1,5 +1,5 @@
 // popup
-const openPopupButton = document.getElementById("morebutton");
+const openPopupButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 
@@ -19,10 +19,10 @@ if (openPopupButton && popup) {
 
 
 // dropdown
-const dropdownButton = document.getElementById("dropdownbutton");
-const dropdownMenu = document.getElementById("dropdownmenu");
-const dropdownText = document.getElementById("dropdowntext");
-const dropdownIcon = document.getElementById("dropdownicon");
+const dropdownButton = document.getElementById("dropdownButton");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const dropdownText = document.getElementById("dropdownText");
+const dropdownIcon = document.getElementById("dropdownIcon");
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 
 dropdownButton.addEventListener("click", function() {

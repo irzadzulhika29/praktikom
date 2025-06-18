@@ -1,5 +1,5 @@
 // Popup
-const moreButton = document.getElementById("morebutton");
+const moreButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 
@@ -26,10 +26,10 @@ if (moreButton && popup) {
 }
 
 // Dropdown - Periksa apakah elemen ada sebelum menambahkan event listener
-const dropdownButton = document.getElementById("dropdownbutton");
-const dropdownMenu = document.getElementById("dropdownmenu");
-const dropdownText = document.getElementById("dropdowntext");
-const dropdownIcon = document.getElementById("dropdownicon");
+const dropdownButton = document.getElementById("dropdownButton");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const dropdownText = document.getElementById("dropdownText");
+const dropdownIcon = document.getElementById("dropdownIcon");
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 
 if (dropdownButton && dropdownMenu) {
@@ -74,9 +74,9 @@ if (dropdownButton && dropdownMenu) {
 }
 
 // Pop up Confirmation
-const confirmationButton = document.getElementById("confirmationbutton");
-const confirmationPopup = document.getElementById("confirmationpopup");
-const closePopupButton = document.getElementById("closepopup");
+const confirmationButton = document.getElementById("confirmationButton");
+const confirmationPopup = document.getElementById("confirmationPopup");
+const closePopupButton = document.getElementById("closePopup");
 
 // Periksa apakah elemen ada sebelum menambahkan event listener
 if (confirmationButton && confirmationPopup) {

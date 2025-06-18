@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const leftTab = document.getElementById("pengajuantab");
-  const rightTab = document.getElementById("riwayattab");
-  const leftContent = document.getElementById("pengajuancontent");
-  const rightContent = document.getElementById("riwayatcontent");
+  const leftTab = document.getElementById("pengajuanTab");
+  const rightTab = document.getElementById("riwayatTab");
+  const leftContent = document.getElementById("pengajuanContent");
+  const rightContent = document.getElementById("riwayatContent");
 
   // Function to switch tabs
   function switchTab(activeTab, inactiveTab, activeContent, inactiveContent) {
@@ -57,7 +57,7 @@ categories.forEach(function (category) {
 });
 
 // Popup
-const openPopupButton = document.getElementById("morebutton");
+const openPopupButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 
@@ -75,10 +75,10 @@ if (openPopupButton && popup) {
   });
 }
 
-const rejectButton = document.getElementById("rejectbutton");
-const acceptButton = document.getElementById("acceptbutton"); // Tombol Terima dengan ID
-const acceptPopup = document.getElementById("acceptpopup");
-const rejectPopup = document.getElementById("rejectpopup");
+const rejectButton = document.getElementById("rejectButton");
+const acceptButton = document.getElementById("acceptButton"); // Tombol Terima dengan ID
+const acceptPopup = document.getElementById("acceptPopup");
+const rejectPopup = document.getElementById("rejectPopup");
 const closeAcceptButton = acceptPopup.querySelector(".close-button"); // Tombol Kirim pada popup diterima
 const closeRejectButton = rejectPopup.querySelector(".close-button"); // Tombol Kirim pada popup ditolak
 
