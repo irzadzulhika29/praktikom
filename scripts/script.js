@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-
   // Tab Switching
   const leftTab = document.getElementById("left-tab");
   const rightTab = document.getElementById("right-tab");

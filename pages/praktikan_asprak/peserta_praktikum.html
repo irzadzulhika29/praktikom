@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peserta Praktikum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="bg-white p-6 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-6 py-4 z-10"
+    >
+      <a href="detail_class.html">
+        <img src="../../assets/svg/chevron-left-icon.svg" alt="Back" />
+      </a>
+      <h1 class="text-lg font-medium text-blue truncate w-2/3 text-center">
+        (C) Perancangan Pengalaman Pengguna
+      </h1>
+      <img src="../../assets/svg/dots-icon.svg" alt="dots" />
+    </header>
+
+    <!-- Main Content -->
+    <main class="mt-20 space-y-6">
+      <!-- Dosen Pengampu -->
+      <section>
+        <h2 class="text-lg font-semibold mb-2">Dosen Pengampu</h2>
+        <hr class="border-t-1 border-black mb-2" />
+        <div class="flex items-center space-x-3 mb-2">
+          <img
+            src="../../assets/img/foto-profile.png"
+            class="w-10 h-10 rounded-full"
+            alt="avatar"
+          />
+          <div>
+            <p class="text-sm font-medium">Muhammad Irza Dzulhika</p>
+            <p class="text-xs text-gray-500">235150401111</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Asisten Praktikum -->
+      <section>
+        <h2 class="text-lg font-semibold mb-2">Asisten Praktikum</h2>
+        <hr class="border-t-1 border-black mb-2" />
+        <div class="space-y-2">
+          <div class="flex items-center space-x-3">
+            <img
+              src="../../assets/img/foto-profile.png"
+              class="w-10 h-10 rounded-full"
+              alt="avatar"
+            />
+            <div>
+              <p class="text-sm font-medium">Muhammad Irza Dzulhika</p>
+              <p class="text-xs text-gray-500">235150401111</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              src="../../assets/img/foto-profile.png"
+              class="w-10 h-10 rounded-full"
+              alt="avatar"
+            />
+            <div>
+              <p class="text-sm font-medium">Muhammad Irza Dzulhika</p>
+              <p class="text-xs text-gray-500">235150401111</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Praktikan -->
+      <section>
+        <h2 class="text-lg font-semibold mb-2">Mahasiswa Praktikan</h2>
+        <hr class="border-t-1 border-black mb-2" />
+        <div class="space-y-2">
+          <div class="flex items-center space-x-3">
+            <img
+              src="../../assets/img/foto-profile.png"
+              class="w-10 h-10 rounded-full"
+              alt="avatar"
+            />
+            <div>
+              <p class="text-sm font-medium">Muhammad Irza Dzulhika</p>
+              <p class="text-xs text-gray-500">235150401111</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              src="../../assets/img/foto-profile.png"
+              class="w-10 h-10 rounded-full"
+              alt="avatar"
+            />
+            <div>
+              <p class="text-sm font-medium">Muhammad Irza Dzulhika</p>
+              <p class="text-xs text-gray-500">235150401111</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              src="../../assets/img/foto-profile.png"
+              class="w-10 h-10 rounded-full"
+              alt="avatar"
+            />
+            <div>
+              <p class="text-sm font-medium">Muhammad Irza Dzulhika</p>
+              <p class="text-xs text-gray-500">235150401111</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              src="../../assets/img/foto-profile.png"
+              class="w-10 h-10 rounded-full"
+              alt="avatar"
+            />
+            <div>
+              <p class="text-sm font-medium">Muhammad Irza Dzulhika</p>
+              <p class="text-xs text-gray-500">235150401111</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- nav -->
+    <nav
+      class="fixed bottom-0 left-0 right-0 bg-blue px-10 py-2 flex justify-between text-white"
+    >
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('forum')"
+      >
+        <img src="../../assets/svg/forum-icon.svg" alt="Forum" />
+        <p class="text-white">Forum</p>
+      </button>
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('penugasan')"
+      >
+        <img src="../../assets/svg/classwork-icon.svg" alt="Penugasan" />
+        <p>Penugasan</p>
+      </button>
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('peserta')"
+      >
+        <img src="../../assets/svg/people-active-icon.svg" alt="Peserta" />
+        <p class="text-orange-pastel">Peserta</p>
+      </button>
+    </nav>
+
+    <script src="../../scripts/peserta_praktikum.js"></script>
+  </body>
+</html>

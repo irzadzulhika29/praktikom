@@ -1,6 +1,6 @@
 // Fungsi untuk menangani klik tombol notifikasi
 function handleNotificationClick() {
-  window.location.href = "notifikasi.html"; // Arahkan ke halaman notifikasi
+  window.location.href = "notifikasi_praktikan.html";
 }
 
 // Fungsi untuk menangani klik tab "My Classes" atau "Teaching"
@@ -15,10 +15,10 @@ function handleTabClick(tabName) {
   // Kelas dasar untuk tab (status tidak aktif)
   const inactiveTabClasses = [
     "text-gray-600",
-    "hover:bg-gray-300",
+    "hover:bg-grey",
     "bg-transparent",
   ];
-  const activeTabClasses = ["bg-gray-700", "text-white"]; // Kelas untuk tab aktif
+  const activeTabClasses = ["bg-blue", "text-white"]; // Kelas untuk tab aktif
 
   if (tabName === "myClasses") {
     classListSection.classList.remove("hidden");
@@ -41,33 +41,17 @@ function handleTabClick(tabName) {
   }
 }
 
-// Fungsi untuk menangani klik pada kartu kelas
-function handleCardClick(cardNumber) {
-  console.log("Kartu kelas " + cardNumber + " diklik");
-  window.location.href = "detail_class.html"; // Arahkan ke halaman detail kelas
-}
-
-// Fungsi placeholder untuk menangani klik opsi lainnya pada kartu kelas
-function handleMoreOptionsClick(cardNumber) {
-  console.log("Opsi lainnya untuk kartu " + cardNumber + " diklik");
-  // event.stopPropagation(); // Sudah ada di HTML
-}
-
 // Fungsi untuk menangani navigasi dari bottom navigation bar
 function handleNavClick(pageName) {
-  if (pageName === "home") {
-    window.location.href = "home.html";
-  } else if (pageName === "class") {
-    // Sudah di halaman Classes
-    console.log("Sudah di halaman Classes.");
-  } else if (pageName === "chat") {
+  if (pageName === "beranda") {
+    window.location.href = "home_praktikan.html";
+  } else if (pageName === "kelas") {
+    window.location.href = "class.html";
+  } else if (pageName === "pesan") {
     window.location.href = "chat.html";
+  } else if (pageName === "profile") {
+    window.location.href = "profile.html";
   }
-}
-
-// Fungsi untuk menangani klik tombol profil
-function handleProfileClick() {
-  window.location.href = "profile.html";
 }
 
 // Fungsi untuk membuat progress ring (lingkaran progres)
@@ -109,6 +93,12 @@ function createProgressRing(percentage, colorCode = "#FF6823") {
 document.addEventListener("DOMContentLoaded", function () {
   // Inisialisasi progress ring untuk setiap kartu kelas
   const card1Progress = document.getElementById("classCard1ProgressContainer");
+  document.querySelectorAll(".class-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      window.location.href = "detail_class.html";
+    });
+  });
+
   if (card1Progress) {
     card1Progress.innerHTML = createProgressRing(70); // Contoh persentase
   }
@@ -120,7 +110,5 @@ document.addEventListener("DOMContentLoaded", function () {
   if (card3Progress) {
     card3Progress.innerHTML = createProgressRing(30); // Contoh persentase
   }
-
-  // Atur tab "My Classes" sebagai aktif secara default
   handleTabClick("myClasses");
 });

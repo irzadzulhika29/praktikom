@@ -1,8 +1,3 @@
-// Fungsi placeholder untuk opsi "lebih banyak" pada header
-function handleMoreClassOptions() {
-  console.log("Tombol opsi lainnya diklik");
-}
-
 // Fungsi untuk toggle informasi umum
 function toggleGeneralInfo() {
   const content = document.getElementById("informasiUmumContent");
@@ -11,20 +6,14 @@ function toggleGeneralInfo() {
   iconSvg.classList.toggle("rotate-90");
 }
 
-// Fungsi untuk navigasi ke halaman detail material saat modul diklik
-function handleModuleClick(moduleIdentifier) {
-  window.location.href =
-    "classmaterial_Page.html?module=" + encodeURIComponent(moduleIdentifier);
-}
-
 // Fungsi untuk menangani navigasi dari bottom navigation bar
 function handleNavClick(pageName) {
-  if (pageName === "classwork") {
-    window.location.href = "classwork_Page.html";
-  } else if (pageName === "people") {
-    window.location.href = "people_Page.html";
-  } else if (pageName === "stream") {
-    console.log("Sudah di halaman Stream/Detail Kelas.");
+  if (pageName === "penugasan") {
+    window.location.href = "penugasan_praktikum.html";
+  } else if (pageName === "peserta") {
+    window.location.href = "peserta_praktikum.html";
+  } else if (pageName === "forum") {
+    window.location.href = "detail_class.html";
   }
 }
 
@@ -81,9 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   if (progressContainer) {
     progressContainer.innerHTML = createProgressRing(70);
+    updatePresensiBar(100);
   }
 
-  updatePresensiBar(100);
   const infoContent = document.getElementById("informasiUmumContent");
   const infoIcon = document.getElementById("informasiUmumIcon");
   if (infoContent && infoIcon) {
@@ -93,5 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       infoIcon.classList.add("rotate-0");
     }
+  }
+
+  const modul = document.getElementById("modul");
+  if (modul) {
+    modul.addEventListener("click", function () {
+      window.location.href = "detail_modul.html";
+    });
   }
 });

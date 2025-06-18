@@ -58,7 +58,7 @@
           </button>
           <button
             id="teachingTabButton"
-            class="flex-1 py-2 px-4 text-sm font-medium text-gray-600 bg-transparent rounded-md hover:bg-gray-300 focus:outline-none"
+            class="flex-1 py-2 px-4 text-sm font-medium text-gray-600 bg-transparent rounded-md focus:outline-none"
             onclick="handleTabClick('teaching')"
           >
             Teaching
@@ -69,8 +69,7 @@
       <div id="classViewContainer" class="px-4 mt-6">
         <section id="classListSection" class="space-y-4">
           <div
-            class="flex items-center justify-between p-4 space-x-3 bg-white border border-gray-200 rounded-xl shadow-sm cursor-pointer hover:shadow-md active:shadow-sm transition-shadow"
-            onclick="handleCardClick(1)"
+            class="flex items-center justify-between p-4 space-x-3 bg-white border border-gray-200 rounded-xl shadow-sm cursor-pointer hover:shadow-md active:shadow-sm transition-shadow class-card"
           >
             <div
               class="flex-grow min-w-0 flex flex-col self-stretch justify-between"
@@ -95,8 +94,7 @@
           </div>
 
           <div
-            class="flex items-center justify-between p-4 space-x-3 bg-white border border-gray-200 rounded-xl shadow-sm cursor-pointer hover:shadow-md active:shadow-sm transition-shadow"
-            onclick="handleCardClick(2)"
+            class="flex items-center justify-between p-4 space-x-3 bg-white border border-gray-200 rounded-xl shadow-sm cursor-pointer hover:shadow-md active:shadow-sm transition-shadow class-card"
           >
             <div
               class="flex-grow min-w-0 flex flex-col self-stretch justify-between"
@@ -119,32 +117,6 @@
               <div id="classCard2ProgressContainer"></div>
             </div>
           </div>
-
-          <div
-            class="flex items-center justify-between p-4 space-x-3 bg-white border border-gray-200 rounded-xl shadow-sm cursor-pointer hover:shadow-md active:shadow-sm transition-shadow"
-            onclick="handleCardClick(3)"
-          >
-            <div
-              class="flex-grow min-w-0 flex flex-col self-stretch justify-between"
-            >
-              <h3 class="text-md font-semibold text-gray-800">
-                (C) Perancangan Pengalaman Pengguna
-              </h3>
-              <p class="text-xs text-gray-500">
-                Senin (07.00 - 08.40) <span class="mx-1">•</span> Gedung F
-                FILKOM F4.10
-              </p>
-            </div>
-            <div class="flex-shrink-0 flex flex-col items-end space-y-2">
-              <button
-                class="p-1 rounded-full text-gray-400 hover:bg-gray-100"
-                onclick="event.stopPropagation(); handleMoreOptionsClick(3)"
-              >
-                <img src="../../assets/svg/dots-icon.svg" alt="" />
-              </button>
-              <div id="classCard3ProgressContainer"></div>
-            </div>
-          </div>
         </section>
 
         <section
@@ -163,19 +135,31 @@
     <nav
       class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0 bg-blue py-2"
     >
-      <button class="flex flex-col items-center text-white">
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('beranda')"
+      >
         <img src="../../assets/svg/home-icon.svg" alt="" />
         <p>Beranda</p>
       </button>
-      <button class="flex flex-col items-center text-orange-pastel">
+      <button
+        class="flex flex-col items-center text-orange-pastel"
+        onclick="handleNavClick('kelas')"
+      >
         <img src="../../assets/svg/classes-active-icon.svg" alt="" />
         <p>Kelas</p>
       </button>
-      <button class="flex flex-col items-center text-white">
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('pesan')"
+      >
         <img src="../../assets/svg/chat-icon.svg" alt="" />
         <p>Pesan</p>
       </button>
-      <button class="flex flex-col items-center text-white">
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('profile')"
+      >
         <img src="../../assets/svg/profile-icon.svg" alt="" />
         <p>Profil</p>
       </button>

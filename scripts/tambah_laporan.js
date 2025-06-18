@@ -17,12 +17,6 @@ if (openPopupButton && popup) {
   });
 }
 
-// Back Button
-const backButton = document.getElementById("backButton");
-backButton.addEventListener("click", function () {
-  window.history.back(); // Membawa pengguna ke halaman sebelumnya
-});
-
 // Pop up 1 Confirmation
 const openPopupConfirmationButton = document.getElementById(
   "open-popup-confirmation"
@@ -40,4 +34,10 @@ openPopupConfirmationButton.addEventListener("click", function () {
 // Menambahkan event listener untuk menutup popup
 closePopupConfirmationButton.addEventListener("click", function () {
   popupConfirmation.classList.add("hidden"); // Menyembunyikan popup
+});
+
+// Back Button
+const backButton = document.getElementById("backButton");
+backButton.addEventListener("click", function () {
+  window.history.back(); // Membawa pengguna ke halaman sebelumnya
 });

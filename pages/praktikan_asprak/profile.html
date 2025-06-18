@@ -13,14 +13,14 @@
     <div class="flex items-center justify-between px-4 pt-6 text-white">
       <div class="w-5 h-5"></div>
       <h1 class="text-lg font-semibold">Profile</h1>
-      <button id="menu-button">
+      <button id="menuButton">
         <img src="../../assets/svg/dots-white-icon.svg" alt="" />
       </button>
     </div>
 
     <!-- Modal Menu -->
     <div
-      id="menu-modal"
+      id="menuModal"
       class="hidden absolute top-16 right-4 bg-white rounded-lg shadow-md py-2 px-4 text-sm text-gray-800 z-50"
     >
       <button class="block w-full text-left py-1">Pusat bantuan</button>
@@ -84,19 +84,31 @@
     <nav
       class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0 bg-blue py-2"
     >
-      <button class="flex flex-col items-center text-white">
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('beranda')"
+      >
         <img src="../../assets/svg/home-icon.svg" alt="" />
         <p>Beranda</p>
       </button>
-      <button class="flex flex-col items-center text-white">
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('kelas')"
+      >
         <img src="../../assets/svg/classes-icon.svg" alt="" />
         <p>Kelas</p>
       </button>
-      <button class="flex flex-col items-center text-white">
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('pesan')"
+      >
         <img src="../../assets/svg/chat-icon.svg" alt="" />
         <p>Pesan</p>
       </button>
-      <button class="flex flex-col items-center text-orange-pastel">
+      <button
+        class="flex flex-col items-center text-orange-pastel"
+        onclick="handleNavClick('profile')"
+      >
         <img src="../../assets/svg/profile-active-icon.svg" alt="" />
         <p>Profil</p>
       </button>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modul Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="bg-white p-4">
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-6 py-4 z-10"
+    >
+      <a href="detail_class.html">
+        <img src="../../assets/svg/chevron-left-icon.svg" alt="Back" />
+      </a>
+      <h1 class="text-lg font-medium text-blue truncate w-2/3 text-center">
+        Modul 05: Business Plan
+      </h1>
+      <img src="../../assets/svg/dots-icon.svg" alt="dots" />
+    </header>
+
+    <!-- Material Description -->
+    <section class="mt-20 space-y-3">
+      <div class="flex items-center gap-2">
+        <img
+          src="../../assets/svg/informasi-umum-icon.svg"
+          alt="icon"
+          id="informasiUmumIcon"
+          class="rotate-90"
+        />
+        <h2 class="font-semibold text-black">Material description</h2>
+      </div>
+      <p class="text-sm text-gray-600">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        pretium tristique nibh, ac ultrices urna vulputate ut.
+      </p>
+
+      <!-- Tab Switch -->
+      <div class="px-2 mt-6">
+        <div class="flex p-1 bg-grey rounded-lg">
+          <button
+            id="buttonMaterial"
+            class="flex-1 py-2 px-4 text-sm font-medium text-white bg-blue rounded-md focus:outline-none"
+            onclick="handleTabClick('material')"
+          >
+            Material
+          </button>
+          <button
+            id="buttonAssignment"
+            class="flex-1 py-2 px-4 text-sm font-medium text-gray-600 bg-transparent rounded-md focus:outline-none"
+            onclick="handleTabClick('assignment')"
+          >
+            Assignment
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Material Tab -->
+    <section id="tabMaterial" class="mt-4 space-y-4">
+      <div>
+        <h3 class="font-semibold text-black">Video Penjelasan</h3>
+        <div
+          class="w-full aspect-video bg-gray-300 flex items-center justify-center"
+        >
+          <span class="text-3xl">▶</span>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-black">Penjelasan Singkat</h3>
+        <p class="text-sm text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
+          eros euismod...
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-black">Attachment</h3>
+        <div class="flex gap-4 mt-2">
+          <div class="w-36">
+            <div class="w-36 h-20 bg-gray-300 rounded-lg"></div>
+            <div class="flex justify-between">
+              <div class="flex items-center justify-center">
+                <img src="../../assets/svg/file-icon.svg" alt="file" />
+                <p class="text-xs">Tamplete.docs</p>
+              </div>
+              <img src="../../assets/svg/dots-icon.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="w-36">
+            <div class="w-36 h-20 bg-gray-300 rounded-lg"></div>
+            <div class="flex justify-between">
+              <div class="flex items-center justify-center">
+                <img src="../../assets/svg/file-icon.svg" alt="file" />
+                <p class="text-xs">Tamplete.docs</p>
+              </div>
+              <img src="../../assets/svg/dots-icon.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assignment Tab -->
+    <section id="tabAssignment" class="mt-4 space-y-4 hidden">
+      <div>
+        <p class="text-sm text-gray-500">Due May 19, 11:59 PM</p>
+        <h3 class="text-base font-semibold text-black">
+          Project Akhir: Proposal Business Plan
+        </h3>
+        <p class="text-xs font-bold">100 points</p>
+      </div>
+      <p class="text-sm text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu eros
+        euismod...
+      </p>
+
+      <div>
+        <h3 class="font-semibold text-black">Attachment</h3>
+        <div class="mt-2 w-36">
+          <div class="w-36 h-20 bg-gray-300 rounded-lg"></div>
+          <div class="flex justify-between">
+            <div class="flex items-center justify-center">
+              <img src="../../assets/svg/file-icon.svg" alt="file" />
+              <p class="text-xs">Tamplete.docs</p>
+            </div>
+            <img src="../../assets/svg/dots-icon.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="fixed bottom-0 left-0 right-0 px-8 py-2 text-white p-4 bg-white rounded-t-3xl shadow border"
+      >
+        <div class="flex mt-4 justify-between">
+          <h3 class="font-semibold text-black">Your Work</h3>
+          <p class="text-sm text-red-600 font-medium" id="status">Missing</p>
+        </div>
+        <!-- Tempat file yang diunggah akan muncul -->
+        <div id="uploadedFiles" class="mt-2 space-y-2"></div>
+
+        <input
+          type="file"
+          id="fileInput"
+          class="hidden"
+          onchange="handleFileUpload(event)"
+        />
+        <button
+          class="mt-4 w-full py-3 px-16 rounded-full bg-gradient-blue text-white"
+          onclick="document.getElementById('fileInput').click()"
+          id="buttonUploadFile"
+        >
+          + Tambah File
+        </button>
+        <button
+          class="mt-4 w-full py-3 px-16 rounded-full bg-gradient-blue text-white"
+          id="buttonSubmitAssignment"
+        >
+          Tandai sebagai selesai
+        </button>
+      </div>
+    </section>
+
+    <!-- Script -->
+    <script src="../../scripts/detail_modul.js"></script>
+  </body>
+</html>
