@@ -17,3 +17,12 @@ if (openPopupButton && popup) {
   });
 }
 
+function handleNavClick(pageName) {
+  if (pageName === "beranda_laboran") {
+    window.location.href = "home_laboran.html";
+  } else if (pageName === "laboratorium") {
+    window.location.href = "laboratorium.html";
+  } else if (pageName === "profile") {
+    window.location.href = "profile_laboran.html";
+  }
+}
