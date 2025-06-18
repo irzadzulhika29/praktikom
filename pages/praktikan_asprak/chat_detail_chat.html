@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Praktikom</title>
+    <title>Detail Chat</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 
 <body class="w-screen relative">
+    <!-- header -->
     <header class="flex justify-between items-center w-full  relative px-6 pt-6 pb-5">
-        <a href="chat.html">
-            <button> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
-        </a>
+        <a href="chat.html"> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg"
+                alt=""></a>
         <div class="flex flex-col gap-2">
             <div class="flex gap-3 items-center">
                 <h1 class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center">M</h1>
@@ -30,17 +31,17 @@
         </button>
     </header>
 
+    <!-- pembatas -->
     <hr class="border-">
 
-    <!-- Chat Container -->
+    <!-- chat container -->
     <div>
-
         <div class="flex flex-col gap-2 w-full p-6 justify-center items-center">
             <p class="inline-block text-center xsmall-text  bg-blue w-16 py-1 text-white rounded-full">Hari ini</p>
         </div>
 
-        <!-- item chat -->
-        <div class="item-chat mb-5">
+        <!-- bubble chat -->
+        <div class="bubble-chat mb-5">
             <div class="flex gap-3 justify-start items-start px-6 mb-2">
                 <div class="w-12 "></div>
                 <div class="space-x-3 xsmall-text flex">
@@ -56,8 +57,8 @@
             </div>
         </div>
 
-        <!-- item chat -->
-        <div class="item-chat mb-5">
+        <!-- bubble chat -->
+        <div class="bubble-chat mb-5">
             <div class="flex flex-row-reverse justify-start gap-3 px-6 mb-2">
                 <div class="w-12 "></div>
                 <div class="space-x-3 xsmall-text flex ">
@@ -72,8 +73,8 @@
             </div>
         </div>
 
-        <!-- item chat -->
-        <div class="item-chat mb-5">
+        <!-- bubble chat -->
+        <div class="bubble-chat mb-5">
             <div class="flex gap-3 justify-start items-start px-6 mb-2">
                 <div class="w-12 "></div>
                 <div class="space-x-3 xsmall-text flex">
@@ -89,8 +90,8 @@
             </div>
         </div>
 
-        <!-- item chat -->
-        <div class="item-chat mb-5">
+        <!-- bubble chat -->
+        <div class="bubble-chat mb-5">
             <div class="flex flex-row-reverse justify-start gap-3 px-6 mb-2">
                 <div class="w-12 "></div>
                 <div class="space-x-3 xsmall-text flex ">
@@ -106,8 +107,8 @@
             </div>
         </div>
 
-        <!-- item chat -->
-        <div class="item-chat mb-5">
+        <!-- bubble chat -->
+        <div class="bubble-chat mb-5">
             <div class="flex gap-3 justify-start items-start px-6 mb-2">
                 <div class="w-12 "></div>
                 <div class="space-x-3 xsmall-text flex">
@@ -124,20 +125,27 @@
         </div>
     </div>
 
+    <!-- Input chat -->
     <div class="fixed bottom-0 w-full border-t-2 border-grey">
         <div class="p-6 flex items-center justify-between gap-3">
-            <img src="../../assets/svg/plus-icon.svg" alt="Send Icon" class="w-5 h-5">
+            <!-- Input file dengan ikon sebagai tombol -->
+            <label for="file-input" class="cursor-pointer ">
+                <img src="../../assets/svg/plus-icon.svg" alt="Send Icon" class="w-5 h-5">
+                <input type="file" id="file-input" class="hidden" />
+            </label>
+
             <div class="flex items-center gap-2 border-2 border-grey rounded-full w-full py-2 px-4">
                 <!-- Input field -->
-                <input placeholder="Masukkan teks" type="text" class="subtext border-none outline-none p-1 text-black">
+                <input placeholder="Masukkan teks" type="text"
+                    class="regular-text w-full border-none outline-none p-1 text-black">
             </div>
-            <img src="../../assets/svg/mic-icon.svg" alt="Send Icon" class="w-5 h-5">
+            <img src="../../assets/svg/mic-icon.svg" alt="Send Icon" class="cursor-pointer w-5 h-5">
         </div>
     </div>
 
 
-
-    <script src="../../scripts/jadwal_laboratorium.js"></script>
+    <!-- Custom JS -->
+    <script src="../../scripts/chat.js"></script>
 </body>
 
 </html>

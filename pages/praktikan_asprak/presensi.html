@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presensi</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-6 w-screen relative">
+    <!-- header -->
+    <header class="flex justify-between items-center w-full mb-5 relative ">
+        <a href="home_praktikan.html">
+            <button> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        </a>
+        <p class="subheading">Presensi</p>
+        <button id="moreButton">
+            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="flex flex-col gap-2 px-5">
+        <h1 class="font-bold">Jenis Jadwal</h1>
+        <!-- dropdown -->
+        <div class='flex flex-col relative border border-grey rounded-lg p-3'>
+            <div id="dropdownButton" class='cursor-pointer flex justify-between items-center w-full'>
+                <p id="dropdownText" class='regular-text text-blue'>Berjalan</p>
+                <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+                    class='w-6 h-6 transition-transform duration-300 transform'>
+            </div>
+            <!-- Dropdown menu -->
+            <div id="dropdownMenu"
+                class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
+                <ul class="space-y-2 p-3">
+                    <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Berjalan</li>
+                    <hr>
+                    <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Terlewat</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border  border-blue my-5">
+
+    <!-- presensi -->
+    <div class="flex flex-col gap-3">
+
+        <!-- jadwal presensi -->
+        <div class="border-2 space-y-3 border-sky rounded-lg p-3">
+            <h1 class="text-center text-blue">(K) Pemrograman Web</h1>
+            <hr class="mt-3">
+            <div>
+                <div class="bg-blue text-white rounded-t-lg px-3 p-2">
+                    <p class="py-3 text-center">Sub Capaian Pembelajaran: JQuery</p>
+                </div>
+                <div class="bg-grey h-18">
+                    <p class="text-center py-3">catatan:</p>
+                </div>
+                <div class="bg-blue text-white rounded-b-lg p-3">
+                    <p class="subtext text-center italic">Presensi berakhir pada 05-05-2025 23:59</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between gap-3">
+                <button class="flex-1 bg-grey rounded-full px-3 py-2 btn-status">
+                    Izin
+                </button>
+                <button class="flex-1 bg-grey rounded-full px-3 py-2 btn-status">
+                    Sakit
+                </button>
+                <button class="flex-1 bg-grey rounded-full px-3 py-2 btn-status">
+                    Hadir
+                </button>
+            </div>
+        </div>
+        <div class="border-2 space-y-3 border-sky rounded-lg p-3">
+            <h1 class="text-center text-blue">(B) Perancangan Pengalaman Pengguna</h1>
+            <hr class="mt-3">
+            <div>
+                <div class="bg-blue text-white rounded-t-lg px-3 p-2">
+                    <p class="py-3 text-center">Sub Capaian Pembelajaran: UX Honeycomb</p>
+                </div>
+                <div class="bg-grey h-18">
+                    <p class="text-center py-3">catatan:</p>
+                </div>
+                <div class="bg-blue text-white rounded-b-lg p-3">
+                    <p class="subtext text-center italic">Status presensi: HADIR</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Custom JS -->
+    <script src="../../scripts/presensi.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,23 @@
-const categories = document.querySelectorAll(".item-category");
+const itemChat = document.querySelectorAll(".item-chat");
+itemChat.forEach((item) => {
+  item.addEventListener("click", () => {
+    window.location.href = "chat_detail_chat.html";
+  });
+});
 
+function handleNavClick(pageName) {
+  if (pageName === "beranda") {
+    window.location.href = "home_praktikan.html";
+  } else if (pageName === "kelas") {
+    window.location.href = "class.html";
+  } else if (pageName === "pesan") {
+    window.location.href = "chat.html";
+  } else if (pageName === "profile") {
+    window.location.href = "profile.html";
+  }
+}
+
+const categories = document.querySelectorAll(".item-category");
 categories.forEach(function (category) {
   category.addEventListener("click", function () {
     categories.forEach(function (cat) {
@@ -21,7 +39,7 @@ categories.forEach(function (category) {
 });
 
 // Popup
-const openPopupButton = document.getElementById("openPopupButton");
+const openPopupButton = document.getElementById("morebutton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 

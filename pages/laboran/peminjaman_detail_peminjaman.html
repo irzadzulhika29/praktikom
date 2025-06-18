@@ -12,27 +12,29 @@
 </head>
 
 <body class="p-6 w-screen relative h-screen ">
+    <!-- header -->
     <header class="flex justify-between items-center w-full mb-5 relative ">
         <a href="peminjaman.html">
             <button> <img class="w-8 h-8 cursor-pointer" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
         </a>
         <p class="subheading">Detail Peminjaman</p>
-        <button id="openPopupButton">
+        <button id="moreButton">
             <img class="w-8 h-8 cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
 
-       <!-- popup -->
-       <div id="popup"
-       class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
-       <div class="border-b w-full py-2">
-           <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
-       </div>
-       <div class="w-full py-2">
-           <p class="popup-item cursor-pointer">Laporkan Masalah</p>
-       </div>
-   </div>
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
     </header>
 
+    <!-- data peminjam -->
     <div class="mb-5 ">
         <h1 class="mb-5 subheading bold-text">Data peminjam</h1>
         <div class="space-y-4">
@@ -50,6 +52,8 @@
             </div>
         </div>
     </div>
+
+    <!-- data barang -->
     <div class="">
         <h1 class="mb-5  subheading bold-text">Data barang</h1>
         <div class="space-y-4">
@@ -65,7 +69,6 @@
                 <p class="xsmall-text">Tanggal peminjaman</p>
                 <h1 class="regular-text">05/05/2025</h1>
             </div>
-
             <div class="flex gap-5">
                 <div class="flex-1 border-b-2 pb-2">
                     <p class="xsmall-text">Tanggal peminjaman</p>
@@ -83,13 +86,15 @@
 
     <!-- tombol terima dan tolak -->
     <div class="flex justify-center gap-5 right-0 left-0 absolute bottom-10">
-        <button id="tolak-confirmation" class="cursor-pointer bg-orange text-white rounded-full w-32 px-4 py-2">Tolak</button>
-        <button id="terima-confirmation" class="cursor-pointer bg-gradient-blue text-white rounded-full w-32 px-4 py-2">Terima</button>
+        <button id="rejectButton"
+            class="cursor-pointer bg-orange text-white rounded-full w-32 px-4 py-2">Tolak</button>
+        <button id="acceptButton"
+            class="cursor-pointer bg-gradient-blue text-white rounded-full w-32 px-4 py-2">Terima</button>
     </div>
 
     <div>
         <!-- Popup Diterima -->
-        <div id="popup-diterima"
+        <div id="acceptPopup"
             class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
             <div class="flex flex-col justify-center items-center gap-5">
                 <h1 class="text-center font-bold subheading">Permohonan Peminjaman <br> Diterima</h1>
@@ -100,11 +105,11 @@
         </div>
 
         <!-- Popup Ditolak -->
-        <div id="popup-ditolak"
+                <div id="rejectPopup"
             class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
             <div class="flex flex-col justify-center items-center gap-5">
                 <h1 class="text-center font-bold subheading">Permohonan Peminjaman <br> Ditolak</h1>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Masukkan alasan ditolak"
+                <textarea cols="30" rows="10" placeholder="Masukkan alasan ditolak"
                     class="h-24 w-full border-2 border-grey rounded-lg p-2"></textarea>
                 <button
                     class="close-button cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3">Kirim</button>
@@ -112,9 +117,8 @@
         </div>
     </div>
 
-    <script src="../../scripts/detail_peminjaman.js"></script>
-
-
+    <!-- Custom JS -->
+    <script src="../../scripts/peminjaman.js"></script>
 </body>
 
 </html>

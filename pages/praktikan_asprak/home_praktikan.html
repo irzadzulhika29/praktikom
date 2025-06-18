@@ -1,37 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikom</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praktikom</title>
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../../style.css">
-  <!-- Tailwind CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <body class="p-6 w-screen relative">
+    <header class="flex justify-between mb-5 items-center w-full">
+      <div class="flex items-center">
+        <img
+          class="w-10 h-10"
+          src="../../assets/svg/praktikom2-icon.svg"
+          alt=""
+        />
+        <h1 class="text-blue semibold-heading">PRAKTIKOM</h1>
+      </div>
+      <a href="notifikasi_praktikan.html">
+        <button>
+          <img
+            class="w-6 h-6"
+            src="../../assets/svg/notification-icon.svg"
+            alt=""
+          />
+        </button>
+      </a>
+    </header>
 
-</head>
+    <div class="w-full h-42">
+      <img
+        class="rounded-xl w-full h-full object-cover"
+        src="../../assets/img/carousel3-img.png"
+        alt=""
+      />
+    </div>
 
-<body class="px-6 py-4 w-screen relative">
-<!-- Tombol untuk membuka popup -->
-<button id="openPopupButton" class="regular-text bg-gradient-blue rounded-full w-full text-white py-3">
-    Click
-</button>
+    <h1 class="relative my-3">
+      Halo, <span class="text-blue">Aryo Pinandito! </span>
+    </h1>
 
-<!-- Popup yang akan muncul -->
-<div id="popup"
-    class="h-64 gap-4 fixed flex flex-col items-center justify-center bottom-0 right-0 left-0 hidden w-full border-2 Z-100 border-grey rounded-t-3xl p-6">
-    <h1 class="medium-heading text-center text-blue">Status Laporan Berhasil Diperbarui</h1>
-    <img class="w-16 h-16" src="../../assets/svg/checklist-icon.svg" alt="">
-    <button id="closePopupButton" class="regular-text bg-gradient-blue rounded-full w-full text-white py-3">
-        Tutup
-    </button>
-</div>
+    <div class="flex justify-between gap-2 mb-5">
+      <div
+        class="w-[52%] flex justify-center items-center gap-5 bg-grey rounded-xl px-3 py-3"
+      >
+        <div class="flex flex-col justify-center items-center">
+          <h1 class="medium-heading text-blue">
+            Sen <span class="text-orange">Mei</span>
+          </h1>
+          <h1
+            class="regular-heading text-8xl font-bold text-plus-jakarta-sans text-gradient-blue"
+          >
+            19
+          </h1>
+        </div>
+        <div class="flex flex-col gap-3 items-center justify-center">
+          <p>18</p>
+          <p
+            class="h-8 w-8 flex items-center justify-center bg-blue text-white rounded-full"
+          >
+            19
+          </p>
+          <div class="flex flex-col items-center">
+            <p>20</p>
+            <div class="h-1 w-1 rounded-full bg-blue"></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[47%] border-2 border-grey rounded-xl px-3 py-3">
+        <div class="gap-2 flex flex-col">
+          <button
+            class="small-text px-2 py-6 rounded-xl flex bg-grey items-center"
+            onclick="handleSectionClick('presensi')"
+          >
+            <img src="../../assets/svg/presensi-icon.svg" alt="" class="mx-2" />
+            <p>Presensi Kelas</p>
+          </button>
+          <button
+            class="small-text px-2 py-6 rounded-xl bg-grey flex items-center"
+            onclick="handleSectionClick('jadwal')"
+          >
+            <img src="../../assets/svg/jadwal-icon.svg" alt="" class="mx-2" />
+            <p>Jadwal Perkuliahan</p>
+          </button>
+        </div>
+        <div></div>
+      </div>
+    </div>
 
-  <script src="../../script.js"></script>
+    <div class="rounded-xl border-2 relative border-grey p-3">
+      <!-- popup -->
+      <div
+        id="popup"
+        class="absolute hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue"
+      >
+        <div class="border-b w-full py-2">
+          <p class="cursor-pointer item-popup">Semua</p>
+        </div>
+        <div class="border-b w-full py-2">
+          <p class="item-popup cursor-pointer">Berlangsung</p>
+        </div>
+        <div class="w-full py-2">
+          <p class="item-popup cursor-pointer">Terlewat</p>
+        </div>
+      </div>
 
+      <!-- Judul Linimasa -->
+      <div class="flex justify-between items-center mb-3">
+        <h1 class="regular-heading font-bold">Linimasa</h1>
+        <img
+          id="openPopupButton"
+          class="cursor-pointer"
+          src="../../assets/svg/filter-icon.svg"
+          alt=""
+        />
+      </div>
 
+      <!-- Bagian yang bisa di-scroll -->
+      <div class="flex flex-col max-h-56 overflow-y-auto gap-2">
+        <div
+          class="border border-grey rounded-lg items-center bg-grey flex gap-2"
+        >
+          <div class="rounded-l-lg bg-dark-grey w-10 subtext p-2 text-center">
+            <h1 class="font-bold">19</h1>
+            <p>Mei</p>
+          </div>
+          <div>
+            <h1 class="subtext font-bold">
+              FP03-SIB: Studi Kasus Analisis Kl..
+            </h1>
+            <p class="subtext">Tenggat pengerjaan hari ini</p>
+          </div>
+        </div>
+        <div
+          class="border border-grey rounded-lg items-center bg-grey flex gap-2"
+        >
+          <div class="rounded-l-lg bg-dark-grey w-10 subtext p-2 text-center">
+            <h1 class="font-bold">20</h1>
+            <p>Mei</p>
+          </div>
+          <div>
+            <h1 class="subtext font-bold">
+              FP03-SIB: Studi Kasus Analisis Kl..
+            </h1>
+            <p class="subtext">Tenggat pengerjaan besok</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</body>
+    <!-- nav -->
+    <nav
+      class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0 bg-blue py-2"
+    >
+      <button
+        class="flex flex-col items-center text-orange-pastel"
+        onclick="handleNavClick('beranda')"
+      >
+        <img src="../../assets/svg/home-active-icon.svg" alt="" />
+        <p>Beranda</p>
+      </button>
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('kelas')"
+      >
+        <img src="../../assets/svg/classes-icon.svg" alt="" />
+        <p>Kelas</p>
+      </button>
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('pesan')"
+      >
+        <img src="../../assets/svg/chat-icon.svg" alt="" />
+        <p>Pesan</p>
+      </button>
+      <button
+        class="flex flex-col items-center text-white"
+        onclick="handleNavClick('profile')"
+      >
+        <img src="../../assets/svg/profile-icon.svg" alt="" />
+        <p>Profil</p>
+      </button>
+    </nav>
 
+    <script src="../../scripts/home_praktikan.js"></script>
+  </body>
 </html>
