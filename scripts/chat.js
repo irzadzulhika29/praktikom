@@ -5,8 +5,19 @@ itemChat.forEach((item) => {
   });
 });
 
-const categories = document.querySelectorAll(".item-category");
+function handleNavClick(pageName) {
+  if (pageName === "beranda") {
+    window.location.href = "home_praktikan.html";
+  } else if (pageName === "kelas") {
+    window.location.href = "class.html";
+  } else if (pageName === "pesan") {
+    window.location.href = "chat.html";
+  } else if (pageName === "profile") {
+    window.location.href = "profile.html";
+  }
+}
 
+const categories = document.querySelectorAll(".item-category");
 categories.forEach(function (category) {
   category.addEventListener("click", function () {
     categories.forEach(function (cat) {
