@@ -1,3 +1,10 @@
+const itemChat = document.querySelectorAll(".item-chat");
+itemChat.forEach((item) => {
+  item.addEventListener("click", () => {
+    window.location.href = "chat_detail_chat.html";
+  });
+});
+
 const categories = document.querySelectorAll(".item-category");
 
 categories.forEach(function (category) {
@@ -21,7 +28,7 @@ categories.forEach(function (category) {
 });
 
 // Popup
-const openPopupButton = document.getElementById("openPopupButton");
+const openPopupButton = document.getElementById("morebutton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 

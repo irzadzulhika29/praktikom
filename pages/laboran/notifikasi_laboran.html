@@ -12,45 +12,49 @@
 </head>
 
 <body class="px-6 py-4 w-screen relative">
+    <!-- header -->
     <header class="fixed flex justify-between items-center w-full mb-5 relative">
         <a href="home_laboran.html">
             <button>
                 <img class="cursor-pointer h-8" src="../../assets/svg/chevron-left-icon.svg" alt="">
             </button>
         </a>
-            <p class="subheading">Notifikasi</p>
-            <button id="openPopupButton">
-                <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
-            </button>
+        <p class="subheading">Notifikasi</p>
+        <button id="morebutton">
+            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
 
-            <!-- popup -->
-            <div id="popup"
-                class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
-                <div class="border-b w-full py-2">
-                    <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
-                </div>
-                <div class="w-full py-2">
-                    <p class="popup-item cursor-pointer">Laporkan Masalah</p>
-                </div>
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
             </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
     </header>
 
+    <!-- filter -->
     <div class="flex gap-3 mb-5">
-        <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active" id="semua">
+        <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active">
             <p class="subtext text-white">Semua</p>
         </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="peminjaman">
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
             <p class="subtext text-dark-grey">Peminjaman</p>
         </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="laporan">
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
             <p class="subtext text-dark-grey">Laporan</p>
         </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="stok">
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
             <p class="subtext text-dark-grey">Stok</p>
         </div>
     </div>
 
+    <!-- container notifikasi -->
     <div class="overflow-y-auto h-screen">
+        <!-- item notifikasi -->
         <div class="relative p-3 bg-blue-pastel h-28  ">
             <div class="flex gap-3 items-center">
                 <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
@@ -62,9 +66,9 @@
                     25/05/2025 pukul
                     09.30-12.10 WIB</p>
             </div>
-
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
+        <!-- item notifikasi -->
         <div class="relative p-3 bg-blue-pastel h-28  ">
             <div class="flex gap-3 items-center">
                 <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
@@ -75,9 +79,9 @@
                 <p class="subtext">Ahmad Akmal Syafi’i mengajukan peminjaman ruangan laboratorium G1.4 pada 25/05/2025
                     pukul 09.30-12.10 WIB</p>
             </div>
-
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
+        <!-- item notifikasi -->
         <div class="relative p-3 bg-grey h-28  ">
             <div class="flex gap-3 items-center">
                 <h1 class="regular-text  font-bold">Stok bahan hampir habis!</h1>
@@ -90,6 +94,7 @@
             </div>
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
+        <!-- item notifikasi -->
         <div class="relative p-3 bg-grey h-28  ">
             <div class="flex gap-3 items-center">
                 <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
@@ -102,6 +107,7 @@
             </div>
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
+        <!-- item notifikasi -->
         <div class="relative p-3 bg-grey h-28  ">
             <div class="flex gap-3 items-center">
                 <h1 class="regular-text  font-bold">Stok bahan hampir habis!</h1>
@@ -115,15 +121,10 @@
             </div>
             <hr class="border-blue absolute bottom-0 left-3 right-3">
         </div>
-
-
-
     </div>
-
-
+    
+    <!-- Custom JS -->
     <script src="../../scripts/notifikasi.js">
-
-
     </script>
 </body>
 

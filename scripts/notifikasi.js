@@ -1,5 +1,4 @@
 const categories = document.querySelectorAll(".item-category");
-
 categories.forEach(function (category) {
   category.addEventListener("click", function () {
     categories.forEach(function (cat) {
@@ -21,7 +20,7 @@ categories.forEach(function (category) {
 });
 
 // Popup
-const openPopupButton = document.getElementById("openPopupButton");
+const openPopupButton = document.getElementById("morebutton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 
@@ -38,9 +37,3 @@ if (openPopupButton && popup) {
     });
   });
 }
-
-// Back Button
-const backButton = document.getElementById("backButton");
-backButton.addEventListener("click", function () {
-  window.history.back(); // Membawa pengguna ke halaman sebelumnya
-});

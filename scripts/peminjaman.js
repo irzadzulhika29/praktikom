@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const leftTab = document.getElementById("pengajuan-tab");
-  const rightTab = document.getElementById("riwayat-tab");
-  const leftContent = document.getElementById("pengajuan-content");
-  const rightContent = document.getElementById("riwayat-content");
+  const leftTab = document.getElementById("pengajuantab");
+  const rightTab = document.getElementById("riwayattab");
+  const leftContent = document.getElementById("pengajuancontent");
+  const rightContent = document.getElementById("riwayatcontent");
 
   // Function to switch tabs
   function switchTab(activeTab, inactiveTab, activeContent, inactiveContent) {
@@ -54,8 +54,10 @@ categories.forEach(function (category) {
     activeText.classList.remove("text-dark-grey");
     activeText.classList.add("text-white");
   });
-});// Popup
-const openPopupButton = document.getElementById("openPopupButton");
+});
+
+// Popup
+const openPopupButton = document.getElementById("morebutton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 
@@ -66,14 +68,40 @@ if (openPopupButton && popup) {
   });
 
   // Menambahkan event listener untuk setiap item dalam popup
-  popupItems.forEach(function(item) {
-    item.addEventListener("click", function() {
+  popupItems.forEach(function (item) {
+    item.addEventListener("click", function () {
       popup.classList.add("hidden"); // Menyembunyikan popup setelah item diklik
     });
   });
 }
-// Back Button
-const backButton = document.getElementById("backButton");
-backButton.addEventListener("click", function () {
-  window.history.back(); // Membawa pengguna ke halaman sebelumnya
+
+const rejectButton = document.getElementById("rejectbutton");
+const acceptButton = document.getElementById("acceptbutton"); // Tombol Terima dengan ID
+const acceptPopup = document.getElementById("acceptpopup");
+const rejectPopup = document.getElementById("rejectpopup");
+const closeAcceptButton = acceptPopup.querySelector(".close-button"); // Tombol Kirim pada popup diterima
+const closeRejectButton = rejectPopup.querySelector(".close-button"); // Tombol Kirim pada popup ditolak
+
+// Menambahkan event listener untuk tombol Tolak
+rejectButton.addEventListener("click", function () {
+  // Menyembunyikan popup diterima, menampilkan popup ditolak
+  acceptPopup.classList.add("hidden");
+  rejectPopup.classList.remove("hidden");
+});
+
+// Menambahkan event listener untuk tombol Terima
+acceptButton.addEventListener("click", function () {
+  // Menyembunyikan popup ditolak, menampilkan popup diterima
+  rejectPopup.classList.add("hidden");
+  acceptPopup.classList.remove("hidden");
+});
+
+// Menambahkan event listener untuk tombol "Kirim" pada popup diterima
+closeAcceptButton.addEventListener("click", function () {
+  acceptPopup.classList.add("hidden"); // Menyembunyikan popup diterima
+});
+
+// Menambahkan event listener untuk tombol "Kirim" pada popup ditolak
+closeRejectButton.addEventListener("click", function () {
+  rejectPopup.classList.add("hidden"); // Menyembunyikan popup ditolak
 });

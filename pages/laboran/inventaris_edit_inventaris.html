@@ -13,18 +13,18 @@
 </head>
 
 <body class=" w-screen relative max-h-screen ">
+    <!-- wallpaper -->
     <div class="bg-gradient-blue h-36 w-full absolute top-0 left-0 z-[-1]"></div>
-
     </div>
+   
+    <!-- header -->
     <header class="p-6 text-white flex justify-between items-center w-full mb-5 relative">
-        <!-- Background div -->
-
       <a href="inventaris.html">
         <button> <img class="w-8 h-8 cursor-pointer" src="../../assets/svg/chevron-left-white-icon.svg" alt=""></button>
       </a>
         <p class="subheading">Edit Inventaris</p>
-        <button id="openPopupButton">
-            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-white-icon.svg" alt="">
+        <button id="morebutton">
+            <img class="cursor-pointer w-6 h-6" src="../../assets/svg/dots-white-icon.svg" alt="">
         </button>
 
         <!-- popup -->
@@ -54,13 +54,13 @@
             <h1>Kondisi Barang</h1>
             <!-- dropdown -->
             <div class='cursor-pointer flex flex-col relative border border-grey rounded-lg p-3'>
-                <div id="dropdownButton" class='flex justify-between items-center w-full'>
-                    <p id="dropdownText" class='regular-text text-blue'>Baik</p>
-                    <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+                <div id="dropdownbutton" class='flex justify-between items-center w-full'>
+                    <p id="dropdowntext" class='regular-text text-blue'>Baik</p>
+                    <img id="dropdownicon" src="../../assets/svg/chevron-down-icon.svg" alt=""
                         class='w-6 h-6 transition-transform duration-300 transform'>
                 </div>
                 <!-- Dropdown menu -->
-                <div id="dropdownMenu"
+                <div id="dropdownmenu"
                     class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
                     <ul class="space-y-2 p-3">
                         <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Baik</li>
@@ -99,18 +99,18 @@
             </p>
         </div>
 
-        <button id="open-popup-confirmation"
+        <button id="confirmationbutton"
             class="cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3 mt-3">
             Edit Inventaris
         </button>
     </div>
     <!-- popup diterima -->
-    <div id="popup-confirmation"
+    <div id="confirmationpopup"
         class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
         <div class="flex flex-col justify-center items-center gap-5">
             <h1 class="text-center font-bold subheading">Inventaris berhasil<br> diedit!</h1>
             <img src="../../assets/svg/checklist-icon.svg" alt="">
-            <button id="close-popup-confirmation"
+            <button id="closepopup"
                 class="cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3">
                 Tutup
             </button>
@@ -118,7 +118,7 @@
     </div>
 
 
-    <script src="../../scripts/edit_inventaris.js">
+    <script src="../../scripts/inventaris.js">
 
     </script>
 

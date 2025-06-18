@@ -13,12 +13,13 @@
 </head>
 
 <body class="p-6 w-screen relative h-screen ">
+    <!-- header -->
     <header class="flex justify-between items-center w-full mb-5 relative ">
-      <a href="laboratorium.html">
-        <button> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
-      </a>
+        <a href="laboratorium.html">
+            <button> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        </a>
         <p class="subheading">Inventaris</p>
-        <button id="openPopupButton">
+        <button id="morebutton">
             <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
 
@@ -34,27 +35,29 @@
         </div>
     </header>
 
+    <!-- search -->
     <div class="flex items-center gap-2 bg-grey rounded-lg p-2 mb-4">
-        <!-- Search Icon -->
         <img src="../../assets/svg/search-icon.svg" alt="Search Icon" class="w-5 h-5">
-        <!-- Input field -->
         <input placeholder="Cari inventaris" type="text" class="bg-transparent border-none outline-none p-1 text-black">
     </div>
+
+    <!-- filter -->
     <div class="flex gap-3 mb-5">
-        <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active" id="semua">
+        <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active">
             <p class="subtext text-white">Semua</p>
         </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="peminjaman">
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
             <p class="subtext text-dark-grey">Peminjaman</p>
         </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="laporan">
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
             <p class="subtext text-dark-grey">Laporan</p>
         </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="stok">
+        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
             <p class="subtext text-dark-grey">Stok</p>
         </div>
     </div>
 
+    <!-- button tambah inventaris -->
     <a href="inventaris_tambah_inventaris.html">
         <button
             class="cursor-pointer fixed bottom-10 right-6 z-10 w-12 h-12 rounded-full bg-gradient-blue text-white flex justify-center items-center">
@@ -62,8 +65,9 @@
         </button>
     </a>
 
-
+    <!-- container inventaris -->
     <div class="mt-10 flex flex-col gap-3">
+        <!-- item inventaris -->
         <a href="inventaris_edit_inventaris.html">
             <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
                 <img class="w-22 h-full object-cover" src="../../assets/img/kertas-img.jpg" alt="">
@@ -87,6 +91,7 @@
                 </div>
             </div>
         </a>
+        <!-- item inventaris -->
         <a href="inventaris_edit_inventaris.html">
             <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
                 <img class="w-28 h-full object-cover" src="../../assets/img/kabelrj45-img.png" alt="">
@@ -110,6 +115,7 @@
                 </div>
             </div>
         </a>
+        <!-- item inventaris -->
         <a href="inventaris_edit_inventaris.html">
             <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
                 <img class="w-28 h-full object-cover" src="../../assets/img/router-img.png" alt="">
@@ -133,17 +139,11 @@
                 </div>
             </div>
         </a>
+    </div>
 
-        </a>
-
-
-
-        <script src="../../scripts/inventaris.js">
-
-        </script>
-
-
-
+    <!-- Custom JS -->
+    <script src="../../scripts/inventaris.js">
+    </script>
 </body>
 
 </html>

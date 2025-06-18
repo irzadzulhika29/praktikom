@@ -13,27 +13,29 @@
 </head>
 
 <body class="p-6 w-screen relative h-screen ">
+    <!-- header -->
     <header class="flex justify-between items-center w-full mb-5 relative ">
         <a href="laporan.html">
             <button> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
         </a>
         <p class="subheading">Detail Laporan</p>
-        <button id="openPopupButton">
+        <button id="morebutton">
             <img class="w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
 
         <!-- popup -->
         <div id="popup"
-            class="cursor-pointer absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
-            <div class="border-b  w-full py-2">
-                <p id="closePopupButton">Pusat Bantuan</p>
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
             </div>
-            <div class=" w-full py-2">
-                <p>Laporkan Masalah</p>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
             </div>
         </div>
     </header>
 
+    <!-- detail laporan -->
     <div class="flex gap-5">
         <div class="flex gap-3">
             <h1 class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center">M</h1>
@@ -50,6 +52,7 @@
         </div>
     </div>
 
+    <!-- detail laporan -->
     <div>
         <div class="space-y-3 mt-5">
             <div class="space-y-2">
@@ -79,13 +82,13 @@
 
             <!-- dropdown -->
             <div class='cursor-pointer flex flex-col relative border border-grey rounded-lg p-3'>
-                <div id="dropdownButton" class='flex justify-between items-center w-full'>
-                    <p id="dropdownText" class='regular-text text-blue'>Reguler</p>
-                    <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+                <div id="dropdownbutton" class='flex justify-between items-center w-full'>
+                    <p id="dropdowntext" class='regular-text text-blue'>Reguler</p>
+                    <img id="dropdownicon" src="../../assets/svg/chevron-down-icon.svg" alt=""
                         class='w-6 h-6 transition-transform duration-300 transform'>
                 </div>
                 <!-- Dropdown menu -->
-                <div id="dropdownMenu"
+                <div id="dropdownmenu"
                     class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
                     <ul class="space-y-2 p-3">
                         <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">Menunggu</li>
@@ -96,17 +99,12 @@
                     </ul>
                 </div>
             </div>
-
-
         </div>
     </div>
 
-    <script src="../../scripts/detail_laporan.js">
-
+    <!-- Custom JS -->
+    <script src="../../scripts/laporan.js">
     </script>
-
-
-
 </body>
 
 </html>
