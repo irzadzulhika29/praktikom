@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="../../style.css">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
 </head>
 
 <body class="p-6 w-screen relative">
+    <!-- header -->
     <header class="flex justify-between mb-5 items-center w-full">
         <div class="flex items-center ">
             <img class="w-10 h-10" src="../../assets/svg/praktikom2-icon.svg" alt="">
@@ -25,13 +25,33 @@
         </a>
     </header>
 
-    <div class="w-full h-42">
-        <img class="rounded-xl w-full h-full object-cover" src="../../assets/img/carousel3-img.png" alt="">
+    <!-- carousel container -->
+    <div class="relative w-full h-42 overflow-hidden">
+        <div class="flex space-x-4 overflow-x-auto scroll-smooth">
+            <!--  carousel item -->
+            <div class="w-full h-full flex-shrink-0">
+                <img class="rounded-xl w-full h-full object-cover" src="../../assets/img/carousel3-img.png"
+                    alt="Image 1">
+            </div>
+            <!--  carousel item -->
+            <div class="w-full h-full flex-shrink-0">
+                <img class="rounded-xl w-full h-full object-cover" src="../../assets/img/carousel2-img.jpg"
+                    alt="Image 2">
+            </div>
+            <!--  carousel item -->
+            <div class="w-full h-full flex-shrink-0">
+                <img class="rounded-xl w-full h-full object-cover" src="../../assets/img/carousel1-img.png"
+                    alt="Image 3">
+            </div>
+        </div>
     </div>
+
 
     <h1 class=" relative my-3">Halo, <span class="text-blue">Aryo Pinandito! </span></h1>
 
+    <!--container kalender dan jadwal -->
     <div class="flex justify-between gap-2 mb-5 ">
+        <!-- kalender -->
         <div class="w-[52%] flex justify-center items-center  gap-5 bg-grey rounded-xl px-3 py-3">
             <div class="flex flex-col justify-center items-center">
                 <h1 class="medium-heading text-blue">Sen <span class="text-orange">Mei</span></h1>
@@ -47,14 +67,14 @@
 
             </div>
         </div>
-        <div class="w-[47%] border-2 border-grey rounded-xl px-3 py-3">
+        <!-- jadwal -->
+        <div class="w-[47%] border-2 border-grey flex flex-col justify-between rounded-xl px-3 py-3">
             <div class="flex justify-between items-center">
                 <p>Jadwal Lab</p>
-                <a href="jadwal_laboratorium.html"><button class="cursor-pointer">
-                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
-                    </button></a>
+                <a class="cursor-pointer m-0 p-0" href="jadwal_laboratorium.html">
+                    <img class="w-6 h-6" src="../../assets/svg/chevron-right-icon.svg" alt="">
+                </a>
             </div>
-
             <div class="gap-2 flex flex-col">
                 <div class="small-text px-2 py-1 rounded-full flex  bg-grey justify-between items-center">
                     <p>Lab G1.2</p>
@@ -69,7 +89,7 @@
         </div>
     </div>
 
-
+    <!-- container linimasa -->
     <div class="rounded-xl border-2 relative  border-grey p-3">
         <!-- popup -->
         <div id="popup"
@@ -85,14 +105,15 @@
             </div>
         </div>
 
-        <!-- Judul Linimasa -->
+        <!-- header linimasa -->
         <div class="flex justify-between items-center mb-3">
             <h1 class="regular-heading font-bold">Linimasa</h1>
-            <img id="openPopupButton" class="cursor-pointer" src="../../assets/svg/filter-icon.svg" alt="">
+            <img id="filterButton" class="cursor-pointer" src="../../assets/svg/filter-icon.svg" alt="">
         </div>
 
-        <!-- Bagian yang bisa di-scroll -->
-        <div class="flex flex-col max-h-56 overflow-y-auto gap-2">
+        <!-- container item linimasa -->
+        <div class="flex flex-col max-h-56 overflow-x-auto gap-2">
+            <!-- item linimasa -->
             <div class="border border-grey rounded-lg items-center  bg-grey flex gap-2 ">
                 <div class="rounded-l-lg bg-dark-grey w-10 subtext p-2 text-center">
                     <h1 class="font-bold">19</h1>
@@ -103,6 +124,7 @@
                     <p class="subtext">Tenggat pengerjaan hari ini</p>
                 </div>
             </div>
+            <!-- item linimasa -->
             <div class="border border-grey rounded-lg items-center  bg-grey flex gap-2 ">
                 <div class="rounded-l-lg bg-dark-grey w-10 subtext p-2 text-center">
                     <h1 class="font-bold">20</h1>
@@ -113,6 +135,7 @@
                     <p class="subtext">Tenggat pengerjaan besok</p>
                 </div>
             </div>
+            <!-- item linimasa -->
             <div class="border border-grey rounded-lg items-center  bg-orange-pastel flex gap-2 ">
                 <div class="rounded-l-lg bg-orange w-10 subtext p-2 text-center">
                     <h1 class="font-bold">17</h1>
@@ -123,6 +146,7 @@
                     <p class="subtext">Pengerjaan terlambat</p>
                 </div>
             </div>
+            <!-- item linimasa -->
             <div class="border border-grey rounded-lg items-center  bg-orange-pastel flex gap-2 ">
                 <div class="rounded-l-lg bg-orange w-10 subtext p-2 text-center">
                     <h1 class="font-bold">18</h1>
@@ -133,38 +157,33 @@
                     <p class="subtext">Pengerjaan terlambat</p>
                 </div>
             </div>
-
         </div>
     </div>
 
-
-
+    <!-- navbar -->
     <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0  bg-blue py-2">
-        <a href="home_laboran.html">
-            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
-                <img class="w-6 h-6" src="../../assets//svg/home-active-icon.svg" alt="">
-                <p class="text-orange-pastel">Beranda</p>
-            </button>
-        </a>
-        <a href="laboratorium.html">
-            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
-                <img class="mb-1 w-5 h-5" src="../../assets/svg/lab-icon.svg" alt="">
-                <p>Laboratorium</p>
-            </button>
-        </a>
-        <a href="profile_laboran.html">
-            <button class="cursor-pointer flex flex-col justify-center items-center text-white">
-                <img class="w-6 h-6" src="../../assets/svg/profile-icon.svg" alt="">
-                <p>Profil</p>
-            </button>
-        </a>
+
+        <button onclick="handleNavClick('beranda_laboran')" class="cursor-pointer flex flex-col justify-center items-center text-white">
+            <img class="w-6 h-6" src="../../assets//svg/home-active-icon.svg" alt="">
+            <p class="text-orange-pastel">Beranda</p>
+        </button>
+
+        <button onclick="handleNavClick('laboratorium')" class="cursor-pointer flex flex-col justify-center items-center text-white">
+            <img class="mb-1 w-5 h-5" src="../../assets/svg/lab-icon.svg" alt="">
+            <p>Laboratorium</p>
+        </button>
+
+        <button onclick="handleNavClick('profile')" class="cursor-pointer flex flex-col justify-center items-center text-white">
+            <img class="w-6 h-6" src="../../assets/svg/profile-icon.svg" alt="">
+            <p>Profil</p>
+        </button>
+
     </nav>
 
 
 
-
+    <!-- Custom JS -->
     <script src="../../scripts/home_laboran.js">
-
     </script>
 </body>
 

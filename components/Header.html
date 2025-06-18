@@ -4,12 +4,33 @@
     <h1 class="text-blue semibold-heading">PRAKTIKOM</h1>
   </div>
   <a href="notifikasi_laboran.html">
-    <button>
-      <img
-        class="w-6 h-6"
-        src="../../assets/svg/notification-icon.svg"
-        alt=""
-      />
-    </button>
+    <header class="flex justify-between items-center w-full mb-5 relative">
+      <a href="laboratorium.html">
+        <button>
+          <img
+            class="w-6 h-6"
+            src="../../assets/svg/notification-icon.svg"
+            alt=""
+          />
+        </button>
+      </a>
+      <p class="subheading">Peminjaman</p>
+      <button id="morebutton">
+        <img class="w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="" />
+      </button>
+
+      <!-- popup -->
+      <div
+        id="popup"
+        class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue"
+      >
+        <div class="border-b w-full py-2">
+          <p class="popup-item cursor-pointer">Pusat Bantuan</p>
+        </div>
+        <div class="w-full py-2">
+          <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+        </div>
+      </div>
+    </header>
   </a>
 </header>

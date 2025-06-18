@@ -12,16 +12,16 @@
 
 <body class="bg-gradient-blue min-h-screen font-sans relative">
     <!-- Header -->
-    <div class="flex items-center justify-between px-4 pt-6 text-white">
+    <div class="flex items-center justify-between px-6 pt-6 text-white">
         <div class="w-5 h-5"></div>
         <h1 class="text-lg font-semibold">Profile</h1>
-        <button id="menu-button">
+        <button id="menuButton">
             <img src="../../assets/svg/dots-white-icon.svg" alt="" />
         </button>
     </div>
 
     <!-- Modal Menu -->
-    <div id="menu-modal"
+    <div id="menuModal"
         class="hidden absolute top-16 right-4 bg-white rounded-lg shadow-md py-2 px-4 text-sm text-gray-800 z-50">
         <button class="block w-full text-left py-1">Pusat bantuan</button>
         <hr class="my-1" />
@@ -73,20 +73,15 @@
 
         <!-- Navbar -->
         <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0  bg-blue py-2">
-            <a href="home_laboran.html">
-                <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+            <button onclick="handleNavClick('beranda_laboran')" class="cursor-pointer flex flex-col justify-center items-center text-white">
                     <img class="w-6 h-6" src="../../assets//svg/home-icon.svg" alt="">
                     <p>Beranda</p>
                 </button>
-            </a>
-            <a href="laboratorium.html">
-                <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+            <button onclick="handleNavClick('laboratorium')" class="cursor-pointer flex flex-col justify-center items-center text-white">
                     <img class="mb-1 w-5 h-5" src="../../assets/svg/lab-icon.svg" alt="">
                     <p>Laboratorium</p>
                 </button>
-            </a>
-            <a href="profile_laboran.html">
-                <button class="cursor-pointer flex flex-col justify-center items-center text-white">
+            <button onclick="handleNavClick('profile')" class="cursor-pointer flex flex-col justify-center items-center text-white">
                     <img class="w-6 h-6" src="../../assets/svg/profile-active-icon.svg" alt="">
                     <p class="text-orange-pastel">Profil</p>
                 </button>
