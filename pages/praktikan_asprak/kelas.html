@@ -54,14 +54,14 @@
             class="flex-1 py-2 px-4 text-sm font-medium text-white bg-gray-700 rounded-md focus:outline-none"
             onclick="handleTabClick('myClasses')"
           >
-            My Classes
+            Kelas Saya
           </button>
           <button
             id="teachingTabButton"
             class="flex-1 py-2 px-4 text-sm font-medium text-gray-600 bg-transparent rounded-md focus:outline-none"
             onclick="handleTabClick('teaching')"
           >
-            Teaching
+            Pengajaran
           </button>
         </div>
       </section>
@@ -121,12 +121,32 @@
 
         <section
           id="teachingMessageSection"
-          class="hidden mt-0 p-4 text-center text-gray-600"
+          class="hidden space-y-4 text-gray-600"
         >
-          <p>
-            Untuk mengakses halaman ini, anda harus terdaftar sebagai asisten
-            praktikum dan melakukan enroll kelas.
-          </p>
+          <div
+            class="flex items-center justify-between p-4 space-x-3 bg-white border border-gray-200 rounded-xl shadow-sm cursor-pointer hover:shadow-md active:shadow-sm transition-shadow class-card-teaching"
+          >
+            <div
+              class="flex-grow min-w-0 flex flex-col self-stretch justify-between"
+            >
+              <h3 class="text-md font-semibold text-gray-800">
+                (C) Perancangan Pengalaman Pengguna
+              </h3>
+              <p class="text-xs text-gray-500">
+                Senin (07.00 - 08.40) <span class="mx-1">•</span> Gedung F
+                FILKOM F4.10
+              </p>
+            </div>
+            <div class="flex-shrink-0 flex flex-col items-end space-y-2">
+              <button
+                class="p-1 rounded-full text-gray-400 hover:bg-gray-100"
+                onclick="event.stopPropagation(); handleMoreOptionsClick(2)"
+              >
+                <img src="../../assets/svg/dots-icon.svg" alt="" />
+              </button>
+              <div id="classCard3ProgressContainer"></div>
+            </div>
+          </div>
         </section>
       </div>
     </main>

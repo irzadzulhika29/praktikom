@@ -99,6 +99,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  document.querySelectorAll(".class-card-teaching").forEach((card) => {
+    card.addEventListener("click", () => {
+      window.location.href = "kelas_detail_asprak.html";
+    });
+  });
+
   if (card1Progress) {
     card1Progress.innerHTML = createProgressRing(70); // Contoh persentase
   }
