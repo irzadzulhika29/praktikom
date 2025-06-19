@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Kelas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="bg-white p-6 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-6 py-4 z-10"
+    >
+      <a href="class.html"
+        ><img src="../../assets/svg/chevron-left-icon.svg" alt="Back"
+      /></a>
+      <h1 class="text-lg font-medium text-blue">Detail Kelas</h1>
+      <img src="../../assets/svg/dots-icon.svg" alt="dots" />
+    </header>
+
+    <!-- Main Content -->
+    <main class="my-16 space-y-4 overflow-y-auto">
+      <section class="p-4 bg-white rounded-lg shadow space-y-4">
+        <div class="flex justify-between items-start">
+          <div>
+            <h2 class="text-lg font-semibold text-black">
+              (C) Perancangan Pengalaman Pengguna
+            </h2>
+            <p class="text-xs text-black">
+              Senin (07.00 - 08.40) • Gedung F FILKOM F4.10
+            </p>
+          </div>
+          <div id="classDetailProgressContainer"></div>
+        </div>
+        <div class="relative w-full h-5 bg-gray-200 rounded-full">
+          <div
+            id="presensiProgressBarFill"
+            class="flex justify-between items-center h-full px-2.5 text-xs text-white bg-[#FF6823] rounded-full"
+          >
+            <span>Presensi</span>
+            <span id="presensiPercentageText">0%</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex justify-between space-x-3">
+        <button
+          class="flex flex-col justify-center items-center px-6 py-1 rounded-xl bg-grey"
+        >
+          <img
+            src="../../assets/svg/penilaian-icon.svg"
+            alt=""
+            class="w-7 h-7"
+          />
+          <p class="subtext">Penilaian</p>
+        </button>
+        <button
+          class="flex flex-col justify-center items-center px-6 py-1 rounded-xl bg-grey"
+        >
+          <img
+            src="../../assets/svg/presensi-icon-asprak.svg"
+            alt=""
+            class="w-7 h-7"
+          />
+          <p class="subtext">Presensi</p>
+        </button>
+        <button
+          class="flex flex-col justify-center items-center px-6 py-1 rounded-xl bg-grey"
+        >
+          <img src="../../assets/svg/laporan-icon.svg" alt="" class="w-7 h-7" />
+          <p class="subtext">Laporan</p>
+        </button>
+      </div>
+
+      <button
+        onclick="toggleGeneralInfo()"
+        class="flex items-center p-4 bg-white space-x-3"
+      >
+        <img
+          src="../../assets/svg/informasi-umum-icon.svg"
+          alt="icon"
+          id="informasiUmumIcon"
+        />
+        <span class="text-md font-semibold text-black">Informasi umum</span>
+      </button>
+      <div
+        id="informasiUmumContent"
+        class="hidden p-4 bg-white rounded-b-lg shadow text-sm text-black space-y-2"
+      >
+        <p class="font-bold">
+          Beban sks: <span class="font-normal">2 SKS</span>
+        </p>
+        <p class="font-bold">
+          Kode Mata Kuliah: <span class="font-normal">CIS00000</span>
+        </p>
+        <p class="font-bold">
+          Deskripsi Mata Kuliah:
+          <span class="font-normal">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
+          >
+        </p>
+      </div>
+
+      <section
+        class="p-4 bg-white rounded-lg shadow flex items-start space-x-3"
+      >
+        <div class="bg-gray-300 p-2 rounded-full">AV</div>
+        <div class="flex-grow">
+          <textarea
+            rows="3"
+            class="w-full p-2 text-sm border rounded-md focus:border-blue-500"
+            placeholder="Announce something to your class..."
+          ></textarea>
+          <div class="text-right mt-2">
+            <button class="px-3 py-1.5 text-xs text-white bg-blue rounded-md">
+              Post
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="space-y-4">
+        <div class="p-4 bg-white rounded-lg shadow space-y-3">
+          <div class="flex space-x-3">
+            <div class="bg-gray-300 p-2 rounded-full">AV</div>
+            <div class="flex-grow">
+              <div class="flex items-baseline space-x-2">
+                <h3 class="text-sm font-semibold">Nanang Yudi Setiawan</h3>
+                <p class="text-xs text-black">May 19</p>
+              </div>
+              <p class="text-sm text-black">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          <hr class="border-t-1 border-black" />
+          <input
+            type="text"
+            placeholder="Add class comment..."
+            class="w-full p-2 text-xs"
+          />
+        </div>
+
+        <div class="p-2 bg-white rounded-lg shadow">
+          <div id="modul" class="flex space-x-3 p-2 rounded-lg">
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full"
+            >
+              <img src="../../assets/svg/modul-icon.svg" alt="modul" />
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-black">
+                Modul 01: Mastering Business Plan Strategic
+              </h3>
+              <p class="text-xs text-black">May 19</p>
+            </div>
+          </div>
+          <hr class="border-t-1 border-black" />
+          <input
+            type="text"
+            placeholder="Add class comment..."
+            class="w-full text-xs mt-3 p-2"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- nav -->
+    <nav
+      class="fixed bottom-0 left-0 right-0 bg-blue px-10 py-2 flex justify-between text-white"
+    >
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('forum')"
+      >
+        <img src="../../assets/svg/forum-active-icon.svg" alt="Forum" />
+        <p class="text-orange-pastel">Forum</p>
+      </button>
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('penugasan')"
+      >
+        <img src="../../assets/svg/classwork-icon.svg" alt="Penugasan" />
+        <p>Penugasan</p>
+      </button>
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('peserta')"
+      >
+        <img src="../../assets/svg/people-icon.svg" alt="Peserta" />
+        <p>Peserta</p>
+      </button>
+    </nav>
+
+    <script src="../../scripts/detail_class.js"></script>
+  </body>
+</html>

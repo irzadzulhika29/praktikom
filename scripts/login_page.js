@@ -1,13 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("LupaSandiForm");
-  const button = document.getElementById("LupaSandiButton");
+document.getElementById("actionButton").addEventListener("click", function () {
+  const email = document.getElementById("email").value.trim().toLowerCase();
 
-  button.addEventListener("click", function () {
-    if (button.innerText === "Next") {
-      form.classList.add("hidden");
-      button.innerText = "Kembali ke Halaman Masuk";
-    } else {
-      window.location.href = "login_page.html";
-    }
-  });
+  // Simulasi login sederhana
+  if (email === "laboran") {
+    window.location.href = "../pages/laboran/home_laboran.html";
+  } else if (email === "praktikum") {
+    window.location.href = "../pages/praktikan_asprak/home_praktikan.html";
+  } else {
+    alert("Email tidak dikenal. Gunakan 'praktikum' atau 'laboran'.");
+  }
 });
