@@ -46,7 +46,7 @@ function handleNavClick(pageName) {
   if (pageName === "beranda") {
     window.location.href = "home_praktikan.html";
   } else if (pageName === "kelas") {
-    window.location.href = "class.html";
+    window.location.href = "kelas.html";
   } else if (pageName === "pesan") {
     window.location.href = "chat.html";
   } else if (pageName === "profile") {
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const card1Progress = document.getElementById("classCard1ProgressContainer");
   document.querySelectorAll(".class-card").forEach((card) => {
     card.addEventListener("click", () => {
-      window.location.href = "detail_class.html";
+      window.location.href = "kelas_detail.html";
     });
   });
 

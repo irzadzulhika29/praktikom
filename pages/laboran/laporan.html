@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Praktikom</title>
+    <title>Laporan</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
@@ -13,15 +13,14 @@
 </head>
 
 <body class="px-6 py-4 w-screen relative">
-    <!-- wallpaper -->
+    <!-- header -->
     <header class="flex justify-between items-center w-full mb-5 relative ">
         <a href="laboratorium.html">
-            <button> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg"
-                    alt=""></button>
+            <button> <img class="cursor-pointer" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
         </a>
         <p class="subheading">Laporan Kerusakan</p>
         <button id="moreButton">
-            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+            <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
 
         <!-- popup -->
@@ -36,108 +35,196 @@
         </div>
     </header>
 
-    <div class="flex gap-5 mb-5">
-        <div class="flex-1 border-r-2 border-r-gray-300">
-            <h1 class="font-bold regular-heading-bold text-red-500">3</h1>
-            <p class="subtext text-red-500">Menunggu</p>
+    <!-- main content -->
+    <main>
+        <div class="flex gap-5 mb-5">
+            <div class="flex-1 border-r-2 border-r-gray-300">
+                <h1 class="font-bold regular-heading-bold text-red-500">3</h1>
+                <p class="subtext text-red-500">Menunggu</p>
+            </div>
+            <div class="flex-1 border-r-2 border-r-gray-300">
+                <h1 class="font-bold regular-heading-bold text-orange-pastel">4</h1>
+                <p class="subtext text-orange-pastel">Diperbaiki</p>
+            </div>
+            <div class="flex-1">
+                <h1 class="font-bold regular-heading-bold text-success">2</h1>
+                <p class="subtext text-success">Selesai</p>
+            </div>
         </div>
-        <div class="flex-1 border-r-2 border-r-gray-300">
-            <h1 class="font-bold regular-heading-bold text-orange-pastel">3</h1>
-            <p class="subtext text-orange-pastel">Menunggu</p>
+
+        <!-- daftar laporan -->
+        <div class="mb-5">
+            <h1 class="medium-font-bold mb-3">Daftar Laporan</h1>
+            <hr class="border border-black">
         </div>
-        <div class="flex-1">
-            <h1 class="font-bold regular-heading-bold text-success">3</h1>
-            <p class="subtext text-success">Menunggu</p>
+
+        <!-- container laporan -->
+        <div class="flex flex-col gap-3 relative overflow-y-auto max-h-180 pb-20">
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Router G2.2</h1>
+                        <span class="small-text bg-orange text-white px-2 py-1 rounded-full">Menunggu</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">20/05/2025</p>
+                        <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Pintu Ruang G1.3</h1>
+                        <span class="small-text bg-orange text-white px-2 py-1 rounded-full">Menunggu</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">20/05/2025</p>
+                        <p class="xsmall-text">oleh: Ahmad Akmal Syafi'i</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Proyektor</h1>
+                        <span class="small-text bg-orange text-white px-2 py-1 rounded-full">Menunggu</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">20/05/2025</p>
+                        <p class="xsmall-text">oleh: Khaizuran Alvaro</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Router G2.2</h1>
+                        <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Diperbaiki</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">22/05/2025</p>
+                        <p class="xsmall-text">oleh: Khaizuran Alvaro</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Proyektor</h1>
+                        <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Diperbaiki</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">23/05/2025</p>
+                        <p class="xsmall-text">oleh: Khaizuran Alvaro</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Kabel LAN G1.1</h1>
+                        <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Diperbaiki</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">20/05/2025</p>
+                        <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Router G1.2</h1>
+                        <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Diperbaiki</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">22/05/2025</p>
+                        <p class="xsmall-text">oleh: Khaizuran Alvaro</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Router G1.2</h1>
+                        <span class="small-text bg-success text-white px-2 py-1 rounded-full">Diperbaiki</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">22/05/2025</p>
+                        <p class="xsmall-text">oleh: Khaizuran Alvaro</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+            <!-- item laporan -->
+            <a href="laporan_detail_laporan.html">
+                <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="subheading">Kerusakan Router</h1>
+                        <span class="small-text bg-success text-white px-2 py-1 rounded-full">Diperbaiki</span>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <img src="../../assets/svg/calender-icon.svg" alt="">
+                        <p class="xsmall-text">22/05/2025</p>
+                        <p class="xsmall-text">oleh: Nuhammad Irza Dzulhika</p>
+                    </div>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+                        <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+                    </button>
+                </div>
+            </a>
+
+            <!-- tambah laporan -->
+            <a href="laporan_tambah_laporan.html">
+                <button
+                    class="cursor-pointer fixed bottom-10 right-6 z-10 w-12 h-12 rounded-full bg-gradient-blue text-white flex justify-center items-center">
+                    <h1 class="medium-heading">+</h1>
+                </button>
+            </a>
         </div>
-    </div>
-
-
-    <div class="mb-5">
-        <h1 class="medium-font-bold mb-3">Daftar Laporan</h1>
-        <hr class="border border-black">
-    </div>
-    <div class="flex flex-col gap-3 relative overflow-y-auto max-h-screen pb-20">
-        <a href="laporan_tambah_laporan.html">
-            <button
-                class="cursor-pointer fixed bottom-10 right-6 z-10 w-12 h-12 rounded-full bg-gradient-blue text-white flex justify-center items-center">
-                <h1 class="medium-heading">+</h1>
-            </button>
-        </a>
-
-        <a href="laporan_detail_laporan.html">
-            <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
-                <div class="flex gap-2 items-center">
-                    <h1 class="subheading">Kerusakan Router G2.2</h1>
-                    <span class="small-text bg-orange text-white px-2 py-1 rounded-full">Menunggu</span>
-                </div>
-                <div class="flex gap-2 items-center ">
-                    <img src="../../assets/svg/calender-icon.svg" alt="">
-                    <p class="xsmall-text">23/05/2025</p>
-                    <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
-                </div>
-                <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
-                    <img src="../../assets/svg/chevron-right-icon.svg" alt="">
-                </button>
-            </div>
-        </a>
-        <a href="laporan_detail_laporan.html">
-            <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
-                <div class="flex gap-2 items-center">
-                    <h1 class="subheading">Kerusakan Proyektor</h1>
-                    <span class="small-text bg-orange text-white px-2 py-1 rounded-full">Menunggu</span>
-                </div>
-                <div class="flex gap-2 items-center ">
-                    <img src="../../assets/svg/calender-icon.svg" alt="">
-                    <p class="xsmall-text">20/05/2025</p>
-                    <p class="xsmall-text">oleh: Khaizuran Alvaro</p>
-                </div>
-                <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
-                    <img src="../../assets/svg/chevron-right-icon.svg" alt="">
-                </button>
-            </div>
-        </a>
-        <a href="laporan_detail_laporan.html">
-            <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
-                <div class="flex gap-2 items-center">
-                    <h1 class="subheading">Kerusakan Proyektor</h1>
-                    <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Diperbaiki</span>
-                </div>
-                <div class="flex gap-2 items-center ">
-                    <img src="../../assets/svg/calender-icon.svg" alt="">
-                    <p class="xsmall-text">23/05/2025</p>
-                    <p class="xsmall-text">oleh: Khaizuran Alvaro</p>
-                </div>
-                <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
-                    <img src="../../assets/svg/chevron-right-icon.svg" alt="">
-                </button>
-            </div>
-        </a>
-        <a href="laporan_detail_laporan.html">
-            <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
-                <div class="flex gap-2 items-center">
-                    <h1 class="subheading">Kerusakan Kabel LAN G1.1</h1>
-                    <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Diperbaiki</span>
-                </div>
-                <div class="flex gap-2 items-center ">
-                    <img src="../../assets/svg/calender-icon.svg" alt="">
-                    <p class="xsmall-text">20/05/2025</p>
-                    <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
-                </div>
-                <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
-                    <img src="../../assets/svg/chevron-right-icon.svg" alt="">
-                </button>
-            </div>
-        </a>
-
-    </div>
-
+    </main>
 
     <script src="../../scripts/laporan.js"></script>
-
-
-
-
-
 </body>
 
 </html>

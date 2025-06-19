@@ -2,7 +2,7 @@ function handleNavClick(pageName) {
   if (pageName === "beranda") {
     window.location.href = "home_praktikan.html";
   } else if (pageName === "kelas") {
-    window.location.href = "class.html";
+    window.location.href = "kelas.html";
   } else if (pageName === "pesan") {
     window.location.href = "chat.html";
   } else if (pageName === "profile") {
@@ -35,22 +35,3 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "regis_asprak_1.html";
   });
 });
-
-
-function handleNavClick(pageName) {
-  if (pageName === "beranda") {
-    window.location.href = "home_praktikan.html";
-  } else if (pageName === "kelas") {
-    window.location.href = "class.html";
-  } else if (pageName === "pesan") {
-    window.location.href = "chat.html";
-  } else if (pageName === "profile") {
-    window.location.href = "profile.html";
-  } else if (pageName === "beranda_laboran") {
-    window.location.href = "home_laboran.html";
-  } else if (pageName === "laboratorium") {
-    window.location.href = "laboratorium.html";
-  } else if (pageName === "profile_laboran") {
-    window.location.href = "profile_laboran.html";
-  }
-}

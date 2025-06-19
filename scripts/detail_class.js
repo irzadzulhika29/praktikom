@@ -17,6 +17,16 @@ function handleNavClick(pageName) {
   }
 }
 
+function handleFiturAsprak(name) {
+  if (name === "penilaian") {
+    window.location.href = "kelas_detail_penilaian_asprak.html";
+  } else if (name === "presensi") {
+    window.location.href = "kelas_penilaian_asprak.html";
+  } else if (name === "laporan") {
+    window.location.href = "laporan_asprak.html";
+  }
+}
+
 // Fungsi untuk membuat progress ring (lingkaran progres)
 function createProgressRing(percentage, colorCode = "#FF6823") {
   const radius = 15.9155;

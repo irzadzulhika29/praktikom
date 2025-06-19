@@ -4,6 +4,6 @@ function handleNavClick(pageName) {
   } else if (pageName === "peserta") {
     window.location.href = "peserta_praktikum.html";
   } else if (pageName === "forum") {
-    window.location.href = "detail_class.html";
+    window.location.href = "kelas_detail.html";
   }
 }

@@ -1,48 +1,48 @@
-// Popup
+// popup
 const moreButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
-const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
+const popupItems = document.querySelectorAll(".popup-item");
 
-// Menutup popup ketika mengklik di luar popup
+// tutup popup saat klik di luar
 document.addEventListener("click", function(event) {
   if (popup && !popup.contains(event.target) && event.target !== moreButton) {
     popup.classList.add("hidden");
   }
 });
 
+// toggle popup saat tombol diklik
 if (moreButton && popup) {
-  // Menambahkan event listener untuk tombol klik membuka popup
   moreButton.addEventListener("click", function(event) {
-    event.stopPropagation(); // Mencegah event click menyebar ke document
-    popup.classList.toggle("hidden"); // Menampilkan atau menyembunyikan popup
+    event.stopPropagation(); 
+    popup.classList.toggle("hidden");
   });
 
-  // Menambahkan event listener untuk setiap item dalam popup
+  // tutup popup saat item dipilih
   popupItems.forEach(function(item) {
     item.addEventListener("click", function() {
-      popup.classList.add("hidden"); // Menyembunyikan popup setelah item diklik
+      popup.classList.add("hidden");
     });
   });
 }
 
-// Dropdown - Periksa apakah elemen ada sebelum menambahkan event listener
+// dropdown
 const dropdownButton = document.getElementById("dropdownButton");
 const dropdownMenu = document.getElementById("dropdownMenu");
 const dropdownText = document.getElementById("dropdownText");
 const dropdownIcon = document.getElementById("dropdownIcon");
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 
+// toggle dropdown saat tombol diklik
 if (dropdownButton && dropdownMenu) {
-  // Menampilkan atau menyembunyikan menu dropdown saat tombol diklik
   dropdownButton.addEventListener("click", function() {
-    dropdownMenu.classList.toggle("hidden"); // Menampilkan atau menyembunyikan menu dropdown
+    dropdownMenu.classList.toggle("hidden");
     if (dropdownIcon) {
-      dropdownIcon.classList.toggle("transform"); // Memberikan efek rotasi pada ikon
-      dropdownIcon.classList.toggle("rotate-180"); // Rotasi 180 derajat pada ikon
+      dropdownIcon.classList.toggle("transform");
+      dropdownIcon.classList.toggle("rotate-180");
     }
   });
 
-  // Menutup dropdown ketika mengklik di luar dropdown
+  // tutup dropdown saat klik di luar
   document.addEventListener("click", function(event) {
     if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
       dropdownMenu.classList.add("hidden");
@@ -52,43 +52,34 @@ if (dropdownButton && dropdownMenu) {
     }
   });
 
-  // Menangani pemilihan item dropdown
-  if (dropdownItems.length > 0) {
-    dropdownItems.forEach((item) => {
-      item.addEventListener("click", function() {
-        // Mengubah teks yang ditampilkan di dropdownButton
-        if (dropdownText) {
-          dropdownText.textContent = item.textContent;
-        }
-
-        // Menyembunyikan dropdown setelah item dipilih
-        dropdownMenu.classList.add("hidden");
-
-        // Mengubah ikon kembali ke posisi semula (tidak terbalik)
-        if (dropdownIcon) {
-          dropdownIcon.classList.remove("rotate-180");
-        }
-      });
+  // ganti teks dan tutup dropdown saat item dipilih
+  dropdownItems.forEach((item) => {
+    item.addEventListener("click", function() {
+      if (dropdownText) {
+        dropdownText.textContent = item.textContent;
+      }
+      dropdownMenu.classList.add("hidden");
+      if (dropdownIcon) {
+        dropdownIcon.classList.remove("rotate-180");
+      }
     });
-  }
+  });
 }
 
-// Pop up Confirmation
+// popup konfirmasi
 const confirmationButton = document.getElementById("confirmationButton");
 const confirmationPopup = document.getElementById("confirmationPopup");
 const closePopupButton = document.getElementById("closePopup");
 
-// Periksa apakah elemen ada sebelum menambahkan event listener
+// buka dan tutup popup konfirmasi
 if (confirmationButton && confirmationPopup) {
-  // Menambahkan event listener untuk membuka popup
   confirmationButton.addEventListener("click", function() {
-    confirmationPopup.classList.remove("hidden"); // Menampilkan popup
+    confirmationPopup.classList.remove("hidden");
   });
 
-  // Menambahkan event listener untuk menutup popup
   if (closePopupButton) {
     closePopupButton.addEventListener("click", function() {
-      confirmationPopup.classList.add("hidden"); // Menyembunyikan popup
+      confirmationPopup.classList.add("hidden");
     });
   }
 }

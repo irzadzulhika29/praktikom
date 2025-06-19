@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengajuan Peminjaman</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body class="bg-white p-6 flex flex-col justify-between">
+    <!-- header -->
+    <header class="flex justify-between items-center w-full mb-5 relative ">
+        <a href="home_praktikan.html">
+            <button> <img class="cursor-pointer " src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        </a>
+        <p class="subheading text-blue">Pengajuan Peminjaman</p>
+        <button id="moreButton">
+            <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <main class="w-full">
+        <h2 class="text-xl mb-2 px-3">Data Barang</h2>
+        <hr class="border-t-1 border-black mb-4" />
+
+        <!-- Form -->
+        <form>
+            <div class="px-3 space-y-3">
+                <input type="text"
+                    class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900"
+                    placeholder="Nama Barang">
+                </input>
+                <input type="text"
+                    class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900"
+                    placeholder="Keperluan">
+                </input>
+                <input type="text"
+                    class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900"
+                    placeholder="Tanggal Peminjaman" type='text'>
+                <input type="text"
+                    class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900"
+                    placeholder="Waktu Mulai" type='text'>
+                <input type="text"
+                    class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900"
+                    placeholder="Waktu Mulai" type='text'>
+            </div>
+        </form>
+
+        <!-- Button -->
+        <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2">
+            <a href="pengajuan_detail_pengajuan.html">
+                <button type="button" id="submitButton2"
+                    class="bg-gradient-blue text-white py-3 px-10 rounded-full text-sm font-medium whitespace-nowrap">
+                    Lanjut
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="../../scripts/pengajuan.js"></script>
+</body>
+
+</html>

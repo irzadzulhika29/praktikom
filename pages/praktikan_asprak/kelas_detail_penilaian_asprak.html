@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelas (Penilaian)</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body class="bg-white p-6 flex flex-col relative min-h-screen">
+    <!-- header -->
+    <header class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-6 py-4 z-10">
+        <a href="kelas_detail_asprak.html"><img src="../../assets/svg/chevron-left-icon.svg" alt="Back" /></a>
+        <h1 class="text-lg font-medium text-blue">Penilaian</h1>
+        <button id="moreButton">
+            <img src="../../assets/svg/dots-icon.svg" alt="dots" />
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class="popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="mt-10">
+        <div class="flex gap-3 px-3">
+            <div class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                M
+            </div>
+            <div>
+                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                <p class="text-xs text-dark-grey">Dikumpulkan terlambat</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-2 px-3 mt-5 w-56">
+            <div class="bg-grey w-full h-28 rounded-xl "></div>
+            <div class="flex items-center justify-between gap-2">
+                <img src="../../assets//svg/file-icon.svg" alt="">
+                <p class="xsmall-text w-48 truncate">TUGAS1_IRZA_DZULHIKA</p>
+                <img src="../../assets/svg/dots-icon.svg" alt="" class="cursor-pointer">
+            </div>
+        </div>
+
+        <!-- komentar -->
+        <div class="mt-10">
+            <h1 class="text-blue px-3">Komentar</h1>
+            <hr class="my-3">
+            <div class="px-3">
+                <div class="flex justify-between px-4 gap-2 border-2 border-sky rounded-lg w-full">
+                    <input type="text" class="w-72 regular-text py-3  focus:outline-none focus:border-blue-900"
+                        placeholder="tambahkan komentar">
+                    </input>
+                    <img src="../../assets/svg/submit-button.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- nilai -->
+        <div class="absolute bottom-15 left-5 right-5 px-3">
+            <div class="flex justify-between px-3 py-1 gap-2 border-2 border-sky rounded-lg w-full">
+                <input type="text" class="w-72 regular-text py-3  focus:outline-none focus:border-blue-900"
+                    placeholder="Nila/100">
+                </input>
+                <a class="block w-full" href="kelas_penilaian_asprak.html">
+                    <button class="bg-gradient-blue text-white w-full px-4 py-2 rounded-lg">
+                        <p class="text-white">Kembalikan</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../scripts/kelas_penilaian.js"></script>
+</body>
+
+</html>

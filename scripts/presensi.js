@@ -1,19 +1,26 @@
 // popup
 const openPopupButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
-const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
+const popupItems = document.querySelectorAll(".popup-item");
 
 if (openPopupButton && popup) {
-  // Menambahkan event listener untuk tombol klik membuka popup
+  // buka popup saat tombol diklik
   openPopupButton.addEventListener("click", function () {
-    popup.classList.remove("hidden"); // Menampilkan popup
+    popup.classList.remove("hidden");
   });
 
-  // Menambahkan event listener untuk setiap item dalam popup
+  // tutup popup saat item diklik
   popupItems.forEach(function (item) {
     item.addEventListener("click", function () {
-      popup.classList.add("hidden"); // Menyembunyikan popup setelah item diklik
+      popup.classList.add("hidden");
     });
+  });
+
+  // tutup popup saat klik di luar elemen popup
+  document.addEventListener("click", function (event) {
+    if (!popup.contains(event.target) && !openPopupButton.contains(event.target)) {
+      popup.classList.add("hidden");
+    }
   });
 }
 
@@ -24,12 +31,14 @@ const dropdownText = document.getElementById("dropdownText");
 const dropdownIcon = document.getElementById("dropdownIcon");
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 
+// toggle dropdown saat tombol diklik
 dropdownButton.addEventListener("click", function () {
   dropdownMenu.classList.toggle("hidden");
   dropdownIcon.classList.toggle("transform");
   dropdownIcon.classList.toggle("rotate-180");
 });
 
+// ganti teks dropdown saat item dipilih
 dropdownItems.forEach((item) => {
   item.addEventListener("click", function () {
     dropdownText.textContent = item.textContent;

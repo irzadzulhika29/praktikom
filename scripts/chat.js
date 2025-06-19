@@ -2,7 +2,7 @@ function handleNavClick(pageName) {
   if (pageName === "beranda") {
     window.location.href = "home_praktikan.html";
   } else if (pageName === "kelas") {
-    window.location.href = "class.html";
+    window.location.href = "kelas.html";
   } else if (pageName === "pesan") {
     window.location.href = "chat.html";
   } else if (pageName === "profile") {
@@ -38,7 +38,7 @@ categories.forEach(function (category) {
 });
 
 // Popup
-const openPopupButton = document.getElementById("morebutton");
+const openPopupButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
 const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
 

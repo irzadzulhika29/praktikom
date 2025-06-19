@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Praktikom</title>
+    <title>Laboratorium</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
@@ -17,7 +17,7 @@
         <div></div>
         <p class="subheading">Laboratorium</p>
         <button id="moreButton">
-            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+            <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
         <!-- popup -->
         <div id="popup"
@@ -31,8 +31,9 @@
         </div>
     </header>
 
-    <!-- content -->
-    <div>
+    <!-- main content -->
+    <main>
+        <!-- fitur peminjaman -->
         <a href="peminjaman.html">
             <div class="rounded-xl overflow-hidden w-full h-56">
                 <img class="w-full h-28 object-cover -mt-10" src="../../assets/img/fitur1-lab.png" alt="">
@@ -53,6 +54,7 @@
                 </div>
             </div>
         </a>
+        <!-- fitur laporan -->
         <a href="laporan.html">
             <div class="rounded-xl overflow-hidden w-full h-56">
                 <img class="w-full h-28 object-cover -mt-10" src="../../assets/img/fitur2-lab.png" alt="">
@@ -73,6 +75,7 @@
                 </div>
             </div>
         </a>
+        <!-- fitur inventaris -->
         <a href="inventaris.html">
             <div class="rounded-xl overflow-hidden w-full h-56">
                 <img class="w-full h-28 object-cover -mt-10" src="../../assets/img/fitur3-lab.png" alt="">
@@ -93,11 +96,10 @@
                 </div>
             </div>
         </a>
-    </div>
+    </main>
 
     <!-- navbar -->
     <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0  bg-blue py-2">
-       
             <button onclick="handleNavClick('beranda_laboran')" class="cursor-pointer flex flex-col justify-center items-center text-white">
                 <img class="w-6 h-6" src="../../assets//svg/home-icon.svg" alt="">
                 <p>Beranda</p>
@@ -110,12 +112,10 @@
                 <img class="w-6 h-6" src="../../assets/svg/profile-icon.svg" alt="">
                 <p>Profil</p>
             </button>
-    
     </nav>
 
     <!-- Custom JS -->
     <script src="../../scripts/laboratorium.js"></script>
-
 </body>
 
 </html>

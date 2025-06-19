@@ -1,39 +1,44 @@
+// filter kategori
 const categories = document.querySelectorAll(".item-category");
-categories.forEach(function (category) {
-  category.addEventListener("click", function () {
-    categories.forEach(function (cat) {
+
+categories.forEach(function(category) {
+  category.addEventListener("click", function() {
+    categories.forEach(function(cat) {
       cat.classList.remove("active", "bg-blue");
       cat.classList.add("bg-grey");
-      // Tambahkan juga perubahan warna teks
+
+      // ubah warna teks jadi abu saat tidak aktif
       const text = cat.querySelector("p");
       text.classList.remove("text-white");
       text.classList.add("text-dark-grey");
     });
 
+    // aktifkan kategori yang diklik
     this.classList.remove("bg-grey");
     this.classList.add("active", "bg-blue");
-    // Ubah warna teks untuk kategori yang aktif
+
+    // ubah warna teks jadi putih untuk kategori aktif
     const activeText = this.querySelector("p");
     activeText.classList.remove("text-dark-grey");
     activeText.classList.add("text-white");
   });
 });
 
-// Popup
+// popup
 const openPopupButton = document.getElementById("moreButton");
 const popup = document.getElementById("popup");
-const popupItems = document.querySelectorAll(".popup-item"); // Mengambil semua item dalam popup
+const popupItems = document.querySelectorAll(".popup-item");
 
 if (openPopupButton && popup) {
-  // Menambahkan event listener untuk tombol klik membuka popup
-  openPopupButton.addEventListener("click", function () {
-    popup.classList.remove("hidden"); // Menampilkan popup
+  // buka popup saat tombol diklik
+  openPopupButton.addEventListener("click", function() {
+    popup.classList.remove("hidden");
   });
 
-  // Menambahkan event listener untuk setiap item dalam popup
+  // tutup popup saat item dipilih
   popupItems.forEach(function(item) {
     item.addEventListener("click", function() {
-      popup.classList.add("hidden"); // Menyembunyikan popup setelah item diklik
+      popup.classList.add("hidden");
     });
   });
 }
