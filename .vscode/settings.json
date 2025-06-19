@@ -1,3 +1,4 @@
 {
-  "livePreview.defaultPreviewPath": "/pages/praktikan_asprak/pesan.html"
+  "livePreview.defaultPreviewPath": "/pages/praktikan_asprak/pesan.html",
+  "liveServer.settings.port": 5501
 }

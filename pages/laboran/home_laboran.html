@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../../style.css">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 </head>
 
 <body class="p-6 w-screen relative">
@@ -27,24 +32,21 @@
 
     <!-- main content -->
     <main>
-        <!-- carousel container -->
-        <div class="relative w-full h-42 overflow-hidden">
-            <div class="flex space-x-4 overflow-x-auto scroll-smooth">
-                <!--  carousel item -->
-                <div class="w-full h-full flex-shrink-0">
-                    <img class="rounded-xl w-full h-full object-cover" src="../../assets/img/carousel3-img.png"
-                        alt="Image 1">
+        <!-- Banner Slider -->
+        <div class="px-1 mt-4">
+            <div class="swiper rounded-xl overflow-hidden">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../../assets/img/carousel1-img.png" alt="Banner 1" class="w-full h-40 object-cover" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../assets/img/carousel2-img.jpg" alt="Banner 1" class="w-full h-40 object-cover" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../assets/img/carousel3-img.png" alt="Banner 2" class="w-full h-40 object-cover" />
+                    </div>
                 </div>
-                <!--  carousel item -->
-                <div class="w-full h-full flex-shrink-0">
-                    <img class="rounded-xl w-full h-full object-cover" src="../../assets/img/carousel2-img.jpg"
-                        alt="Image 2">
-                </div>
-                <!--  carousel item -->
-                <div class="w-full h-full flex-shrink-0">
-                    <img class="rounded-xl w-full h-full object-cover" src="../../assets/img/carousel1-img.png"
-                        alt="Image 3">
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
 

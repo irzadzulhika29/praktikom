@@ -1,10 +1,3 @@
-const itemChat = document.querySelectorAll(".item-chat");
-itemChat.forEach((item) => {
-  item.addEventListener("click", () => {
-    window.location.href = "chat_detail_chat.html";
-  });
-});
-
 function handleNavClick(pageName) {
   if (pageName === "beranda") {
     window.location.href = "home_praktikan.html";
@@ -16,6 +9,12 @@ function handleNavClick(pageName) {
     window.location.href = "profile.html";
   }
 }
+const itemChat = document.querySelectorAll(".item-chat");
+itemChat.forEach((item) => {
+  item.addEventListener("click", () => {
+    window.location.href = "chat_detail_chat.html";
+  });
+});
 
 const categories = document.querySelectorAll(".item-category");
 categories.forEach(function (category) {
