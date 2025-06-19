@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelas (Penilaian)</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body class="bg-white p-6 flex flex-col min-h-screen">
+    <!-- header -->
+    <header class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-6 py-4 z-10">
+        <a href="detail_kelas_asprak.html"><img src="../../assets/svg/chevron-left-icon.svg" alt="Back" /></a>
+        <h1 class="text-lg font-medium text-blue">Kelas Penilaian</h1>
+        <button id="moreButton">
+            <img src="../../assets/svg/dots-icon.svg" alt="dots" />
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class="popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="mt-10">
+        <div class="flex flex-col gap-2  px-5">
+            <h1 class="font-bold">Pilih Tugas</h1>
+            <!-- dropdown -->
+            <div class="flex flex-col relative border border-grey rounded-lg p-3">
+                <div id="dropdownButton" class="flex justify-between items-center w-full">
+                    <p id="dropdownText" class="regular-text text-blue">Tugas 1: Perbedaan UI/UX</p>
+                    <img id="dropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+                        class="w-6 h-6 transition-transform duration-300 transform" />
+                </div>
+                <!-- dropdown menu -->
+                <div id="dropdownMenu"
+                    class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
+                    <ul class="space-y-2 p-3">
+                        <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">
+                            Tugas 1: Perbedaan UI/UX
+                        </li>
+                        <hr />
+                        <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">
+                            Tugas 2: Perancangan UI/UX
+                        </li>
+                        <li class="dropdown-item cursor-pointer hover:bg-gray-100 p-2">
+                            Tugas 3: Business Plan
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-y-auto max-h-200 flex flex-col">
+            <!-- container penilaian (telah dinilai) -->
+            <div class="flex flex-col mt-5">
+                <div class="flex mb-3 items-center border-b border-black gap-2 pb-2">
+                    <input type="checkbox" class="w-5 h-5 accent-orange">
+                    <label for="nilaiCheckbox" class="text-blue">Telah dinilai</label>
+                </div>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex  items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p class="text-success">80/100</p>
+                            <p class="text-xs">Dikembalikan</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex mt-4 items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p class="text-success">80/100</p>
+                            <p class="text-xs">Dikembalikan</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex mt-4 items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p class="text-success">80/100</p>
+                            <p class="text-xs">Draft</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- container penilaian (dikumpulkan) -->
+            <div class="flex flex-col mt-10">
+                <div class="flex mb-3 items-center border-b border-black gap-2 pb-2">
+                    <input type="checkbox" class="w-5 h-5 accent-orange">
+                    <label for="nilaiCheckbox" class="text-blue">Dikumpulkan</label>
+                </div>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p>__/100</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex mt-4 items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p>__/100</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex mt-4 items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p>__/100</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- container penilaian (ditugaskan) -->
+            <div class="flex flex-col mt-10">
+                <div class="flex mb-3 items-center border-b border-black gap-2 pb-2">
+                    <input type="checkbox" class="w-5 h-5 accent-orange">
+                    <label for="nilaiCheckbox" class="text-blue">Ditugaskan</label>
+                </div>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p>__/100</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex mt-4 items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p>__/100</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex mt-4 items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p>__/100</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- item penilaian -->
+                <a href="kelas_detail_penilaian.html" class="flex mt-4 items-center">
+                    <div class="flex items-center gap-3 justify-between w-full">
+                        <!-- Profil -->
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="w-5 h-5 accent-orange">
+                            <div
+                                class="flex justify-center items-center w-10 h-10 rounded-full bg-orange-pastel text-white font-bold">
+                                M
+                            </div>
+                            <div>
+                                <p class="regular-text">Muhammad Irza Dzulhika</p>
+                                <p class="text-xs">235150401111006</p>
+                            </div>
+                        </div>
+                        <!-- Nilai -->
+                        <div class="text-right">
+                            <p>__/100</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- custom JS -->
+    <script src="../../scripts/kelas_penilaian.js"></script>
+</body>
+
+</html>
