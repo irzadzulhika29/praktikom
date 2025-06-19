@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Praktikom</title>
+    <title>Notifikasi</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
@@ -16,12 +16,12 @@
     <header class="fixed flex justify-between items-center w-full mb-5 relative">
         <a href="home_laboran.html">
             <button>
-                <img class="cursor-pointer h-8" src="../../assets/svg/chevron-left-icon.svg" alt="">
+                <img class="cursor-pointer" src="../../assets/svg/chevron-left-icon.svg" alt="">
             </button>
         </a>
         <p class="subheading">Notifikasi</p>
         <button id="moreButton">
-            <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+            <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
 
         <!-- popup -->
@@ -36,93 +36,137 @@
         </div>
     </header>
 
-    <!-- filter -->
-    <div class="flex gap-3 mb-5">
-        <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active">
-            <p class="subtext text-white">Semua</p>
+    <!-- main content -->
+    <main>
+        <!-- filter -->
+        <div class="flex gap-3 mb-5">
+            <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active">
+                <p class="subtext text-white">Semua</p>
+            </div>
+            <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
+                <p class="subtext text-dark-grey">Peminjaman</p>
+            </div>
+            <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
+                <p class="subtext text-dark-grey">Laporan</p>
+            </div>
+            <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
+                <p class="subtext text-dark-grey">Stok</p>
+            </div>
         </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
-            <p class="subtext text-dark-grey">Peminjaman</p>
-        </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
-            <p class="subtext text-dark-grey">Laporan</p>
-        </div>
-        <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
-            <p class="subtext text-dark-grey">Stok</p>
-        </div>
-    </div>
 
-    <!-- container notifikasi -->
-    <div class="overflow-y-auto h-screen">
-        <!-- item notifikasi -->
-        <div class="relative p-3 bg-blue-pastel h-28  ">
-            <div class="flex gap-3 items-center">
-                <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
-                <div class="h-1 w-1 rounded-full bg-blue"></div>
-                <p class="xsmall-text">10 menit yang lalu</p>
+        <!-- container notifikasi -->
+        <div class="overflow-y-auto max-h-200">
+            <!-- item notifikasi -->
+            <div class="relative p-3 bg-blue-pastel h-28  ">
+                <div class="flex gap-3 items-center">
+                    <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
+                    <div class="h-1 w-1 rounded-full bg-blue"></div>
+                    <p class="xsmall-text">10 menit yang lalu</p>
+                </div>
+                <div>
+                    <p class="subtext">Muhammad Irza Dzulhika mengajukan peminjaman ruangan laboratorium G1.3 pada
+                        25/05/2025 pukul
+                        09.30-12.10 WIB</p>
+                </div>
+                <hr class="border-blue absolute bottom-0 left-3 right-3">
             </div>
-            <div>
-                <p class="subtext">Muhammad Irza Dzulhika mengajukan peminjaman ruangan laboratorium G1.3 pada
-                    25/05/2025 pukul
-                    09.30-12.10 WIB</p>
+            <!-- item notifikasi -->
+            <div class="relative p-3 bg-blue-pastel h-28  ">
+                <div class="flex gap-3 items-center">
+                    <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
+                    <div class="h-1 w-1 rounded-full bg-blue"></div>
+                    <p class="xsmall-text">15 menit yang lalu</p>
+                </div>
+                <div>
+                    <p class="subtext">Ahmad Akmal Syafi’i mengajukan peminjaman ruangan laboratorium G1.4 pada
+                        25/05/2025
+                        pukul 09.30-12.10 WIB</p>
+                </div>
+                <hr class="border-blue absolute bottom-0 left-3 right-3">
             </div>
-            <hr class="border-blue absolute bottom-0 left-3 right-3">
+            <!-- item notifikasi -->
+            <div class="relative p-3 bg-grey h-28  ">
+                <div class="flex gap-3 items-center">
+                    <h1 class="regular-text  font-bold">Stok bahan hampir habis!</h1>
+                    <div class="h-1 w-1 rounded-full bg-blue"></div>
+                    <p class="xsmall-text">30 menit yang lalu</p>
+                </div>
+                <div>
+                    <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan
+                        pengadaan
+                        untuk menjaga ketersediaan stok barang</p>
+                </div>
+                <hr class="border-blue absolute bottom-0 left-3 right-3">
+            </div>
+            <!-- item notifikasi -->
+            <div class="relative p-3 bg-grey h-28  ">
+                <div class="flex gap-3 items-center">
+                    <h1 class="regular-text  font-bold">Laporan Kerusakan</h1>
+                    <div class="h-1 w-1 rounded-full bg-blue"></div>
+                    <p class="xsmall-text">Kemarin</p>
+                </div>
+                <div>
+                    <p class="subtext">Khaizuran Alvaro melaporkan kerusakan pada ruang laboratorium G1.2</p>
+                </div>
+                <hr class="border-blue absolute bottom-0 left-3 right-3">
+            </div>
+            <!-- item notifikasi -->
+            <div class="relative p-3 bg-grey h-28  ">
+                <div class="flex gap-3 items-center">
+                    <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
+                    <div class="h-1 w-1 rounded-full bg-blue"></div>
+                    <p class="xsmall-text">kemarin</p>
+                </div>
+                <div>
+                    <p class="subtext">Ahmad Akmal Syafi’i mengajukan peminjaman ruangan laboratorium G1.4 pada
+                        25/05/2025
+                        pukul 07.00-08.40 WIB</p>
+                </div>
+                <hr class="border-blue absolute bottom-0 left-3 right-3">
+            </div>
+            <!-- item notifikasi -->
+            <div class="relative p-3 bg-grey h-28  ">
+                <div class="flex gap-3 items-center">
+                    <h1 class="regular-text  font-bold">Stok bahan hampir habis!</h1>
+                    <div class="h-1 w-1 rounded-full bg-blue"></div>
+                    <p class="xsmall-text">2 hari yang lalu</p>
+                </div>
+                <div>
+                    <p class="subtext">Stok <span class="font-bold">Tinta Printer</span> hampir habis! Segera lakukan
+                        pengadaan
+                        untuk menjaga ketersediaan stok barang</p>
+                </div>
+                <hr class="border-blue absolute bottom-0 left-3 right-3">
+            </div>
+            <!-- item notifikasi -->
+            <div class="relative p-3 bg-grey h-28">
+                <div class="flex gap-3 items-center">
+                    <h1 class="regular-text font-bold">Pengajuan peminjaman</h1>
+                    <div class="h-1 w-1 rounded-full bg-blue"></div>
+                    <p class="xsmall-text">Kemarin</p>
+                </div>
+                <div>
+                    <p class="subtext">Rizky Ramadhan mengajukan peminjaman ruangan laboratorium F8.2 pada 26/05/2025
+                        pukul 13.00-15.30 WIB</p>
+                </div>
+                <hr class="border-blue absolute bottom-0 left-3 right-3">
+            </div>
+            <!-- item notifikasi -->
+            <div class="relative p-3 bg-grey h-28">
+                <div class="flex gap-3 items-center">
+                    <h1 class="regular-text font-bold">Stok bahan hampir habis!</h1>
+                    <div class="h-1 w-1 rounded-full bg-blue"></div>
+                    <p class="xsmall-text">Kemarin</p>
+                </div>
+                <div>
+                    <p class="subtext">Stok <span class="font-bold">Kabel LAN</span> hampir habis! Segera lakukan
+                        pengadaan untuk menjaga ketersediaan stok barang.</p>
+                </div>
+                <hr class="border-blue absolute bottom-0 left-3 right-3">
+            </div>
         </div>
-        <!-- item notifikasi -->
-        <div class="relative p-3 bg-blue-pastel h-28  ">
-            <div class="flex gap-3 items-center">
-                <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
-                <div class="h-1 w-1 rounded-full bg-blue"></div>
-                <p class="xsmall-text">15 menit yang lalu</p>
-            </div>
-            <div>
-                <p class="subtext">Ahmad Akmal Syafi’i mengajukan peminjaman ruangan laboratorium G1.4 pada 25/05/2025
-                    pukul 09.30-12.10 WIB</p>
-            </div>
-            <hr class="border-blue absolute bottom-0 left-3 right-3">
-        </div>
-        <!-- item notifikasi -->
-        <div class="relative p-3 bg-grey h-28  ">
-            <div class="flex gap-3 items-center">
-                <h1 class="regular-text  font-bold">Stok bahan hampir habis!</h1>
-                <div class="h-1 w-1 rounded-full bg-blue"></div>
-                <p class="xsmall-text">30 menit yang lalu</p>
-            </div>
-            <div>
-                <p class="subtext">Stok <span class="font-bold">Kertas HVS</span> hampir habis! Segera lakukan pengadaan
-                    untuk menjaga ketersediaan stok barang</p>
-            </div>
-            <hr class="border-blue absolute bottom-0 left-3 right-3">
-        </div>
-        <!-- item notifikasi -->
-        <div class="relative p-3 bg-grey h-28  ">
-            <div class="flex gap-3 items-center">
-                <h1 class="regular-text  font-bold">Pengajuan peminjaman</h1>
-                <div class="h-1 w-1 rounded-full bg-blue"></div>
-                <p class="xsmall-text">kemarin</p>
-            </div>
-            <div>
-                <p class="subtext">Ahmad Akmal Syafi’i mengajukan peminjaman ruangan laboratorium G1.4 pada 25/05/2025
-                    pukul 07.00-08.40 WIB</p>
-            </div>
-            <hr class="border-blue absolute bottom-0 left-3 right-3">
-        </div>
-        <!-- item notifikasi -->
-        <div class="relative p-3 bg-grey h-28  ">
-            <div class="flex gap-3 items-center">
-                <h1 class="regular-text  font-bold">Stok bahan hampir habis!</h1>
-                <div class="h-1 w-1 rounded-full bg-blue"></div>
-                <p class="xsmall-text">2 hari yang lalu</p>
-            </div>
-            <div>
-                <p class="subtext">Stok <span class="font-bold">Tinta Printer</span> hampir habis! Segera lakukan
-                    pengadaan
-                    untuk menjaga ketersediaan stok barang</p>
-            </div>
-            <hr class="border-blue absolute bottom-0 left-3 right-3">
-        </div>
-    </div>
-    
+    </main>
+
     <!-- Custom JS -->
     <script src="../../scripts/notifikasi.js">
     </script>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Praktikom</title>
+    <title>Peminjaman</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
@@ -13,13 +13,14 @@
 </head>
 
 <body class="p-6 w-screen relative">
+    <!-- header -->
     <header class="flex justify-between items-center w-full mb-5 relative ">
       <a href="laboratorium.html">
-        <button> <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        <button> <img class="cursor-pointer " src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
       </a>
         <p class="subheading">Peminjaman</p>
         <button id="moreButton">
-            <img class="w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="">
+            <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
 
         <!-- popup -->
@@ -34,8 +35,9 @@
         </div>
     </header>
 
-
-    <div class="container mx-auto w-full">
+    <!-- main content -->
+    <main class="container mx-auto w-full">
+       <!-- switch tab -->
         <div class="flex mb-4">
             <button id="pengajuanTab"
                 class="flex-1 py-1 px-4 regular-text font-semibold text-gray-400 focus:outline-none border-b-2">
@@ -47,10 +49,11 @@
             </button>
         </div>
 
-        <!-- Left Content -->
+        <!-- container pengajuan -->
         <div id="pengajuanContent" class="tab-content block">
-            <!-- Content for Left Tab -->
+            <!-- content pengajuan -->
             <div class="flex flex-col gap-3">
+                <!-- item pengajuan -->
                 <a href="peminjaman_detail_peminjaman.html">
                     <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
                         <div class="flex gap-2 items-center">
@@ -68,6 +71,7 @@
                         </button>
                     </div>
                 </a>
+                <!-- item pengajuan -->
                 <a href="peminjaman_detail_peminjaman.html">
                     <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
                         <div class="flex gap-2 items-center">
@@ -85,6 +89,7 @@
                         </button>
                     </div>
                 </a>
+                <!-- item pengajuan -->
                 <a href="peminjaman_detail_peminjaman.html">
                     <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
                         <div class="flex gap-2 items-center">
@@ -101,6 +106,7 @@
                         </button>
                     </div>
                 </a>
+                <!-- item pengajuan -->
                 <a href="peminjaman_detail_peminjaman.html">
                     <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
                         <div class="flex gap-2 items-center">
@@ -120,10 +126,11 @@
             </div>
         </div>
 
-        <!-- Right Content -->
+        <!-- container riwayat -->
         <div id="riwayatContent" class="tab-content hidden">
-            <!-- Content for Right Tab -->
+            <!-- content riwayat -->
             <div class="flex flex-col gap-3">
+                <!-- item riwayat -->
                 <a href="peminjaman_detail_riwayat_peminjaman.html">
                     <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
                         <div class="flex gap-2 items-center">
@@ -140,6 +147,7 @@
                         </button>
                     </div>
                 </a>
+                <!-- item riwayat -->
                 <a href="peminjaman_detail_riwayat_peminjaman.html">
                     <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
                         <div class="flex gap-2 items-center">
@@ -156,7 +164,7 @@
                         </button>
                     </div>
                 </a>
-
+                <!-- item riwayat -->
                 <a href="peminjaman_detail_riwayat_peminjaman.html">
                     <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
                         <div class="flex gap-2 items-center">
@@ -175,12 +183,9 @@
                 </a>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="../../scripts/peminjaman.js"></script>
-
-
-
 </body>
 
 </html>

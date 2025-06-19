@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peminjaman (Riwayat)</title>
+    <title>Pengajuan Peminjaman</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
@@ -14,12 +14,12 @@
 <body class="p-6 w-screen relative h-screen ">
     <!-- header -->
     <header class="flex justify-between items-center w-full mb-5 relative ">
-        <a href="peminjaman.html">
-            <button> <img class="cursor-pointer" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        <a href="pengajuan.html">
+            <button> <img class=" cursor-pointer" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
         </a>
-        <p class="subheading">Detail Peminjaman</p>
+        <p class="subheading text-blue">Pengajuan Peminjaman</p>
         <button id="moreButton">
-            <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
+            <img class=" cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
         </button>
 
         <!-- popup -->
@@ -34,10 +34,13 @@
         </div>
     </header>
 
-    <!-- main content -->
-    <main>
+
+    <main class="relative">
+        <h2 class="text-xl mb-2 px-3">Ringkasan Pengajuan</h2>
+        <hr class="border-t-1 border-black mb-4" />
+        
         <!-- data peminjam -->
-        <div class="mb-5 ">
+        <div class="mb-5 px-3">
             <h1 class="mb-5 subheading bold-text">Data peminjam</h1>
             <div class="space-y-4">
                 <div class="border-b-2 pb-2">
@@ -54,7 +57,9 @@
                 </div>
             </div>
         </div>
-        <div class="">
+
+        <!-- data barang -->
+        <div class="px-3">
             <h1 class="mb-5  subheading bold-text">Data barang</h1>
             <div class="space-y-4">
                 <div class="border-b-2 pb-2">
@@ -69,7 +74,6 @@
                     <p class="xsmall-text">Tanggal peminjaman</p>
                     <h1 class="regular-text">05/05/2025</h1>
                 </div>
-
                 <div class="flex gap-5">
                     <div class="flex-1 border-b-2 pb-2">
                         <p class="xsmall-text">Tanggal peminjaman</p>
@@ -83,10 +87,41 @@
                 </div>
             </div>
         </div>
+
+        <div class="p-6 fixed bottom-0 left-0 right-0">
+            <div class="flex items-center gap-3">
+                <!-- checkbox -->
+                <input type="checkbox" class="form-checkbox text-blue-900">
+                <!-- text -->
+                <p class="regular-text" for="datachecked">
+                    Data yang saya isikan adalah data sebenar-benarnya
+                </p>
+            </div>
+            <!-- button -->
+            <button id="confirmationButton"
+                class="cursor-pointer regular-text bg-gradient-blue rounded-full w-full text-white py-3 mt-3">
+                Kirim
+            </button>
+
+            <!-- popup confirmation -->
+            <div id="confirmationPopup"
+                class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
+                <div class="flex flex-col justify-center items-center gap-5">
+                    <h1 class="text-center font-bold subheading">Pengajuan peminjaman berhasil!</h1>
+                    <img src="../../assets/svg/checklist-icon.svg" alt="">
+                    <a class="inline-block w-full " href="pengajuan.html">
+                        <button id="closePopup"
+                            class="cursor-pointer w-full regular-text bg-gradient-blue rounded-full text-white py-3">
+                            Tutup
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Custom JS -->
-    <script src="../../scripts/peminjaman.js"></script>
+    <script src="../../scripts/pengajuan.js"></script>
 </body>
 
 </html>

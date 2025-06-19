@@ -1,82 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat</title>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../style.css" />
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
 
-  <body class="p-6 w-screen relative">
-    <header class="flex justify-between items-center w-full mb-5 relative">
-      <div class="w-5 h-5"></div>
-      <p class="subheading">Pesan</p>
-      <button id="openPopupButton">
-        <img
-          class="cursor-pointer w-8 h-8"
-          src="../../assets/svg/dots-icon.svg"
-          alt=""
-        />
-      </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../style.css" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
 
-      <!-- Popup -->
-      <div
-        id="popup"
-        class="cursor-pointer absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue"
-      >
-        <div class="border-b w-full py-2 popup-item">
-          <p>Pusat Bantuan</p>
-        </div>
-        <div class="w-full py-2 popup-item">
-          <p>Laporkan Masalah</p>
-        </div>
+<body class="p-6 w-screen relative">
+  <!-- header -->
+  <header class="flex justify-between items-center w-full mb-5 relative">
+    <div class="w-5 h-5"></div>
+    <p class="subheading">Pesan</p>
+    <button id="moreButton">
+      <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="" />
+    </button>
+
+    <!-- Popup -->
+    <div id="popup"
+      class="cursor-pointer absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+      <div class="border-b w-full py-2 popup-item">
+        <p>Pusat Bantuan</p>
       </div>
-    </header>
+      <div class="w-full py-2 popup-item">
+        <p>Laporkan Masalah</p>
+      </div>
+    </div>
+  </header>
 
+  <!-- main content -->
+  <main>
     <!-- search bar -->
     <div class="flex items-center gap-2 bg-grey rounded-lg p-2 mb-4">
       <!-- Search Icon -->
-      <img
-        src="../../assets/svg/search-icon.svg"
-        alt="Search Icon"
-        class="w-5 h-5"
-      />
+      <img src="../../assets/svg/search-icon.svg" alt="Search Icon" class="w-5 h-5" />
       <!-- Input field -->
-      <input
-        placeholder="Cari pesan"
-        type="text"
-        class="bg-transparent border-none outline-none p-1 text-black"
-      />
+      <input placeholder="Cari pesan" type="text" class="bg-transparent border-none outline-none p-1 text-black" />
     </div>
 
     <!-- filter -->
     <div class="flex gap-3 mb-10">
-      <div
-        class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active"
-        id="semua"
-      >
-        <p class="subtext text-white">All</p>
+      <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active" id="semua">
+        <p class="subtext text-white">Semua</p>
       </div>
-      <div
-        class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category"
-        id="peminjaman"
-      >
-        <p class="subtext text-dark-grey">Unread 10</p>
+      <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="peminjaman">
+        <p class="subtext text-dark-grey">Belum dibaca (4)</p>
       </div>
-      <div
-        class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category"
-        id="laporan"
-      >
-        <p class="subtext text-dark-grey">Favourites</p>
+      <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="laporan">
+        <p class="subtext text-dark-grey">Favorit</p>
       </div>
-      <div
-        class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category"
-        id="stok"
-      >
-        <p class="subtext text-dark-grey">Groups</p>
+      <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category" id="stok">
+        <p class="subtext text-dark-grey">Grup</p>
       </div>
     </div>
 
@@ -85,9 +63,7 @@
       <a href="chat_detail_chat.html">
         <div class="flex flex-col gap-2">
           <div class="flex gap-3 items-center">
-            <h1
-              class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center"
-            >
+            <h1 class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center">
               P
             </h1>
             <div class="flex flex-col">
@@ -108,9 +84,7 @@
       <a href="chat_detail_chat.html">
         <div class="flex flex-col gap-2">
           <div class="flex gap-3 items-center">
-            <h1
-              class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center"
-            >
+            <h1 class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center">
               D
             </h1>
             <div class="flex flex-col">
@@ -131,9 +105,7 @@
       <a href="chat_detail_chat.html">
         <div class="flex flex-col gap-2">
           <div class="flex gap-3 items-center">
-            <h1
-              class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center"
-            >
+            <h1 class="bg-orange-pastel w-12 h-12 text-white rounded-2xl flex justify-center items-center">
               M
             </h1>
             <div class="flex flex-col">
@@ -152,41 +124,29 @@
         </div>
       </a>
     </div>
+  </main>
 
-    <!-- nav -->
-    <nav
-      class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0 bg-blue py-2"
-    >
-      <button
-        class="flex flex-col items-center text-white"
-        onclick="handleNavClick('beranda')"
-      >
-        <img src="../../assets/svg/home-icon.svg" alt="" />
-        <p>Beranda</p>
-      </button>
-      <button
-        class="flex flex-col items-center text-white"
-        onclick="handleNavClick('kelas')"
-      >
-        <img src="../../assets/svg/classes-icon.svg" alt="" />
-        <p>Kelas</p>
-      </button>
-      <button
-        class="flex flex-col items-center text-orange-pastel"
-        onclick="handleNavClick('pesan')"
-      >
-        <img src="../../assets/svg/chat-active-icon.svg" alt="" />
-        <p>Pesan</p>
-      </button>
-      <button
-        class="flex flex-col items-center text-white"
-        onclick="handleNavClick('profile')"
-      >
-        <img src="../../assets/svg/profile-icon.svg" alt="" />
-        <p>Profil</p>
-      </button>
-    </nav>
+  <!-- nav -->
+  <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0 bg-blue py-2">
+    <button class="flex flex-col items-center text-white" onclick="handleNavClick('beranda')">
+      <img src="../../assets/svg/home-icon.svg" alt="" />
+      <p>Beranda</p>
+    </button>
+    <button class="flex flex-col items-center text-white" onclick="handleNavClick('kelas')">
+      <img src="../../assets/svg/classes-icon.svg" alt="" />
+      <p>Kelas</p>
+    </button>
+    <button class="flex flex-col items-center text-orange-pastel" onclick="handleNavClick('pesan')">
+      <img src="../../assets/svg/chat-active-icon.svg" alt="" />
+      <p>Pesan</p>
+    </button>
+    <button class="flex flex-col items-center text-white" onclick="handleNavClick('profile')">
+      <img src="../../assets/svg/profile-icon.svg" alt="" />
+      <p>Profil</p>
+    </button>
+  </nav>
 
-    <script src="../../scripts/pesan.js"></script>
-  </body>
+  <script src="../../scripts/chat.js"></script>
+</body>
+
 </html>

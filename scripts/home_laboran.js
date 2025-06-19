@@ -1,22 +1,23 @@
-// Popup
+// buka popup saat tombol diklik
 const openPopupButton = document.getElementById("filterButton");
 const popup = document.getElementById("popup");
 const itemPopups = document.querySelectorAll(".item-popup");
 
 if (openPopupButton && popup) {
-  // Menambahkan event listener untuk tombol klik membuka popup
+  // tampilkan popup
   openPopupButton.addEventListener("click", function () {
-    popup.classList.remove("hidden"); // Menampilkan popup
+    popup.classList.remove("hidden");
   });
 
-  // Menambahkan event listener pada setiap item dalam popup untuk menutup popup setelah item diklik
+  // sembunyikan popup saat item diklik
   itemPopups.forEach(function (item) {
     item.addEventListener("click", function () {
-      popup.classList.add("hidden"); // Menyembunyikan popup setelah item diklik
+      popup.classList.add("hidden");
     });
   });
 }
 
+// navigasi ke halaman sesuai nama halaman
 function handleNavClick(pageName) {
   if (pageName === "beranda_laboran") {
     window.location.href = "home_laboran.html";
