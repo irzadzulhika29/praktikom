@@ -12,9 +12,13 @@ function handleNavClick(pageName) {
 
 function handleSectionClick(name) {
   if (name === "jadwal") {
-    window.location.href = "jadwal.html";
+    window.location.href = "jadwal_praktikan.html";
   } else if (name === "presensi") {
     window.location.href = "presensi.html";
+  } else if (name === "peminjamanAlat") {
+    window.location.href = "pengajuan.html";
+  } else if (name === "rekapStudi") {
+    window.location.href = "rekap_studi.html";
   }
 }
 
@@ -36,3 +40,17 @@ if (openPopupButton && popup) {
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".swiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+});

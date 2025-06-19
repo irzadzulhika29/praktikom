@@ -40,26 +40,35 @@ dropdownItems.forEach((item) => {
 
 // status presensi
 const buttons = document.querySelectorAll(".btn-status");
+
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Hapus bg-blue dan tambahkan bg-grey pada semua tombol
-    buttons.forEach((btn) => {
-      btn.classList.remove("bg-blue");
-      btn.classList.add("bg-grey");
-    });
+    const isActive = button.classList.contains("bg-blue");
 
-    // Tambahkan bg-blue dan hapus bg-grey pada tombol yang diklik
-    button.classList.add("bg-blue");
-    button.classList.remove("bg-grey");
-    
-    // Tambahkan text-white pada tombol yang diklik
-    button.classList.add("text-white");
+    // Jika tombol sudah aktif (biru), ubah jadi nonaktif (abu)
+    if (isActive) {
+      button.classList.remove("bg-blue", "text-white");
+      button.classList.add("bg-grey", "text-black");
+    } else {
+      // Nonaktifkan semua tombol lain
+      buttons.forEach((btn) => {
+        btn.classList.remove("bg-blue", "text-white");
+        btn.classList.add("bg-grey", "text-black");
+      });
+
+      // Aktifkan tombol yang diklik
+      button.classList.remove("bg-grey", "text-black");
+      button.classList.add("bg-blue", "text-white");
+    }
   });
 });
 
 // Menambahkan event listener untuk dokumen untuk menutup popup saat klik di luar
-document.addEventListener("click", function(event) {
-  if (!popup.contains(event.target) && !openPopupButton.contains(event.target)) {
+document.addEventListener("click", function (event) {
+  if (
+    !popup.contains(event.target) &&
+    !openPopupButton.contains(event.target)
+  ) {
     popup.classList.add("hidden");
   }
 });
