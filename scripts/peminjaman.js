@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // fungsi untuk mengganti tab
   function switchTab(activeTab, inactiveTab, activeContent, inactiveContent) {
-    activeTab.classList.add("border-gray-600", "text-blue");
+    activeTab.classList.add("border-b-2", "text-blue");
     activeTab.classList.remove("text-gray-600");
 
-    inactiveTab.classList.remove("border-gray-600", "text-blue-500");
+    inactiveTab.classList.remove("border-b-2", "text-blue");
     inactiveTab.classList.add("text-gray-600");
 
     activeContent.classList.remove("hidden");
@@ -20,17 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // tab default yang aktif adalah pengajuan
-  switchTab(leftTab, rightTab, leftContent, rightContent);
-
-  // event saat tab pengajuan diklik
-  leftTab.addEventListener("click", () => {
+  if (leftTab && rightTab && leftContent && rightContent) {
     switchTab(leftTab, rightTab, leftContent, rightContent);
-  });
 
-  // event saat tab riwayat diklik
-  rightTab.addEventListener("click", () => {
-    switchTab(rightTab, leftTab, rightContent, leftContent);
-  });
+    // event saat tab pengajuan diklik
+    leftTab.addEventListener("click", () => {
+      switchTab(leftTab, rightTab, leftContent, rightContent);
+    });
+
+    // event saat tab riwayat diklik
+    rightTab.addEventListener("click", () => {
+      switchTab(rightTab, leftTab, rightContent, leftContent);
+    });
+  }
 });
 
 // filter kategori
@@ -43,8 +45,10 @@ categories.forEach(function(category) {
 
       // ubah warna teks jadi abu saat tidak aktif
       const text = cat.querySelector("p");
-      text.classList.remove("text-white");
-      text.classList.add("text-dark-grey");
+      if (text) {
+        text.classList.remove("text-white");
+        text.classList.add("text-dark-grey");
+      }
     });
 
     // aktifkan kategori yang diklik
@@ -53,8 +57,10 @@ categories.forEach(function(category) {
 
     // ubah warna teks jadi putih untuk kategori aktif
     const activeText = this.querySelector("p");
-    activeText.classList.remove("text-dark-grey");
-    activeText.classList.add("text-white");
+    if (activeText) {
+      activeText.classList.remove("text-dark-grey");
+      activeText.classList.add("text-white");
+    }
   });
 });
 
@@ -82,27 +88,34 @@ const rejectButton = document.getElementById("rejectButton");
 const acceptButton = document.getElementById("acceptButton");
 const acceptPopup = document.getElementById("acceptPopup");
 const rejectPopup = document.getElementById("rejectPopup");
-const closeAcceptButton = acceptPopup.querySelector(".close-button");
-const closeRejectButton = rejectPopup.querySelector(".close-button");
 
-// tombol tolak diklik
-rejectButton.addEventListener("click", function() {
-  acceptPopup.classList.add("hidden");
-  rejectPopup.classList.remove("hidden");
-});
+if (rejectButton && acceptButton && acceptPopup && rejectPopup) {
+  const closeAcceptButton = acceptPopup.querySelector(".close-button");
+  const closeRejectButton = rejectPopup.querySelector(".close-button");
 
-// tombol terima diklik
-acceptButton.addEventListener("click", function() {
-  rejectPopup.classList.add("hidden");
-  acceptPopup.classList.remove("hidden");
-});
+  // tombol tolak diklik
+  rejectButton.addEventListener("click", function() {
+    acceptPopup.classList.add("hidden");
+    rejectPopup.classList.remove("hidden");
+  });
 
-// tombol kirim pada popup diterima
-closeAcceptButton.addEventListener("click", function() {
-  acceptPopup.classList.add("hidden");
-});
+  // tombol terima diklik
+  acceptButton.addEventListener("click", function() {
+    rejectPopup.classList.add("hidden");
+    acceptPopup.classList.remove("hidden");
+  });
 
-// tombol kirim pada popup ditolak
-closeRejectButton.addEventListener("click", function() {
-  rejectPopup.classList.add("hidden");
-});
+  // tombol kirim pada popup diterima
+  if (closeAcceptButton) {
+    closeAcceptButton.addEventListener("click", function() {
+      acceptPopup.classList.add("hidden");
+    });
+  }
+
+  // tombol kirim pada popup ditolak
+  if (closeRejectButton) {
+    closeRejectButton.addEventListener("click", function() {
+      rejectPopup.classList.add("hidden");
+    });
+  }
+}

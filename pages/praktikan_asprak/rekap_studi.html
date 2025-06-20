@@ -1,181 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Praktikom</title>
-    <link rel="stylesheet" href="../../style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
 
-  <body class="p-6 w-screen relative">
-    <header class="flex justify-between items-center w-full mb-5 relative">
-      <a href="home_praktikan.html">
-        <button>
-          <img
-            class="cursor-pointer w-8 h-8"
-            src="../../assets/svg/chevron-left-icon.svg"
-            alt=""
-          />
-        </button>
-      </a>
-      <p class="subheading">Rekap Studi Praktikum</p>
-      <button id="moreButton">
-        <img
-          class="cursor-pointer w-8 h-8"
-          src="../../assets/svg/dots-icon.svg"
-          alt=""
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praktikom</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-6 w-screen relative">
+  <header class="flex justify-between items-center w-full mb-5 relative">
+    <a href="home_praktikan.html">
+      <button>
+        <img class="cursor-pointer w-8 h-8" src="../../assets/svg/chevron-left-icon.svg" alt="" />
       </button>
+    </a>
+    <p class="subheading">Rekap Studi Praktikum</p>
+    <button id="moreButton">
+      <img class="cursor-pointer w-8 h-8" src="../../assets/svg/dots-icon.svg" alt="" />
+    </button>
 
-      <div
-        id="popup"
-        class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue"
-      >
-        <div class="border-b w-full py-2">
-          <p class="popup-item cursor-pointer">Pusat Bantuan</p>
-        </div>
-        <div class="w-full py-2">
-          <p class="popup-item cursor-pointer">Laporkan Masalah</p>
-        </div>
+    <div id="popup"
+      class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+      <div class="border-b w-full py-2">
+        <p class="popup-item cursor-pointer">Pusat Bantuan</p>
       </div>
-    </header>
+      <div class="w-full py-2">
+        <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+      </div>
+    </div>
+  </header>
 
-    <div class="flex flex-col gap-2 px-5">
-      <h1 class="font-bold">Pilih Semester</h1>
+  <div class="flex flex-col gap-2 px-5">
+    <h1 class="font-bold">Pilih Semester</h1>
 
-      <div class="flex flex-col relative border border-grey rounded-lg p-3">
-        <div
-          id="semesterDropdownButton"
-          class="flex justify-between items-center w-full"
-        >
-          <p id="semesterDropdownText" class="regular-text text-dark-grey">
+    <div class="flex flex-col relative border border-grey rounded-lg p-3">
+      <div id="semesterDropdownButton" class="flex justify-between items-center w-full">
+        <p id="semesterDropdownText" class="regular-text text-dark-grey">
+          Genap 2024/2025
+        </p>
+        <img id="semesterDropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+          class="w-6 h-6 transition-transform duration-300 transform" />
+      </div>
+      <div id="semesterDropdownMenu"
+        class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
+        <ul class="space-y-2 p-3">
+          <li class="semester-dropdown-item cursor-pointer hover:bg-gray-100 p-2">
             Genap 2024/2025
-          </p>
-          <img
-            id="semesterDropdownIcon"
-            src="../../assets/svg/chevron-down-icon.svg"
-            alt=""
-            class="w-6 h-6 transition-transform duration-300 transform"
-          />
-        </div>
-        <div
-          id="semesterDropdownMenu"
-          class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden"
-        >
-          <ul class="space-y-2 p-3">
-            <li
-              class="semester-dropdown-item cursor-pointer hover:bg-gray-100 p-2"
-            >
-              Genap 2024/2025
-            </li>
-            <hr />
-            <li
-              class="semester-dropdown-item cursor-pointer hover:bg-gray-100 p-2"
-            >
-              Ganjil 2024/2025
-            </li>
-          </ul>
-        </div>
+          </li>
+          <hr />
+          <li class="semester-dropdown-item cursor-pointer hover:bg-gray-100 p-2">
+            Ganjil 2024/2025
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
 
-    <div class="flex flex-col gap-2 px-5">
-      <h1 class="font-bold">Jenis Semester</h1>
+  <div class="flex flex-col gap-2 px-5">
+    <h1 class="font-bold">Jenis Semester</h1>
 
-      <div class="flex flex-col relative border border-grey rounded-lg p-3">
-        <div
-          id="typeDropdownButton"
-          class="flex justify-between items-center w-full"
-        >
-          <p id="typeDropdownText" class="regular-text text-dark-grey">
+    <div class="flex flex-col relative border border-grey rounded-lg p-3">
+      <div id="typeDropdownButton" class="flex justify-between items-center w-full">
+        <p id="typeDropdownText" class="regular-text text-dark-grey">
+          Reguler
+        </p>
+        <img id="typeDropdownIcon" src="../../assets/svg/chevron-down-icon.svg" alt=""
+          class="w-6 h-6 transition-transform duration-300 transform" />
+      </div>
+      <div id="typeDropdownMenu"
+        class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden">
+        <ul class="space-y-2 p-3">
+          <li class="type-dropdown-item cursor-pointer hover:bg-gray-100 p-2">
             Reguler
-          </p>
-          <img
-            id="typeDropdownIcon"
-            src="../../assets/svg/chevron-down-icon.svg"
-            alt=""
-            class="w-6 h-6 transition-transform duration-300 transform"
-          />
-        </div>
-        <div
-          id="typeDropdownMenu"
-          class="absolute left-0 top-full w-full mt-2 bg-white border border-grey rounded-lg shadow-md hidden"
-        >
-          <ul class="space-y-2 p-3">
-            <li class="type-dropdown-item cursor-pointer hover:bg-gray-100 p-2">
-              Reguler
-            </li>
-            <hr />
-            <li class="type-dropdown-item cursor-pointer hover:bg-gray-100 p-2">
-              Pendek
-            </li>
-          </ul>
-        </div>
+          </li>
+          <hr />
+          <li class="type-dropdown-item cursor-pointer hover:bg-gray-100 p-2">
+            Pendek
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
 
-    <hr class="border border-blue my-5" />
+  <hr class="border border-blue my-5" />
 
-    <div class="bg-grey rounded-xl p-4 mb-4">
-      <h2 class="text-sm font-semibold border-b pb-2 mb-2">Rekap presensi</h2>
-      <div class="flex justify-between text-center text-sm">
-        <div class="flex-1">
-          <p class="text-green-600 font-bold text-lg">35</p>
-          <p>Hadir</p>
-        </div>
-        <div class="border-l"></div>
-        <div class="flex-1">
-          <p class="text-yellow-500 font-bold text-lg">4</p>
-          <p>Izin</p>
-        </div>
-        <div class="border-l"></div>
-        <div class="flex-1">
-          <p class="text-yellow-400 font-bold text-lg">3</p>
-          <p>Sakit</p>
-        </div>
-        <div class="border-l"></div>
-        <div class="flex-1">
-          <p class="text-red-500 font-bold text-lg">6</p>
-          <p>Alpha</p>
-        </div>
+  <div class="bg-grey rounded-xl p-4 mb-4">
+    <h2 class="text-sm font-semibold border-b pb-2 mb-2">Rekap presensi</h2>
+    <div class="flex justify-between text-center text-sm">
+      <div class="flex-1">
+        <p class="text-green-600 font-bold text-lg">35</p>
+        <p>Hadir</p>
+      </div>
+      <div class="border-l"></div>
+      <div class="flex-1">
+        <p class="text-yellow-500 font-bold text-lg">4</p>
+        <p>Izin</p>
+      </div>
+      <div class="border-l"></div>
+      <div class="flex-1">
+        <p class="text-yellow-400 font-bold text-lg">3</p>
+        <p>Sakit</p>
+      </div>
+      <div class="border-l"></div>
+      <div class="flex-1">
+        <p class="text-red-500 font-bold text-lg">6</p>
+        <p>Alpha</p>
       </div>
     </div>
+  </div>
 
-    <div class="bg-grey rounded-xl p-4 mb-4">
-      <h2 class="text-sm font-semibold border-b pb-2 mb-2">Rekap penugasan</h2>
-      <div class="flex justify-between text-center text-sm">
-        <div class="flex-1">
-          <p class="text-green-600 font-bold text-lg">21</p>
-          <p>Dikumpulkan</p>
-        </div>
-        <div class="border-l"></div>
-        <div class="flex-1">
-          <p class="text-yellow-500 font-bold text-lg">1</p>
-          <p>Telat dikumpulkan</p>
-        </div>
-        <div class="border-l"></div>
-        <div class="flex-1">
-          <p class="text-red-500 font-bold text-lg">2</p>
-          <p>Tidak dikerjakan</p>
-        </div>
+  <div class="bg-grey rounded-xl p-4 mb-4">
+    <h2 class="text-sm font-semibold border-b pb-2 mb-2">Rekap penugasan</h2>
+    <div class="flex justify-between text-center text-sm">
+      <div class="flex-1">
+        <p class="text-green-600 font-bold text-lg">21</p>
+        <p>Dikumpulkan</p>
+      </div>
+      <div class="border-l"></div>
+      <div class="flex-1">
+        <p class="text-yellow-500 font-bold text-lg">1</p>
+        <p>Telat dikumpulkan</p>
+      </div>
+      <div class="border-l"></div>
+      <div class="flex-1">
+        <p class="text-red-500 font-bold text-lg">2</p>
+        <p>Tidak dikerjakan</p>
       </div>
     </div>
+  </div>
 
-    <div class="bg-grey rounded-xl p-4">
-      <h2 class="text-sm font-semibold border-b pb-2 mb-2">Rekap penilaian</h2>
-      <div class="flex justify-between text-center text-sm">
-        <div class="flex-1">
-          <p class="text-green-600 font-bold text-lg">86,40</p>
-          <p>Rata-rata nilai</p>
-        </div>
-        <div class="border-l"></div>
-        <div class="flex-1">
-          <p class="text-orange-500 font-bold text-lg">4</p>
-          <p>Jumlah MK Praktikum</p>
-        </div>
+  <div class="bg-grey rounded-xl p-4">
+    <h2 class="text-sm font-semibold border-b pb-2 mb-2">Rekap penilaian</h2>
+    <div class="flex justify-between text-center text-sm">
+      <div class="flex-1">
+        <p class="text-green-600 font-bold text-lg">86,40</p>
+        <p>Rata-rata nilai</p>
+      </div>
+      <div class="border-l"></div>
+      <div class="flex-1">
+        <p class="text-orange-500 font-bold text-lg">4</p>
+        <p>Jumlah MK Praktikum</p>
       </div>
     </div>
-    <script src="../../scripts/rekap_studi.js"></script>
-  </body>
+  </div>
+  
+  <script src="../../scripts/rekap_studi.js"></script>
+</body>
+
 </html>

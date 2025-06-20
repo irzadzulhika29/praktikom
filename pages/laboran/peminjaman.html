@@ -1,251 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peminjaman</title>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../style.css" />
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
 
-  <body class="p-6 w-screen relative">
-    <!-- header -->
-    <header class="flex justify-between items-center w-full mb-5 relative">
-      <a href="laboratorium.html">
-        <button>
-          <img
-            class="cursor-pointer"
-            src="../../assets/svg/chevron-left-icon.svg"
-            alt=""
-          />
-        </button>
-      </a>
-      <p class="subheading">Peminjaman</p>
-      <button id="moreButton">
-        <img
-          class="cursor-pointer"
-          src="../../assets/svg/dots-icon.svg"
-          alt=""
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peminjaman</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../style.css" />
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="p-6 w-screen relative">
+  <!-- header -->
+  <header class="flex justify-between items-center w-full mb-5 relative ">
+    <a href="laboratorium.html">
+      <button> <img class="cursor-pointer " src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+    </a>
+    <p class="subheading">Peminjaman</p>
+    <button id="moreButton">
+      <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
+    </button>
+
+    <!-- popup -->
+    <div id="popup"
+      class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+      <div class="border-b w-full py-2">
+        <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+      </div>
+      <div class="w-full py-2">
+        <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- main content -->
+  <main class="container mx-auto w-full">
+    <div class="flex mb-4">
+      <button id="pengajuanTab"
+        class="flex-1 py-1 px-4 regular-text font-semibold text-gray-600 focus:outline-none border-b-2 border-gray-400">
+        Pengajuan
       </button>
-
-      <!-- popup -->
-      <div
-        id="popup"
-        class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue"
-      >
-        <div class="border-b w-full py-2">
-          <p class="popup-item cursor-pointer">Pusat Bantuan</p>
-        </div>
-        <div class="w-full py-2">
-          <p class="popup-item cursor-pointer">Laporkan Masalah</p>
-        </div>
+      <button id="riwayatTab"
+        class="flex-1 py-1 px-4 regular-text font-semibold text-gray-600 focus:outline-none border-b-2 border-gray-400">
+        Riwayat
+      </button>
+    </div>
+    <!-- container pengajuan -->
+    <div id="pengajuanContent" class="tab-content block">
+      <!-- content pengajuan -->
+      <div class="flex flex-col gap-3">
+        <!-- item pengajuan -->
+        <a href="peminjaman_detail_peminjaman.html">
+          <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+            <div class="flex gap-2 items-center">
+              <h1 class="subheading">Peminjaman Ruang G 1.3</h1>
+              <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Perlu
+                diproses</span>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../assets/svg/clock-icon.svg" alt="">
+              <p class="xsmall-text">2 jam yang lalu</p>
+              <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
+            </div>
+            <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+              <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+            </button>
+          </div>
+        </a>
+        <!-- item pengajuan -->
+        <a href="peminjaman_detail_peminjaman.html">
+          <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+            <div class="flex gap-2 items-center">
+              <h1 class="subheading">Peminjaman Arduino</h1>
+              <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Perlu
+                diproses</span>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../assets/svg/clock-icon.svg" alt="">
+              <p class="xsmall-text">2 jam yang lalu</p>
+              <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
+            </div>
+            <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+              <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+            </button>
+          </div>
+        </a>
+        <!-- item pengajuan -->
+        <a href="peminjaman_detail_peminjaman.html">
+          <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+            <div class="flex gap-2 items-center">
+              <h1 class="subheading">Peminjaman Ruang G 1.5</h1>
+              <span class="small-text bg-orange text-white px-2 py-1 rounded-full">Ditolak</span>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../assets/svg/clock-icon.svg" alt="">
+              <p class="xsmall-text">4 jam yang lalu</p>
+              <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
+            </div>
+            <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+              <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+            </button>
+          </div>
+        </a>
+        <!-- item pengajuan -->
+        <a href="peminjaman_detail_peminjaman.html">
+          <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+            <div class="flex gap-2 items-center">
+              <h1 class="subheading">Peminjaman Proyektor</h1>
+              <span class="small-text bg-orange text-white px-2 py-1 rounded-full">Ditolak</span>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../assets/svg/clock-icon.svg" alt="">
+              <p class="xsmall-text">1 hari yang lalu</p>
+              <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
+            </div>
+            <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+              <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+            </button>
+          </div>
+        </a>
       </div>
-    </header>
+    </div>
 
-    <!-- main content -->
-    <main class="container mx-auto w-full">
-      <!-- switch tab -->
-      <div class="flex mb-4">
-        <button
-          id="pengajuanTab"
-          class="flex-1 py-1 px-4 regular-text font-semibold text-gray-400 focus:outline-none border-b-2"
-        >
-          Pengajuan
-        </button>
-        <button
-          id="riwayatTab"
-          class="flex-1 py-1 px-4 regular-text font-semibold text-gray-400 focus:outline-none border-b-2"
-        >
-          Riwayat
-        </button>
+    <!-- container riwayat -->
+    <div id="riwayatContent" class="tab-content hidden">
+      <!-- content riwayat -->
+      <div class="flex flex-col gap-3">
+        <!-- item riwayat -->
+        <a href="peminjaman_detail_riwayat_peminjaman.html">
+          <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+            <div class="flex gap-2 items-center">
+              <h1 class="subheading">Peminjaman Ruang G 1.3</h1>
+              <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Dipinjam</span>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../assets/svg/clock-icon.svg" alt="">
+              <p class="xsmall-text">3 jam yang lalu</p>
+              <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
+            </div>
+            <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+              <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+            </button>
+          </div>
+        </a>
+        <!-- item riwayat -->
+        <a href="peminjaman_detail_riwayat_peminjaman.html">
+          <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+            <div class="flex gap-2 items-center">
+              <h1 class="subheading">Peminjaman Router</h1>
+              <span class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full">Dipinjam</span>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../assets/svg/clock-icon.svg" alt="">
+              <p class="xsmall-text">3 jam yang lalu</p>
+              <p class="xsmall-text">oleh: Ahmad Akmal Syafi’i</p>
+            </div>
+            <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+              <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+            </button>
+          </div>
+        </a>
+        <!-- item riwayat -->
+        <a href="peminjaman_detail_riwayat_peminjaman.html">
+          <div class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3">
+            <div class="flex gap-2 items-center">
+              <h1 class="subheading">Peminjaman Ruang G 1.3</h1>
+              <span class="small-text bg-success text-white px-2 py-1 rounded-full">Dikembalikan</span>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../assets/svg/clock-icon.svg" alt="">
+              <p class="xsmall-text">2 jam yang lalu</p>
+              <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
+            </div>
+            <button class="absolute top-1/2 right-0 transform -translate-y-1/2">
+              <img src="../../assets/svg/chevron-right-icon.svg" alt="">
+            </button>
+          </div>
+        </a>
       </div>
+    </div>
+  </main>
 
-      <!-- container pengajuan -->
-      <div id="pengajuanContent" class="tab-content block">
-        <!-- content pengajuan -->
-        <div class="flex flex-col gap-3">
-          <!-- item pengajuan -->
-          <a href="peminjaman_detail_peminjaman.html">
-            <div
-              class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3"
-            >
-              <div class="flex gap-2 items-center">
-                <h1 class="subheading">Peminjaman Ruang G 1.3</h1>
-                <span
-                  class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full"
-                  >Perlu diproses</span
-                >
-              </div>
-              <div class="flex gap-2 items-center">
-                <img src="../../assets/svg/clock-icon.svg" alt="" />
-                <p class="xsmall-text">2 jam yang lalu</p>
-                <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
-              </div>
-              <button
-                class="absolute top-1/2 right-0 transform -translate-y-1/2"
-              >
-                <img src="../../assets/svg/chevron-right-icon.svg" alt="" />
-              </button>
-            </div>
-          </a>
-          <!-- item pengajuan -->
-          <a href="peminjaman_detail_peminjaman.html">
-            <div
-              class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3"
-            >
-              <div class="flex gap-2 items-center">
-                <h1 class="subheading">Peminjaman Arduino</h1>
-                <span
-                  class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full"
-                  >Perlu diproses</span
-                >
-              </div>
-              <div class="flex gap-2 items-center">
-                <img src="../../assets/svg/clock-icon.svg" alt="" />
-                <p class="xsmall-text">2 jam yang lalu</p>
-                <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
-              </div>
-              <button
-                class="absolute top-1/2 right-0 transform -translate-y-1/2"
-              >
-                <img src="../../assets/svg/chevron-right-icon.svg" alt="" />
-              </button>
-            </div>
-          </a>
-          <!-- item pengajuan -->
-          <a href="peminjaman_detail_peminjaman.html">
-            <div
-              class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3"
-            >
-              <div class="flex gap-2 items-center">
-                <h1 class="subheading">Peminjaman Ruang G 1.5</h1>
-                <span
-                  class="small-text bg-orange text-white px-2 py-1 rounded-full"
-                  >Ditolak</span
-                >
-              </div>
-              <div class="flex gap-2 items-center">
-                <img src="../../assets/svg/clock-icon.svg" alt="" />
-                <p class="xsmall-text">4 jam yang lalu</p>
-                <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
-              </div>
-              <button
-                class="absolute top-1/2 right-0 transform -translate-y-1/2"
-              >
-                <img src="../../assets/svg/chevron-right-icon.svg" alt="" />
-              </button>
-            </div>
-          </a>
-          <!-- item pengajuan -->
-          <a href="peminjaman_detail_peminjaman.html">
-            <div
-              class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3"
-            >
-              <div class="flex gap-2 items-center">
-                <h1 class="subheading">Peminjaman Proyektor</h1>
-                <span
-                  class="small-text bg-orange text-white px-2 py-1 rounded-full"
-                  >Ditolak</span
-                >
-              </div>
-              <div class="flex gap-2 items-center">
-                <img src="../../assets/svg/clock-icon.svg" alt="" />
-                <p class="xsmall-text">1 hari yang lalu</p>
-                <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
-              </div>
-              <button
-                class="absolute top-1/2 right-0 transform -translate-y-1/2"
-              >
-                <img src="../../assets/svg/chevron-right-icon.svg" alt="" />
-              </button>
-            </div>
-          </a>
-        </div>
-      </div>
+  <script src="../../scripts/peminjaman.js"></script>
+</body>
 
-      <!-- container riwayat -->
-      <div id="riwayatContent" class="tab-content hidden">
-        <!-- content riwayat -->
-        <div class="flex flex-col gap-3">
-          <!-- item riwayat -->
-          <a href="peminjaman_detail_riwayat_peminjaman.html">
-            <div
-              class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3"
-            >
-              <div class="flex gap-2 items-center">
-                <h1 class="subheading">Peminjaman Ruang G 1.3</h1>
-                <span
-                  class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full"
-                  >Dipinjam</span
-                >
-              </div>
-              <div class="flex gap-2 items-center">
-                <img src="../../assets/svg/clock-icon.svg" alt="" />
-                <p class="xsmall-text">3 jam yang lalu</p>
-                <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
-              </div>
-              <button
-                class="absolute top-1/2 right-0 transform -translate-y-1/2"
-              >
-                <img src="../../assets/svg/chevron-right-icon.svg" alt="" />
-              </button>
-            </div>
-          </a>
-          <!-- item riwayat -->
-          <a href="peminjaman_detail_riwayat_peminjaman.html">
-            <div
-              class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3"
-            >
-              <div class="flex gap-2 items-center">
-                <h1 class="subheading">Peminjaman Router</h1>
-                <span
-                  class="small-text bg-orange-pastel text-white px-2 py-1 rounded-full"
-                  >Dipinjam</span
-                >
-              </div>
-              <div class="flex gap-2 items-center">
-                <img src="../../assets/svg/clock-icon.svg" alt="" />
-                <p class="xsmall-text">3 jam yang lalu</p>
-                <p class="xsmall-text">oleh: Ahmad Akmal Syafi’i</p>
-              </div>
-              <button
-                class="absolute top-1/2 right-0 transform -translate-y-1/2"
-              >
-                <img src="../../assets/svg/chevron-right-icon.svg" alt="" />
-              </button>
-            </div>
-          </a>
-          <!-- item riwayat -->
-          <a href="peminjaman_detail_riwayat_peminjaman.html">
-            <div
-              class="border-2 gap-5 flex flex-col border-grey relative rounded-xl p-3"
-            >
-              <div class="flex gap-2 items-center">
-                <h1 class="subheading">Peminjaman Ruang G 1.3</h1>
-                <span
-                  class="small-text bg-success text-white px-2 py-1 rounded-full"
-                  >Dikembalikan</span
-                >
-              </div>
-              <div class="flex gap-2 items-center">
-                <img src="../../assets/svg/clock-icon.svg" alt="" />
-                <p class="xsmall-text">2 jam yang lalu</p>
-                <p class="xsmall-text">oleh: Muhammad Irza Dzulhika</p>
-              </div>
-              <button
-                class="absolute top-1/2 right-0 transform -translate-y-1/2"
-              >
-                <img src="../../assets/svg/chevron-right-icon.svg" alt="" />
-              </button>
-            </div>
-          </a>
-        </div>
-      </div>
-    </main>
-
-    <script src="../../scripts/peminjaman.js"></script>
-  </body>
 </html>
