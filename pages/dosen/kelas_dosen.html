@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body class="bg-white p-6 flex flex-col min-h-screen justify-between">
+    <header class="flex justify-between items-center py-4 px-4 bg-white">
+        <div class="w-10"></div>
+        <h1 class="flex-grow text-xl font-bold text-center text-gray-800">
+            Classes
+        </h1>
+        <button class="p-1 rounded-full text-gray-600 hover:bg-gray-100 focus:outline-none"
+            onclick="handleNotificationClick()">
+            <img src="../../assets/svg/notification-icon.svg" alt="icon notifikasi" />
+        </button>
+    </header>
+
+    <main class="flex-grow overflow-y-auto">
+        <section class="px-4 mt-6">
+            <h2 class="mb-3 text-lg font-semibold text-gray-800">Daftar Kelas</h2>
+            <div class="flex items-center overflow-hidden bg-white border border-gray-300 rounded-lg">
+                <input type="text" placeholder="Enter enroll code"
+                    class="flex-grow py-3 px-4 text-base text-gray-700 focus:outline-none" />
+                <button
+                    class="flex-shrink-0 flex items-center justify-center mr-2 w-8 h-8 hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#213448]">
+                    <img src="../../assets/svg/submit-button.svg" alt="submit button" />
+                </button>
+            </div>
+        </section>
+
+        <section class="px-4 mt-6">
+            <a href="kelas_buat_kelas_dosen.html">
+                <button class="relative w-full bg-gradient-blue text-white px-4 py-3 rounded-full">
+                    <p>Buat Kelas</p>
+                    <img class="absolute top-1/2 -translate-y-1/2 right-10"
+                        src="../../assets/svg/chevron-right-white-icon.svg" alt="">
+                </button>
+            </a>
+        </section>
+
+        <div id="classViewContainer" class="px-4 mt-6">
+            <section id="classListSection" class="space-y-4">
+                <div
+                    class="flex items-center justify-between p-4 space-x-3 bg-white border border-gray-200 rounded-xl shadow-sm cursor-pointer hover:shadow-md active:shadow-sm transition-shadow class-card">
+                    <div class="flex-grow min-w-0 flex flex-col self-stretch justify-between">
+                        <h3 class="text-md font-semibold text-gray-800">
+                            (C) Perancangan Pengalaman Pengguna
+                        </h3>
+                        <p class="text-xs text-gray-500">
+                            Senin (07.00 - 08.40) <span class="mx-1">•</span> Gedung F
+                            FILKOM F4.10
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0 flex flex-col items-end space-y-2">
+                        <button class="p-1 rounded-full text-gray-400 hover:bg-gray-100"
+                            onclick="event.stopPropagation(); handleMoreOptionsClick(1)">
+                            <img src="../../assets/svg/dots-icon.svg" alt="" />
+                        </button>
+                        <div id="classCard1ProgressContainer"></div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-center justify-between p-4 space-x-3 bg-white border border-gray-200 rounded-xl shadow-sm cursor-pointer hover:shadow-md active:shadow-sm transition-shadow class-card">
+                    <div class="flex-grow min-w-0 flex flex-col self-stretch justify-between">
+                        <h3 class="text-md font-semibold text-gray-800">
+                            (C) Perancangan Pengalaman Pengguna
+                        </h3>
+                        <p class="text-xs text-gray-500">
+                            Senin (07.00 - 08.40) <span class="mx-1">•</span> Gedung F
+                            FILKOM F4.10
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0 flex flex-col items-end space-y-2">
+                        <button class="p-1 rounded-full text-gray-400 hover:bg-gray-100"
+                            onclick="event.stopPropagation(); handleMoreOptionsClick(2)">
+                            <img src="../../assets/svg/dots-icon.svg" alt="" />
+                        </button>
+                        <div id="classCard2ProgressContainer"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="teachingMessageSection" class="hidden mt-0 p-4 text-center text-gray-600">
+                <p>
+                    Untuk mengakses halaman ini, anda harus terdaftar sebagai asisten
+                    praktikum dan melakukan enroll kelas.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- nav -->
+    <nav class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0 bg-blue py-2">
+        <button class="flex flex-col items-center text-white" onclick="handleNavClick('beranda')">
+            <img src="../../assets/svg/home-icon.svg" alt="" />
+            <p>Beranda</p>
+        </button>
+        <button class="flex flex-col items-center text-orange-pastel" onclick="handleNavClick('kelas')">
+            <img src="../../assets/svg/classes-active-icon.svg" alt="" />
+            <p>Kelas</p>
+        </button>
+        <button class="flex flex-col items-center text-white" onclick="handleNavClick('pesan')">
+            <img src="../../assets/svg/chat-icon.svg" alt="" />
+            <p>Pesan</p>
+        </button>
+        <button class="flex flex-col items-center text-white" onclick="handleNavClick('profile')">
+            <img src="../../assets/svg/profile-icon.svg" alt="" />
+            <p>Profil</p>
+        </button>
+    </nav>
+    <script src="../../scripts/kelas_dosen.js"></script>
+</body>
+
+</html>
