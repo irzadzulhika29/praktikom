@@ -12,7 +12,7 @@
     <header
       class="fixed top-0 left-0 w-full bg-white flex items-center justify-between p-6 z-10"
     >
-      <a href="detail_class.html">
+      <a href="kelas_detail.html">
         <img src="../../assets/svg/chevron-left-icon.svg" alt="Back" />
       </a>
       <h1 class="text-lg font-medium text-blue truncate w-2/3 text-center">
@@ -23,19 +23,23 @@
 
     <!-- Material Description -->
     <section class="mt-20 space-y-3">
-      <div class="flex items-center gap-2">
+      <button
+        class="flex items-center gap-2 cursor-pointer"
+        onclick="toggleGeneralInfo()"
+      >
         <img
           src="../../assets/svg/informasi-umum-icon.svg"
           alt="icon"
           id="informasiUmumIcon"
-          class="rotate-90"
         />
-        <h2 class="font-semibold text-black">Material description</h2>
+        <h2 class="font-semibold text-black">Deskripsi Materi</h2>
+      </button>
+      <div id="informasiUmumContent" class="hidden">
+        <p class="text-sm text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          pretium tristique nibh, ac ultrices urna vulputate ut.
+        </p>
       </div>
-      <p class="text-sm text-gray-600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        pretium tristique nibh, ac ultrices urna vulputate ut.
-      </p>
 
       <!-- Tab Switch -->
       <div class="px-2 mt-6">

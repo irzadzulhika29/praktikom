@@ -7,8 +7,10 @@ document.getElementById("actionButton").addEventListener("click", function () {
   } else if (email === "praktikum") {
     window.location.href = "../pages/praktikan_asprak/home_praktikan.html";
   } else if (email === "dosen") {
-    window.location.href = "../pages/praktikan_asprak/home_praktikan.html";
+    window.location.href = "../pages/dosen/home_dosen.html";
   } else {
-    alert("Email tidak dikenal. Gunakan 'praktikum' atau 'laboran'.");
+    alert(
+      "Email tidak dikenal. Gunakan 'praktikum' atau 'laboran' atau 'dosen'."
+    );
   }
 });

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventaris</title>
@@ -9,192 +8,250 @@
     <link rel="stylesheet" href="../../style.css" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+  </head>
 
-<body class="p-6 w-screen relative h-screen ">
+  <body class="p-6 w-screen relative h-screen">
     <!-- header -->
-    <header class="flex justify-between items-center w-full mb-5 relative ">
-        <a href="laboratorium.html">
-            <button> <img class="cursor-pointer" src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
-        </a>
-        <p class="subheading">Inventaris</p>
-        <button id="moreButton">
-            <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
+    <header class="flex justify-between items-center w-full mb-5 relative">
+      <a href="laboratorium.html">
+        <button>
+          <img
+            class="cursor-pointer"
+            src="../../assets/svg/chevron-left-icon.svg"
+            alt=""
+          />
         </button>
+      </a>
+      <p class="subheading">Inventaris</p>
+      <button id="moreButton">
+        <img
+          class="cursor-pointer"
+          src="../../assets/svg/dots-icon.svg"
+          alt=""
+        />
+      </button>
 
-        <!-- popup -->
-        <div id="popup"
-            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
-            <div class="border-b w-full py-2">
-                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
-            </div>
-            <div class="w-full py-2">
-                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
-            </div>
+      <!-- popup -->
+      <div
+        id="popup"
+        class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue"
+      >
+        <div class="border-b w-full py-2">
+          <p class="popup-item cursor-pointer">Pusat Bantuan</p>
         </div>
+        <div class="w-full py-2">
+          <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+        </div>
+      </div>
     </header>
 
     <!-- main content -->
     <main>
-        <!-- search -->
-        <div class="flex items-center gap-2 bg-grey rounded-lg p-2 mb-4">
-            <img src="../../assets/svg/search-icon.svg" alt="Search Icon" class="w-5 h-5">
-            <input placeholder="Cari inventaris" type="text"
-                class="bg-transparent border-none outline-none p-1 text-black">
-        </div>
+      <!-- search -->
+      <div class="flex items-center gap-2 bg-grey rounded-lg p-2 mb-4">
+        <img
+          src="../../assets/svg/search-icon.svg"
+          alt="Search Icon"
+          class="w-5 h-5"
+        />
+        <input
+          placeholder="Cari inventaris"
+          type="text"
+          class="bg-transparent border-none outline-none p-1 text-black"
+        />
+      </div>
 
-        <!-- filter -->
-        <div class="flex gap-3 mb-5">
-            <div class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active">
-                <p class="subtext text-white">Semua</p>
-            </div>
-            <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
-                <p class="subtext text-dark-grey">Aksesoris</p>
-            </div>
-            <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
-                <p class="subtext text-dark-grey">Perangkat Keras</p>
-            </div>
-            <div class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category">
-                <p class="subtext text-dark-grey">ATK</p>
-            </div>
+      <!-- filter -->
+      <div
+        class="flex gap-3 mb-5 overflow-x-auto no-scrollbar whitespace-nowrap"
+      >
+        <div
+          class="cursor-pointer bg-blue px-3 py-1 rounded-full item-category active"
+        >
+          <p class="subtext text-white">Semua</p>
         </div>
+        <div
+          class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category"
+        >
+          <p class="subtext text-dark-grey">Aksesoris</p>
+        </div>
+        <div
+          class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category"
+        >
+          <p class="subtext text-dark-grey">Perangkat Keras</p>
+        </div>
+        <div
+          class="cursor-pointer bg-grey px-3 py-1 rounded-full item-category"
+        >
+          <p class="subtext text-dark-grey">ATK</p>
+        </div>
+      </div>
 
-        <!--tambah inventaris -->
-        <a href="inventaris_tambah_inventaris.html">
-            <button
-                class="cursor-pointer fixed bottom-10 right-6 z-10 w-12 h-12 rounded-full bg-gradient-blue text-white flex justify-center items-center">
-                <h1 class="medium-heading">+</h1>
-            </button>
+      <!--tambah inventaris -->
+      <a href="inventaris_tambah_inventaris.html">
+        <button
+          class="cursor-pointer fixed bottom-10 right-6 z-10 w-12 h-12 rounded-full bg-gradient-blue text-white flex justify-center items-center"
+        >
+          <h1 class="medium-heading">+</h1>
+        </button>
+      </a>
+
+      <!-- container list inventaris -->
+      <div class="mt-10 flex flex-col gap-3">
+        <!-- item inventaris -->
+        <a href="inventaris_edit_inventaris.html">
+          <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
+            <img
+              class="w-22 h-full object-cover"
+              src="../../assets/img/kertas-img.jpg"
+              alt=""
+            />
+            <div
+              class="border-t border-b border-r p-5 w-full h-full border-grey"
+            >
+              <h1 class="mb-2">Kertas HVS</h1>
+              <div class="flex items-center gap-2 small-text">
+                <p>Kondisi</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>Baik</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Jumlah stok</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>1000</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Pemeriksaan terakhir</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>25/05/2025 23.59 WIB</p>
+              </div>
+            </div>
+          </div>
         </a>
-
-        <!-- container list inventaris -->
-        <div class="mt-10 flex flex-col gap-3">
-            <!-- item inventaris -->
-            <a href="inventaris_edit_inventaris.html">
-                <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
-                    <img class="w-22 h-full object-cover" src="../../assets/img/kertas-img.jpg" alt="">
-                    <div class="border-t border-b border-r p-5 w-full h-full border-grey">
-                        <h1 class="mb-2">Kertas HVS</h1>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Kondisi</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>Baik</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Jumlah stok</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>1000</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Pemeriksaan terakhir</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>25/05/2025 23.59 WIB</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!-- item inventaris -->
-            <a href="inventaris_edit_inventaris.html">
-                <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
-                    <img class="w-22 h-full object-cover" src="../../assets/img/keyboard-img.jpg" alt="">
-                    <div class="border-t border-b border-r p-5 w-full h-full border-grey">
-                        <h1 class="mb-2">Keyboard</h1>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Kondisi</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>Baik</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Jumlah stok</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>10</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Pemeriksaan terakhir</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>21/05/2025 17.29 WIB</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!-- item inventaris -->
-            <a href="inventaris_edit_inventaris.html">
-                <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
-                    <img class="w-28 h-full object-cover" src="../../assets/img/kabelrj45-img.png" alt="">
-                    <div class="border-t border-b border-r p-5 w-full h-full border-grey">
-                        <h1 class="mb-2">Kabel RJ-45</h1>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Kondisi</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>Baik</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Jumlah stok</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>25</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Pemeriksaan terakhir</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>25/05/2025 23.59 WIB</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!-- item inventaris -->
-            <a href="inventaris_edit_inventaris.html">
-                <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
-                    <img class="w-28 h-full object-cover" src="../../assets/img/map-img.png" alt="">
-                    <div class="border-t border-b border-r p-5 w-full h-full border-grey">
-                        <h1 class="mb-2">Map Karton</h1>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Kondisi</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>Baik</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Jumlah stok</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>1000</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Pemeriksaan terakhir</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>25/05/2025 23.59 WIB</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!-- item inventaris -->
-            <a href="inventaris_edit_inventaris.html">
-                <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
-                    <img class="w-28 h-full object-cover" src="../../assets/img/router-img.png" alt="">
-                    <div class="border-t border-b border-r p-5 w-full h-full border-grey">
-                        <h1 class="mb-2">Router</h1>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Kondisi</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>Buruk</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Jumlah stok</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>1000</p>
-                        </div>
-                        <div class="flex items-center gap-2 small-text">
-                            <p>Pemeriksaan terakhir</p>
-                            <div class="bg-blue rounded-full  w-1 h-1"></div>
-                            <p>25/05/2025 23.59 WIB</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
+        <!-- item inventaris -->
+        <a href="inventaris_edit_inventaris.html">
+          <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
+            <img
+              class="w-22 h-full object-cover"
+              src="../../assets/img/keyboard-img.jpg"
+              alt=""
+            />
+            <div
+              class="border-t border-b border-r p-5 w-full h-full border-grey"
+            >
+              <h1 class="mb-2">Keyboard</h1>
+              <div class="flex items-center gap-2 small-text">
+                <p>Kondisi</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>Baik</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Jumlah stok</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>10</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Pemeriksaan terakhir</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>21/05/2025 17.29 WIB</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- item inventaris -->
+        <a href="inventaris_edit_inventaris.html">
+          <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
+            <img
+              class="w-28 h-full object-cover"
+              src="../../assets/img/kabelrj45-img.png"
+              alt=""
+            />
+            <div
+              class="border-t border-b border-r p-5 w-full h-full border-grey"
+            >
+              <h1 class="mb-2">Kabel RJ-45</h1>
+              <div class="flex items-center gap-2 small-text">
+                <p>Kondisi</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>Baik</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Jumlah stok</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>25</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Pemeriksaan terakhir</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>25/05/2025 23.59 WIB</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- item inventaris -->
+        <a href="inventaris_edit_inventaris.html">
+          <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
+            <img
+              class="w-28 h-full object-cover"
+              src="../../assets/img/map-img.png"
+              alt=""
+            />
+            <div
+              class="border-t border-b border-r p-5 w-full h-full border-grey"
+            >
+              <h1 class="mb-2">Map Karton</h1>
+              <div class="flex items-center gap-2 small-text">
+                <p>Kondisi</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>Baik</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Jumlah stok</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>1000</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Pemeriksaan terakhir</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>25/05/2025 23.59 WIB</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- item inventaris -->
+        <a href="inventaris_edit_inventaris.html">
+          <div class="w-full h-28 overflow-hidden flex rounded-xl relative">
+            <img
+              class="w-28 h-full object-cover"
+              src="../../assets/img/router-img.png"
+              alt=""
+            />
+            <div
+              class="border-t border-b border-r p-5 w-full h-full border-grey"
+            >
+              <h1 class="mb-2">Router</h1>
+              <div class="flex items-center gap-2 small-text">
+                <p>Kondisi</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>Buruk</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Jumlah stok</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>1000</p>
+              </div>
+              <div class="flex items-center gap-2 small-text">
+                <p>Pemeriksaan terakhir</p>
+                <div class="bg-blue rounded-full w-1 h-1"></div>
+                <p>25/05/2025 23.59 WIB</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </main>
 
     <!-- Custom JS -->
-    <script src="../../scripts/inventaris.js">
-    </script>
-</body>
-
+    <script src="../../scripts/inventaris.js"></script>
+  </body>
 </html>

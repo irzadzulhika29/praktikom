@@ -16,7 +16,7 @@ function handleSectionClick(name) {
   } else if (name === "presensi") {
     window.location.href = "presensi.html";
   } else if (name === "peminjamanAlat") {
-    window.location.href = "pengajuan.html";
+    window.location.href = "peminjaman.html";
   } else if (name === "rekapStudi") {
     window.location.href = "rekap_studi.html";
   }

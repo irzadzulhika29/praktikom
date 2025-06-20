@@ -1,4 +1,11 @@
 let textButton = document.getElementById("buttonSubmitAssignment").textContent;
+
+function toggleGeneralInfo() {
+  const content = document.getElementById("informasiUmumContent");
+  const iconSvg = document.getElementById("informasiUmumIcon");
+  content.classList.toggle("hidden");
+  iconSvg.classList.toggle("rotate-90");
+}
 function handleTabClick(tabName) {
   const assignmentTab = document.getElementById("tabAssignment");
   const materialTab = document.getElementById("tabMaterial");
