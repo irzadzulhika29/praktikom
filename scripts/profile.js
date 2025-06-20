@@ -13,6 +13,14 @@ function handleNavClick(pageName) {
     window.location.href = "laboratorium.html";
   } else if (pageName === "profile_laboran") {
     window.location.href = "profile_laboran.html";
+  } else if (pageName === "profile_dosen") {
+    window.location.href = "profile_dosen.html";
+  } else if (pageName === "kelas_dosen") {
+    window.location.href = "kelas_dosen.html";
+  } else if (pageName === "pesan_dosen") {
+    window.location.href = "pesan_dosen.html";
+  } else if (pageName === "beranda_dosen") {
+    window.location.href = "home_dosen.html";
   }
 }
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penugasan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="bg-white min-h-screen flex flex-col">
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-6 py-4 z-10"
+    >
+      <a href="kelas.html">
+        <img src="../../assets/svg/chevron-left-icon.svg" alt="Back" />
+      </a>
+      <h1 class="text-lg font-medium text-blue truncate w-2/3 text-center">
+        (C) Perancangan Pengalaman Pengguna
+      </h1>
+      <img src="../../assets/svg/dots-icon.svg" alt="dots" />
+    </header>
+
+    <!-- Content -->
+    <main class="mt-20 mb-20 px-4 space-y-4">
+      <!-- Modul Cards -->
+      <div class="space-y-5">
+        <!-- 1 -->
+        <div class="space-y-2">
+          <div class="flex justify-between items-center">
+            <h2 class="text-md font-semibold text-black">
+              Modul 5: Business Plan
+            </h2>
+            <img
+              src="../../assets/svg/chevron-right-icon.svg"
+              class="w-8 h-8"
+              alt="arrow"
+            />
+          </div>
+          <hr class="border-t-1 border-black" />
+
+          <div class="flex items-start space-x-3">
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
+            >
+              <img src="../../assets/svg/modul-icon.svg" alt="material" />
+            </div>
+            <div>
+              <p class="text-sm text-black">
+                Material 05: Mastering Business Plan Strategic
+              </p>
+              <p class="text-xs text-gray-500">May 19</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
+            >
+              <img
+                src="../../assets/svg/assignment-icon.svg"
+                alt="assignment"
+              />
+            </div>
+            <div>
+              <p class="text-sm text-black">
+                Assignment 05: Project Akhir Proposal Bisnis
+              </p>
+              <p class="text-xs text-gray-500">May 19</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <h2 class="text-md font-semibold text-black">
+              Modul 5: Business Plan
+            </h2>
+            <img
+              src="../../assets/svg/chevron-right-icon.svg"
+              class="w-8 h-8"
+              alt="arrow"
+            />
+          </div>
+          <hr class="border-t-1 border-black" />
+
+          <div class="flex items-start space-x-3">
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
+            >
+              <img src="../../assets/svg/modul-icon.svg" alt="material" />
+            </div>
+            <div>
+              <p class="text-sm text-black">
+                Material 05: Mastering Business Plan Strategic
+              </p>
+              <p class="text-xs text-gray-500">May 19</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
+            >
+              <img
+                src="../../assets/svg/assignment-icon.svg"
+                alt="assignment"
+              />
+            </div>
+            <div>
+              <p class="text-sm text-black">
+                Assignment 05: Project Akhir Proposal Bisnis
+              </p>
+              <p class="text-xs text-gray-500">May 19</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="cursor-pointer fixed bottom-20 right-6 z-10 w-12 h-12 rounded-full bg-gradient-blue text-white flex justify-center items-center"
+      >
+        <h1 class="medium-heading">+</h1>
+      </button>
+
+      <!-- Modal Backdrop -->
+      <div
+        id="modalBackdrop"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-20"
+      ></div>
+      <div
+        id="buatBaruModal"
+        class="hidden fixed bottom-0 left-0 right-0 z-30 bg-white rounded-t-2xl p-4 shadow-xl"
+      >
+        <h2 class="text-md font-bold text-center text-gray-800 mb-3">
+          Buat Baru
+        </h2>
+        <div class="divide-y divide-gray-300">
+          <a
+            href="penugasan_dosen.html"
+            class="flex items-center py-3 space-x-2 cursor-pointer buat-item"
+          >
+            <img
+              src="../../assets/svg/kumpulan-modul-icon.svg"
+              alt="modul"
+              class="w-5 h-5"
+            />
+            <span class="text-sm text-gray-800">Modul</span>
+          </a>
+          <a
+            href="tambah_materi_dosen.html"
+            class="flex items-center py-3 space-x-2 cursor-pointer buat-item"
+          >
+            <img
+              src="../../assets/svg/modul-icon.svg"
+              alt="materi"
+              class="w-5 h-5"
+            />
+            <span class="text-sm text-gray-800">Materi</span>
+          </a>
+          <a
+            href="tambah_tugas_dosen.html"
+            class="flex items-center py-3 space-x-2 cursor-pointer buat-item"
+          >
+            <img
+              src="../../assets/svg/assignment-icon.svg"
+              alt="tugas"
+              class="w-5 h-5"
+            />
+            <span class="text-sm text-gray-800">Tugas</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- nav -->
+    <nav
+      class="fixed bottom-0 left-0 right-0 bg-blue px-10 py-2 flex justify-between text-white"
+    >
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('forum_dosen')"
+      >
+        <img src="../../assets/svg/forum-icon.svg" alt="Forum" />
+        <p class="text-wihte">Forum</p>
+      </button>
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('penugasan_dosen')"
+      >
+        <img src="../../assets/svg/classwork-active-icon.svg" alt="Penugasan" />
+        <p class="text-orange-pastel">Penugasan</p>
+      </button>
+      <button
+        class="flex flex-col items-center"
+        onclick="handleNavClick('peserta_dosen')"
+      >
+        <img src="../../assets/svg/people-icon.svg" alt="Peserta" />
+        <p>Peserta</p>
+      </button>
+    </nav>
+
+    <script src="../../scripts/penugasan_praktikum.js"></script>
+  </body>
+</html>

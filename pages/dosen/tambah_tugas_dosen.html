@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buat Tugas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body class="bg-white p-6 flex flex-col justify-between">
+    <!-- header -->
+    <header class="flex justify-between items-center w-full mb-5 relative ">
+        <a href="penugasan_dosen.html">
+            <button> <img class="cursor-pointer " src="../../assets/svg/chevron-left-icon.svg" alt=""></button>
+        </a>
+        <p class="subheading text-blue">Buat Tugas</p>
+        <button id="moreButton">
+            <img class="cursor-pointer" src="../../assets/svg/dots-icon.svg" alt="">
+        </button>
+
+        <!-- popup -->
+        <div id="popup"
+            class="absolute subtext hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue">
+            <div class="border-b w-full py-2">
+                <p class=" popup-item cursor-pointer">Pusat Bantuan</p>
+            </div>
+            <div class="w-full py-2">
+                <p class="popup-item cursor-pointer">Laporkan Masalah</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <main class="w-full">
+        <!-- Form -->
+        <form>
+            <div class="px-3 space-y-3 mb-10">
+                <input type="text"
+                    class="regular-text border-2 border-sky rounded-lg w-full py-3 px-4 focus:outline-none focus:border-blue-900"
+                    placeholder="Judul Tugas">
+                </input>
+                <div class="relative">
+                    <input type="text"
+                        class="regular-text border-2 border-sky rounded-lg w-full py-3 pl-10 pr-4 focus:outline-none focus:border-blue-900"
+                        placeholder="Deskripsi Tugas">
+                    <img src="../../assets/svg/text-icon.svg" alt=""
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2">
+                </div>
+                <div
+                    class="regular-text border-2 border-sky rounded-lg w-full py-1 px-2 focus:outline-none focus:border-blue-900">
+                    <label for="file-input"
+                        class="rounded flex bg-gradient-blue w-1/2 p-3  items-center gap-2 cursor-pointer">
+                        <img src="../../assets/svg/upload-icon.svg" alt="">
+                        <span class="text-center text-white subtext">Tambah File</span>
+                    </label>
+                    <input id="file-input" type="file"
+                        class="bg-blue-900 w-36 h-8 p-3 text-white opacity-0 absolute cursor-pointer">
+                </div>
+                <div class="relative">
+                    <input type="text"
+                        class="regular-text border-2 border-sky rounded-lg w-full py-3 pl-10 pr-4 focus:outline-none focus:border-blue-900"
+                        placeholder="Atur Poin">
+                    <img src="../../assets/svg/rank-icon.svg" alt=""
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2">
+                </div>
+                <div class="relative">
+                    <input type="text"
+                        class="regular-text border-2 border-sky rounded-lg w-full py-3 pl-10 pr-4 focus:outline-none focus:border-blue-900"
+                        placeholder="Atur Tenggat Waktu">
+                    <img src="../../assets/svg/calender.svg" alt=""
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2">
+                </div>
+                <div class="relative">
+                    <input type="text"
+                        class="regular-text border-2 border-sky rounded-lg w-full py-3 pl-10 pr-4 focus:outline-none focus:border-blue-900"
+                        placeholder="Atur Modul">
+                    <img src="../../assets/svg/book-icon.svg" alt=""
+                        class="absolute left-3 top-1/2 transform -translate-y-1/2">
+                </div>
+            </div>
+        </form>
+
+
+
+        <!-- Button -->
+        <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 w-full px-6">
+            <button type="button" id="confirmationButton"
+                class="w-full bg-gradient-blue text-white py-3 px-10 rounded-full font-medium whitespace-nowrap">
+                Buat Tugas
+            </button>
+        </div>
+    </main>
+
+    <!-- popup confirmation -->
+    <div id="confirmationPopup"
+        class="hidden fixed bottom-0 left-0 right-0 border-2 border-grey max-h-72 px-5 py-5 rounded-t-3xl bg-white z-10 shadow-xl">
+        <div class="flex flex-col justify-center items-center gap-5">
+            <h1 class="text-center font-bold subheading">Tugas berhasil <br>ditambahkan</h1>
+            <img src="../../assets/svg/checklist-icon.svg" alt="">
+            <a class="w-full" href="penugasan_dosen.html">
+                <button id="closePopup" class="regular-text bg-gradient-blue rounded-full w-full text-white py-3">
+                    Tutup
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="../../scripts/buat_kelas.js"></script>
+</body>
+
+</html>

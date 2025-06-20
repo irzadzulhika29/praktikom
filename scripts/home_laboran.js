@@ -26,10 +26,13 @@ if (openPopupButton && popup) {
       popup.classList.add("hidden");
     });
   });
-  
+
   // tutup popup saat klik di luar elemen popup
   document.addEventListener("click", function (event) {
-    if (!popup.contains(event.target) && !openPopupButton.contains(event.target)) {
+    if (
+      !popup.contains(event.target) &&
+      !openPopupButton.contains(event.target)
+    ) {
       popup.classList.add("hidden");
     }
   });

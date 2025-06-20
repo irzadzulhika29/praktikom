@@ -7,6 +7,14 @@ function handleNavClick(pageName) {
     window.location.href = "chat.html";
   } else if (pageName === "profile") {
     window.location.href = "profile.html";
+  } else if (pageName === "profile_dosen") {
+    window.location.href = "profile_dosen.html";
+  } else if (pageName === "kelas_dosen") {
+    window.location.href = "kelas_dosen.html";
+  } else if (pageName === "pesan_dosen") {
+    window.location.href = "pesan_dosen.html";
+  } else if (pageName === "beranda_dosen") {
+    window.location.href = "home_dosen.html";
   }
 }
 const itemChat = document.querySelectorAll(".item-chat");

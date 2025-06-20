@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page Laboran</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body class="p-6 w-screen relative">
+    <!-- header -->
+    <header class="flex justify-between mb-5 items-center w-full">
+      <div class="flex items-center">
+        <img
+          class="w-10 h-10"
+          src="../../assets/svg/praktikom2-icon.svg"
+          alt=""
+        />
+        <h1 class="text-blue semibold-heading">PRAKTIKOM</h1>
+      </div>
+      <a href="notifikasi_laboran.html">
+        <button>
+          <img src="../../assets/svg/notification-icon.svg" alt="" />
+        </button>
+      </a>
+    </header>
+
+    <!-- main content -->
+    <main>
+      <!-- Banner Slider -->
+      <div class="px-1 mt-4">
+        <div class="swiper rounded-xl overflow-hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="../../assets/img/carousel1-img.png"
+                alt="Banner 1"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../../assets/img/carousel2-img.jpg"
+                alt="Banner 1"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../../assets/img/carousel3-img.png"
+                alt="Banner 2"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <h1 class="relative my-3">
+        Halo, <span class="text-blue">Aryo Pinandito! </span>
+      </h1>
+
+      <!--container kalender dan jadwal -->
+      <div class="flex justify-between gap-2 mb-5">
+        <!-- kalender -->
+        <div
+          class="w-[52%] flex justify-center items-center gap-5 bg-grey rounded-xl px-3 py-3"
+        >
+          <div class="flex flex-col justify-center items-center">
+            <h1 class="medium-heading text-blue">
+              Sen <span class="text-orange">Mei</span>
+            </h1>
+            <h1
+              class="regular-heading text-8xl font-bold text-plus-jakarta-sans text-gradient-blue"
+            >
+              19
+            </h1>
+          </div>
+          <div class="flex flex-col gap-3 items-center justify-center">
+            <p>18</p>
+            <p
+              class="h-8 w-8 flex items-center justify-center bg-blue text-white rounded-full"
+            >
+              19
+            </p>
+            <div class="flex flex-col items-center">
+              <p>20</p>
+              <div class="h-1 w-1 rounded-full bg-blue"></div>
+            </div>
+          </div>
+        </div>
+        <!-- jadwal -->
+        <div
+          class="w-[47%] border-2 border-grey flex flex-col justify-between rounded-xl px-3 py-3"
+        >
+          <a href="jadwal_ajar.html">
+            <div class="flex justify-between items-center">
+              <p>Jadwal Ajar</p>
+              <a class="cursor-pointer m-0 p-0" href="jadwal_laboratorium.html">
+                <img
+                  class="w-6 h-6"
+                  src="../../assets/svg/chevron-right-icon.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="gap-2 flex flex-col">
+              <div
+                class="small-text px-2 py-1 rounded-full flex bg-grey justify-between items-center"
+              >
+                <p>F3.6</p>
+                <p class="text-right italic">Senin <br />07.00-08.40</p>
+              </div>
+              <div
+                class="small-text px-2 py-1 rounded-full bg-grey flex justify-between items-center"
+              >
+                <p>Lab G3.6</p>
+                <p class="text-right italic">Senin <br />09.30-12.10</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- container linimasa -->
+      <div class="rounded-xl border-2 relative border-grey p-3">
+        <!-- popup -->
+        <div
+          id="popup"
+          class="absolute hidden top-0 right-0 rounded-xl border-2 bg-white z-10 w-36 flex flex-col justify-between items-center text-center border-grey px-3 py-1 text-blue"
+        >
+          <div class="border-b w-full py-2">
+            <p class="cursor-pointer item-popup">Semua</p>
+          </div>
+          <div class="border-b w-full py-2">
+            <p class="item-popup cursor-pointer">Berlangsung</p>
+          </div>
+          <div class="w-full py-2">
+            <p class="item-popup cursor-pointer">Terlewat</p>
+          </div>
+        </div>
+
+        <!-- header linimasa -->
+        <div class="flex justify-between items-center mb-3">
+          <h1 class="regular-heading font-bold">Linimasa</h1>
+          <img
+            id="filterButton"
+            class="cursor-pointer"
+            src="../../assets/svg/filter-icon.svg"
+            alt=""
+          />
+        </div>
+
+        <!-- Bagian yang bisa di-scroll -->
+        <div class="flex flex-col max-h-56 overflow-y-auto gap-2">
+          <div
+            class="border border-grey rounded-lg items-center bg-grey flex gap-2"
+          >
+            <div class="rounded-l-lg bg-dark-grey w-10 subtext p-2 text-center">
+              <h1 class="font-bold">19</h1>
+              <p>Mei</p>
+            </div>
+            <div>
+              <h1 class="subtext font-bold">
+                FP03-SIB: Studi Kasus Analisis Kl..
+              </h1>
+              <p class="subtext">Tenggat pengerjaan hari ini</p>
+            </div>
+          </div>
+          <div
+            class="border border-grey rounded-lg items-center bg-grey flex gap-2"
+          >
+            <div class="rounded-l-lg bg-dark-grey w-10 subtext p-2 text-center">
+              <h1 class="font-bold">20</h1>
+              <p>Mei</p>
+            </div>
+            <div>
+              <h1 class="subtext font-bold">
+                FP03-SIB: Studi Kasus Analisis Kl..
+              </h1>
+              <p class="subtext">Tenggat pengerjaan besok</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- navbar -->
+      <!-- nav -->
+      <nav
+        class="subtext px-6 fixed justify-between flex bottom-0 left-0 right-0 bg-blue py-2"
+      >
+        <button
+          class="flex flex-col items-center text-orange-pastel"
+          onclick="handleNavClick('beranda_dosen')"
+        >
+          <img src="../../assets/svg/home-active-icon.svg" alt="" />
+          <p>Beranda</p>
+        </button>
+        <button
+          class="flex flex-col items-center text-white"
+          onclick="handleNavClick('kelas_dosen')"
+        >
+          <img src="../../assets/svg/classes-icon.svg" alt="" />
+          <p>Kelas</p>
+        </button>
+        <button
+          class="flex flex-col items-center text-white"
+          onclick="handleNavClick('pesan_dosen')"
+        >
+          <img src="../../assets/svg/chat-icon.svg" alt="" />
+          <p>Pesan</p>
+        </button>
+        <button
+          class="flex flex-col items-center text-white"
+          onclick="handleNavClick('profile_dosen')"
+        >
+          <img src="../../assets/svg/profile-icon.svg" alt="" />
+          <p>Profil</p>
+        </button>
+      </nav>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="../../scripts/home_dosen.js"></script>
+  </body>
+</html>

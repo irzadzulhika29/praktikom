@@ -6,6 +6,8 @@ document.getElementById("actionButton").addEventListener("click", function () {
     window.location.href = "../pages/laboran/home_laboran.html";
   } else if (email === "praktikum") {
     window.location.href = "../pages/praktikan_asprak/home_praktikan.html";
+  } else if (email === "dosen") {
+    window.location.href = "../pages/praktikan_asprak/home_praktikan.html";
   } else {
     alert("Email tidak dikenal. Gunakan 'praktikum' atau 'laboran'.");
   }
