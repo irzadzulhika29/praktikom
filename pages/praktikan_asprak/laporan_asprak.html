@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="bg-white p-6">
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white flex items-center justify-between p-6 z-10"
+    >
+      <a href="kelas_detail_asprak.html"
+        ><img src="../../assets/svg/chevron-left-icon.svg" alt="Back"
+      /></a>
+      <h1 class="text-lg font-medium text-blue">Presensi Kelas</h1>
+      <img src="../../assets/svg/dots-icon.svg" alt="dots" />
+    </header>
+
+    <!-- Tabs -->
+    <div class="flex mb-4 border-b border-gray-300 pt-20">
+      <button
+        id="tabKehadiranBtn"
+        class="px-4 py-2 border-b-2 border-blue-500 font-semibold text-blue"
+      >
+        Kehadiran
+      </button>
+      <button id="tabPenilaianBtn" class="px-4 py-2 text-gray-600">
+        Penilaian
+      </button>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex gap-3 mb-4">
+      <button
+        class="px-4 py-2 bg-white border border-blue text-blue rounded-full text-sm"
+      >
+        Export CSV
+      </button>
+      <button
+        class="px-4 py-2 bg-gradient-blue text-white rounded-full text-sm"
+      >
+        Kirim ke Dosen Pengampu
+      </button>
+    </div>
+
+    <!-- Tabel Kehadiran -->
+    <div id="tabKehadiran" class="space-y-2">
+      <div class="flex font-semibold text-sm border-b py-2">
+        <div class="w-1/6">No.</div>
+        <div class="w-3/6">Nama/NIM</div>
+        <div class="w-2/6">Kehadiran</div>
+      </div>
+      <!-- Data Kehadiran akan di-inject di sini -->
+      <div id="kehadiranData"></div>
+    </div>
+
+    <!-- Tabel Penilaian -->
+    <div id="tabPenilaian" class="space-y-2 hidden">
+      <div class="flex font-semibold text-sm border-b py-2">
+        <div class="w-1/6">No.</div>
+        <div class="w-3/6">Nama/NIM</div>
+        <div class="w-2/6">Rerata Nilai</div>
+      </div>
+      <!-- Data Penilaian akan di-inject di sini -->
+      <div id="penilaianData"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="../../scripts/laporan_asprak.js"></script>
+  </body>
+</html>

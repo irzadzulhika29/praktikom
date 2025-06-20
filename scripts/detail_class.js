@@ -19,9 +19,9 @@ function handleNavClick(pageName) {
 
 function handleFiturAsprak(name) {
   if (name === "penilaian") {
-    window.location.href = "kelas_detail_penilaian_asprak.html";
-  } else if (name === "presensi") {
     window.location.href = "kelas_penilaian_asprak.html";
+  } else if (name === "presensi") {
+    window.location.href = "kelas_presensi_asprak.html";
   } else if (name === "laporan") {
     window.location.href = "laporan_asprak.html";
   }

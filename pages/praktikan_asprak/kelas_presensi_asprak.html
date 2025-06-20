@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presensi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="bg-white p-6">
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white flex items-center justify-between p-6 z-10"
+    >
+      <a href="kelas_detail_asprak.html"
+        ><img src="../../assets/svg/chevron-left-icon.svg" alt="Back"
+      /></a>
+      <h1 class="text-lg font-medium text-blue">Presensi Kelas</h1>
+      <img src="../../assets/svg/dots-icon.svg" alt="dots" />
+    </header>
+
+    <!-- Form Presensi -->
+    <section class="space-y-4 mt-20">
+      <input
+        type="text"
+        placeholder="Nama topik"
+        class="w-full p-3 border rounded-lg text-sm"
+      />
+      <input
+        type="date"
+        placeholder="Tanggal pelaksanaan"
+        class="w-full p-3 border rounded-lg text-sm"
+      />
+      <div class="flex gap-2">
+        <input
+          type="time"
+          placeholder="Jam mulai"
+          class="w-full p-3 border rounded-lg text-sm"
+        />
+        <input
+          type="time"
+          placeholder="Jam selesai"
+          class="w-full p-3 border rounded-lg text-sm"
+        />
+      </div>
+      <button class="w-full py-3 rounded-full bg-gradient-blue text-white">
+        Buat presensi
+      </button>
+    </section>
+
+    <!-- Tab Navigasi -->
+    <div class="flex p-1 mt-6 bg-gray-200 rounded-lg">
+      <button
+        id="tabBerlangsung"
+        class="flex-1 py-2 px-4 text-sm font-medium text-white bg-blue rounded-md"
+        onclick="switchTab('berlangsung')"
+      >
+        Berlangsung
+      </button>
+      <button
+        id="tabRiwayat"
+        class="flex-1 py-2 px-4 text-sm font-medium text-gray-600 bg-transparent rounded-md"
+        onclick="switchTab('riwayat')"
+      >
+        Riwayat
+      </button>
+    </div>
+
+    <!-- Daftar Presensi -->
+    <section id="listBerlangsung" class="mt-4 space-y-3">
+      <div
+        class="p-4 bg-white border rounded-lg flex items-center justify-between shadow-sm"
+      >
+        <div class="flex items-center justify-center">
+          <div
+            class="flex flex-col justify-center items-center border-r pb-2 mr-2 pr-2"
+          >
+            <h1 class="text-xl text-blue">
+              Sen <span class="text-orange">Mei</span>
+            </h1>
+            <h1
+              class="regular-heading text-6xl font-bold text-plus-jakarta-sans text-gradient-blue"
+            >
+              19
+            </h1>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-black">
+              Modul 5: Business Plan
+            </h3>
+            <p class="text-xs text-black mt-4">10:25:00 - 12:00:00</p>
+          </div>
+        </div>
+        <img src="../../assets/svg/dots-icon.svg" alt="Options" />
+      </div>
+    </section>
+
+    <section id="listRiwayat" class="mt-4 space-y-3 hidden">
+      <div
+        class="p-4 bg-white border rounded-lg flex items-center justify-between shadow-sm"
+      >
+        <div class="flex items-center justify-center">
+          <div
+            class="flex flex-col justify-center items-center border-r pb-2 mr-2 pr-2"
+          >
+            <h1 class="text-xl text-blue">
+              Sen <span class="text-orange">Mei</span>
+            </h1>
+            <h1
+              class="regular-heading text-6xl font-bold text-plus-jakarta-sans text-gradient-blue"
+            >
+              5
+            </h1>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-black">
+              Modul 5: Business Plan
+            </h3>
+            <p class="text-xs text-black mt-4">10:25:00 - 12:00:00</p>
+          </div>
+        </div>
+        <img src="../../assets/svg/dots-icon.svg" alt="Options" />
+      </div>
+    </section>
+
+    <script src="../../scripts/presensi_asprak.js"></script>
+  </body>
+</html>
